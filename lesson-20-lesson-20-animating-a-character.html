@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson - 20 - Animating a Character</title>
+<style>
+:root {
+  --retro-blue: #0A5CA5; /* Broncos retro royal blue */
+  --broncos-orange: #FB4F14; /* Broncos orange */
+  --text: #111111;
+  --bg: #ffffff;
+  --link: var(--retro-blue);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', sans-serif; line-height: 1.55; color: var(--text); background: var(--bg); }
+
+.page { display: grid; grid-template-columns: 10% minmax(0, 1fr) 20%; min-height: 100vh; }
+.sidebar { position: relative; }
+/* Horizontal gradients */
+.sidebar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--retro-blue) 0%, var(--broncos-orange) 100%); opacity: 0.12; }
+.sidebar.left::before { background: linear-gradient(90deg, var(--broncos-orange) 0%, var(--retro-blue) 100%); }
+
+.content { padding: 2rem 1.5rem 4rem; max-width: 980px; margin: 0 auto; }
+
+/* Right sidebar inner containers */
+.right-widgets { position: sticky; top: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.widget { background: #ffffffdd; border: 1px solid rgba(10,92,165,0.25); box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 0.85rem 1rem; }
+.widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
+.widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
+.widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
+.widget .placeholder { color: #6b7280; font-size: 0.95rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
+p { margin: 0.6em 0; }
+ul, ol { margin: 0.6em 0 0.6em 1.4em; }
+ul li::marker, ol li::marker { color: var(--broncos-orange); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+img { display: inline; max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 0 1fr 0; }
+  .right-widgets { position: static; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<aside class="sidebar left" aria-hidden="true"></aside>
+<main class="content" role="main">
+<h1>Lesson - 20 - Animating a Character</h1>
+<h1>Lesson - 20 - Animating a Character</h1>
+<p><strong><em>[video]</em></strong></p>
+<p></p>
+<h3>About this Lesson:</h3>
+<p>In the last lesson you learned how to use deformer tools to make your character flexible and more alive.  In this lesson you will be introduced to tips and tricks on:</p>
+<ul>
+<li>How you isolate the different elements.</li>
+<li>Animating them over time using things like &quot;Cycles.&quot;</li>
+<li>Setting keyframes to the Beat of the Music.</li>
+</ul>
+<p>You will also learn how to animate in the passes.  You will start with the tail, then his legs, then his arms, the guitar, the body and the head.</p>
+<p><strong>Lesson Duration:</strong>  8 hours</p>
+<p></p>
+<h3><strong>Harmony Topics:</strong></h3>
+<ul>
+<li><strong>Creating Cycles:</strong>  Once you have entered a series of drawings and exposures, you can create cycles out of them in several ways. This can be useful for example if you want to make or use a looping character&#x27;s walking animation, referred to as a walk cycle.  When you create a cycle, each instance of each cycled drawing is linked to the same drawing file. This means that if you change a drawing for the first instance of the cycle, it will update for every other instance of the cycle.</li>
+<li><strong>Animate on Passes:</strong>  Animating one part of a character at a time.</li>
+<li><strong>Motion Keyframes and Stop-Motion keyframes:  </strong>Keyframes are the building blocks of Cut-out animation. Unlike Traditional animation, where every pose is drawn, Cut-out animation uses keyframes to mark major poses (key poses) and lets the software create all the poses in between.  In Harmony, you can create two kinds of keyframes: Motion and Stop-Motion. Motion keyframes behave like the description above; they allow for the automatic creation of drawings between two keyframed poses. Stop-Motion keyframes do not allow for interpolation between keyframes. They are often used to block poses, somewhat similar to what you would see in Traditional Animation. </li>
+</ul>
+<p></p>
+<h3><strong>Task:</strong></h3>
+<p></p>
+<ul>
+<li>Download the support files from the Lesson Files.  </li>
+<li>Watch, complete and take notes on the <strong>Animating Cnote part </strong>and<strong> Animating Cnote part 2 </strong>(below)<strong> </strong>video tutorials and the topics presented in this lesson.  Taking notes in your sketchbook/notebook on how to use Harmony and any animation terminology will help you prepare for your certification exam at the end of this course.</li>
+<li>For this activity, you will also create your own step by step <strong>Tutorial</strong>, following the expectations laid out in Part 1 and Part 2.</li>
+</ul>
+<p><strong>Please Note:</strong>  The cut out pieces of CNote are set up to be transparent to help you learn how to set up the rigged character.</p>
+<p><strong>Part 1 - Before you Begin: </strong><br /></p>
+<ul>
+<li>Launch Toon Boom Harmony.   </li>
+<li>In the Welcome Window, open <strong>14_animate_cnote</strong> </li>
+<li>Be sure to save your Harmony file as:  <strong>YourName_Animate</strong> in your Documents folder.</li>
+<li>Take some time to investigate the construction of the Timeline layers and the Node View.   You may also want to review your notes from the previous lesson.</li>
+</ul>
+<p><strong>Hint:</strong>  <strong>Space bar</strong> is freehand,<strong> 1</strong> is Zoom out and<strong> 2</strong> is Zoom in.  These shortcuts will help you navigate the <strong>Node</strong> view.</p>
+<p><strong>Part 2 Animating a Character Tutorial:</strong></p>
+<p></p>
+<p><strong>Animating Character Tutorial - Animating CNote Video Part 1:</strong></p>
+<p></p>
+<p>As you learn how to animate CNote, you will need to take thorough notes including screenshots.  Use previous lessons as an example.  You may create your very own <strong>Animating a Character Tutorial </strong>using any word processing software, just make sure you save as a PDF file.  Please organize, adjust the layout and format your tutorial to improve the effectiveness of the tutorial.  Be sure to document all of the following steps:</p>
+<ul>
+<li>Title:  Animating a Character in Harmony </li>
+<li>Author: Your name goes here</li>
+<li>Subtitle:  <strong>Animating CNote&#x27;s arms, legs, tail and guitar </strong></li>
+<li>Important Hints and tips, ie, locking a layer.</li>
+<li>Shortcuts used, ie, F6 and o</li>
+<li>Step by Step Instructions (as follows):</li>
+</ul>
+<p><strong>Note:</strong>  Include screenshots to support your tutorial.</p>
+<ul>
+<li>Animation start up steps:</li>
+<li>All steps required to animate</li>
+<li>Drawing Substitutions</li>
+<li>How to find the Mouth layer in Node View and and isolate it in the Timeline</li>
+<li>Use of Key Exposures</li>
+<li>Animate the Tail:</li>
+<li>The creation of 5 keyframes </li>
+<li>Keyframe numbers</li>
+<li>Use of Deformers</li>
+<li>Use Node View and Timeline </li>
+<li>Scrubbing </li>
+<li>Timing Key frames with beats along the timeline layer.</li>
+<li>Animate the back leg and foot:</li>
+<li>The creation of 5 keyframes</li>
+<li>Keyframe numbers on Timeline</li>
+<li>Use of Deformers</li>
+<li>Match with Tail</li>
+<li>Use of Node View and Timeline</li>
+<li>Scrubbing</li>
+<li>Timing Key frames with the tail along the timeline layer.</li>
+<li>Animate the front leg and foot:</li>
+<li>The creation of 5 Key Frames</li>
+<li>Keyframe numbers on Timeline</li>
+<li>Use of Deformers</li>
+<li>Match with Tail</li>
+<li>Use of Node View and Timeline</li>
+<li>Scrubbing</li>
+<li>Timing Key Frames on opposite beats along the timeline layer.</li>
+<li>Change drawing substitutions</li>
+<li>Animate the arms (front and back):</li>
+<li>Overview of goal of animating arms</li>
+<li>Use of Node View and Timeline</li>
+<li>Movement of arms</li>
+<li>The creation of 5 Key Frames</li>
+<li>Key Frames numbers on Timeline</li>
+<li>Use of Deformers</li>
+<li>Syncing with audio</li>
+<li>Scrubbing</li>
+<li>Timing Key Frames on opposite beats along the timeline layer.</li>
+<li>Change drawing substitutions</li>
+<li>Animate the guitar:</li>
+<li>Overview of goal of animating arms</li>
+<li>Use of Node View and Timeline</li>
+<li>Movement of the guitar</li>
+<li>The creation of Key Frames</li>
+<li>Key Frames numbers on Timeline</li>
+<li>Syncing with audio</li>
+<li>Scrubbing</li>
+<li>Timing Key Frames </li>
+<li>Change drawing substitutions</li>
+<li>Save your tutorial as: <strong>Animating a Character Tutorial part 1</strong>.  Export and submit your pdf version of the tutorial.</li>
+</ul>
+<p> Required</p>
+<p> Incomplete</p>
+<p>Restart</p>
+<p>Rewind 10s</p>
+<p>Play</p>
+<p>Forward 10s</p>
+<p>00:00</p>
+<p>00:00</p>
+<p>15:26</p>
+<p>Mute</p>
+<p>Settings</p>
+<p>PIP</p>
+<p>Enter fullscreen</p>
+<p>Play</p>
+<p><strong>Animating a Character Tutorial - </strong>Animating CNote Video Part 2:</p>
+<p></p>
+<p>As you continue to animate CNote, you will need to take thorough notes including screenshots.  Be sure to document the following steps:</p>
+<ul>
+<li>As you learn how to animate CNote, you will need to take thorough notes including screenshots.  Use previous lessons as an example.  You will create your very own <strong>Animating a Character Tutorial part 2 </strong>using any word processing software.  You will need to submit each video part as a PDF file.   </li>
+<li>Be sure to document the following steps:<br /></li>
+<li>Subtitle: <strong>Animating CNote&#x27;s Body and Head</strong></li>
+<li>Important Hints and tips, ie, locking a layer</li>
+<li>Shortcuts used, ie, F6 and o</li>
+<li><strong>Note:</strong>  Include screenshots to support your tutorial.</li>
+<li>Animation start up steps:</li>
+<li>All steps required to animate</li>
+<li>Drawing Substitutions</li>
+<li>How to find the art layers in Node VIew and and isolate it in the TImeline</li>
+<li>Use of Key Exposures</li>
+<li>Animate the Body, Head, and Eyes:</li>
+<li>The creation of 5 keyframes </li>
+<li>Keyframe numbers on Timeline</li>
+<li>Use of Deformers</li>
+<li>Use Node View and Timeline </li>
+<li>Scrubbing </li>
+<li>Timing Key frames with beats along the timeline layer.</li>
+<li>Save your tutorial as: <strong>Animating a Character Tutorial part 2</strong>.  Export and submit your pdf version of the tutorial.</li>
+</ul>
+<h3><strong>Part 3 - Export your animation</strong></h3>
+<p></p>
+<ul>
+<li>In the timeline, add a <strong>Colour Card</strong> by selecting the + icon.  Select a colour for your <strong>Colour Card</strong>. </li>
+<li>Review your animated scene one more time.  </li>
+<li>Time to <strong>Export</strong>!  Go to<strong> FIle/Export/Animated movie</strong>.  Select your Document folder as the destination location. </li>
+<li>Test out your exported animated Cnote playing the guitar animation.</li>
+<li>Submit your work</li>
+<li>Submit <strong>Tutorials </strong>and <strong>Animated scene </strong>below.</li>
+</ul>
+<p></p>
+</main>
+<aside class="sidebar right" aria-label="Lesson sidebar">
+  <div class="right-widgets">
+    <section class="widget next-page" aria-label="Next page">
+      <h3>Next Page</h3>
+      <p><a href="lesson-21-lesson-21-modifying-colour-palettes.html">Next lesson →</a></p>
+    </section>
+    <section class="widget lesson-files" aria-label="Lesson files">
+      <h3>Files in this Lesson</h3>
+      <div class="placeholder">Add file links or attachments here.</div>
+    </section>
+  </div>
+</aside>
+</div>
+</body>
+</html>
