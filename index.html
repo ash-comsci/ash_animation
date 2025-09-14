@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Harmony Courseware – Lessons Index</title>
+<style>
+:root {
+  --retro-blue: #0A5CA5;
+  --broncos-orange: #FB4F14;
+  --text: #111111;
+  --bg: #ffffff;
+  --link: var(--retro-blue);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Noto Sans', sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 10% minmax(0, 1fr) 20%;
+  min-height: 100vh;
+}
+.sidebar { position: relative; }
+.sidebar::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--retro-blue) 0%, var(--broncos-orange) 100%);
+  opacity: 0.12;
+}
+.sidebar.left::before {
+  background: linear-gradient(90deg, var(--broncos-orange) 0%, var(--retro-blue) 100%);
+}
+
+.content { padding: 2rem 1.5rem 4rem; max-width: 980px; margin: 0 auto; }
+
+/* Right sidebar widgets */
+.right-widgets { position: sticky; top: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.widget { background: #ffffffdd; border: 1px solid rgba(10,92,165,0.25); box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 0.85rem 1rem; }
+.widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
+.widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
+.widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
+.widget .placeholder { color: #6b7280; font-size: 0.95rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
+p { margin: 0.6em 0; }
+
+/* BUTTON STYLE for lesson links */
+.lesson-buttons {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.lesson-buttons li { width: 90%; }
+.lesson-buttons a {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--retro-blue);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+.lesson-buttons a:hover,
+.lesson-buttons a:focus {
+  background: var(--broncos-orange);
+  box-shadow: 0 0 15px var(--broncos-orange);
+  transform: translateY(-3px) scale(1.02);
+}
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 0 1fr 0; }
+  .right-widgets { position: static; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar left" aria-hidden="true"></aside>
+  <main class="content" role="main">
+    <h1>Harmony Courseware – Lessons</h1>
+    <p>Select a lesson below:</p>
+
+    <!-- Replace the ordered list with button-style links -->
+    <ul class="lesson-buttons">
+      <li><a href="lesson-lesson-introduction-welcome.html">Lesson - Introduction / Welcome</a></li>
+      <li><a href="lesson-01-lesson-01-the-world-of-animation.html">Lesson - 01 - The World of Animation</a></li>
+      <li><a href="lesson-02-lesson-02-the-animation-pipeline.html">Lesson - 02 - The Animation Pipeline</a></li>
+      <li><a href="lesson-03-03-animating-in-harmony.html">03 - Animating in Harmony</a></li>
+      <li><a href="lesson-04-lesson-04-user-interface-set-up.html">Lesson - 04 - User Interface &amp; Set Up</a></li>
+      <li><a href="lesson-05-lesson-05-drawing-tools.html">Lesson - 05 - Drawing Tools</a></li>
+      <li><a href="lesson-06-lesson-06-the-principles-of-animation.html">Lesson - 06 - The Principles of Animation</a></li>
+      <li><a href="lesson-07-lesson-07-paint-tools-palettes.html">Lesson - 07 - Paint Tools &amp; Palettes</a></li>
+      <li><a href="lesson-08-lesson-08-what-is-a-peg.html">Lesson - 08 - What is a Peg</a></li>
+      <li><a href="lesson-09-lesson-09-drawing-substitutions.html">Lesson - 09 - Drawing Substitutions</a></li>
+      <li><a href="lesson-10-lesson-10-importing-images.html">Lesson - 10 - Importing Images</a></li>
+      <li><a href="lesson-11-lesson-11-pencils-brushes-and-shapes.html">Lesson - 11- Pencils, Brushes and Shapes</a></li>
+      <li><a href="lesson-12-lesson-12-nodes-nodes-and-more-nodes.html">Lesson - 12 - Nodes, Nodes and more Nodes</a></li>
+      <li><a href="lesson-13-lesson-13-rigging-dynamic-eyes.html">Lesson - 13 - Rigging Dynamic Eyes</a></li>
+      <li><a href="lesson-14-lesson-14-lip-sync.html">Lesson - 14 - Lip-Sync</a></li>
+      <li><a href="lesson-15-lesson-15-importing-adobe-photoshop-illustrator-files.html">Lesson - 15 - Importing Adobe Photoshop &amp; Illustrator Files</a></li>
+      <li><a href="lesson-16-lesson-16-camera-creating-multiplanes.html">Lesson - 16 - Camera &amp; Creating Multiplanes</a></li>
+      <li><a href="lesson-17-lesson-17-setting-up-a-cut-out-character-for-rigging.html">Lesson - 17 - Setting up a Cut Out Character for Rigging</a></li>
+      <li><a href="lesson-18-lesson-18-adding-master-pegs.html">Lesson - 18 - Adding Master Pegs</a></li>
+      <li><a href="lesson-19-lesson-19-adding-deformers.html">Lesson - 19 - Adding Deformers</a></li>
+      <li><a href="lesson-20-lesson-20-animating-a-character.html">Lesson - 20 - Animating a Character</a></li>
+      <li><a href="lesson-21-lesson-21-modifying-colour-palettes.html">Lesson - 21 - Modifying Colour Palettes</a></li>
+      <li><a href="lesson-22-lesson-22-fly-little-bird.html">Lesson - 22 - Fly Little Bird</a></li>
+      <li><a href="lesson-23-lesson-23-exporting-templates.html">Lesson - 23 - Exporting Templates</a></li>
+      <li><a href="lesson-24-lesson-24-set-the-stage.html">Lesson - 24 - Set the Stage</a></li>
+      <li><a href="lesson-25-lesson-25-harmony-certification.html">Lesson - 25 - Harmony Certification</a></li>
+    </ul>
+
+  </main>
+  <aside class="sidebar right" aria-label="Lesson sidebar">
+    <div class="right-widgets">
+      <section class="widget next-page"><h3>Next Page</h3><div class="placeholder">Start with Lesson 01.</div></section>
+      <section class="widget lesson-files"><h3>Files in this Lesson</h3><div class="placeholder">N/A</div></section>
+    </div>
+  </aside>
+</div>
+</body>
+</html>

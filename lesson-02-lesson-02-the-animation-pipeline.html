@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson - 02 - The Animation Pipeline</title>
+<style>
+:root {
+  --retro-blue: #0A5CA5; /* Broncos retro royal blue */
+  --broncos-orange: #FB4F14; /* Broncos orange */
+  --text: #111111;
+  --bg: #ffffff;
+  --link: var(--retro-blue);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', sans-serif; line-height: 1.55; color: var(--text); background: var(--bg); }
+
+.page { display: grid; grid-template-columns: 10% minmax(0, 1fr) 20%; min-height: 100vh; }
+.sidebar { position: relative; }
+/* Horizontal gradients */
+.sidebar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--retro-blue) 0%, var(--broncos-orange) 100%); opacity: 0.12; }
+.sidebar.left::before { background: linear-gradient(90deg, var(--broncos-orange) 0%, var(--retro-blue) 100%); }
+
+.content { padding: 2rem 1.5rem 4rem; max-width: 980px; margin: 0 auto; }
+
+/* Right sidebar inner containers */
+.right-widgets { position: sticky; top: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.widget { background: #ffffffdd; border: 1px solid rgba(10,92,165,0.25); box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 0.85rem 1rem; }
+.widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
+.widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
+.widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
+.widget .placeholder { color: #6b7280; font-size: 0.95rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
+p { margin: 0.6em 0; }
+ul, ol { margin: 0.6em 0 0.6em 1.4em; }
+ul li::marker, ol li::marker { color: var(--broncos-orange); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+img { display: inline; max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 0 1fr 0; }
+  .right-widgets { position: static; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<aside class="sidebar left" aria-hidden="true"></aside>
+<main class="content" role="main">
+<h1>Lesson - 02 - The Animation Pipeline</h1>
+<h1>Lesson - 02 - The Animation Pipeline</h1>
+<h3>About this Lesson:</h3>
+<p>It is time to become familiar with the different animation workflows, how they end up merging together, and an overview of how they work with Toon Boom Harmony. An animation workflow refers to the steps and the order in which the different workflows occur when producing your movie or animated short. No matter which method you choose to create your project, the pipeline to follow will always be divided into three segments:<strong> pre-production</strong>, <strong>production</strong>, and <strong>post-production</strong>. You will then choose your animation method. Harmony is designed to handle part of the pre-production and all of the production while post-production is managed through an external application. The three workflow segments are broken down into different steps and will be presented in the Animation Pipeline presentation found below.</p>
+<p></p>
+<p><strong>Lesson Duration:</strong> 1 hour</p>
+<p></p>
+<h3><strong>Topics:</strong></h3>
+<p><em>Topics covered in video and attached PDF found in the Lesson Files section.</em></p>
+<ul>
+<li>The Animation Pipeline</li>
+<li>The Animation Workflow</li>
+<li>Pre-Production Phase</li>
+<li>Production Phases for</li>
+<li>Traditional Animation</li>
+<li>Paperless Animation</li>
+<li>Cut Out Animation</li>
+<li>Post-Production Phase</li>
+</ul>
+<h3><strong>Task:</strong></h3>
+<ul>
+<li>Complete the<strong> Animation Pipeline</strong> presentation.</li>
+<li>Take thorough notes and feel free to be creative by sketching some of the Animation Pipeline as it will help you prepare for your certification exam at the end of this course.</li>
+<li>Complete the two Drag and Drop Animation Pipeline quizzes:  </li>
+<li>Quiz - Paperless Animation Pipeline</li>
+<li>Quiz - The Entire Traditional Animation Pipeline</li>
+<li>Download and review the <strong>Animation Pipeline</strong> PDF in the Lesson Files located on the right of your screen.</li>
+</ul>
+<p><strong><em>[slideshow]</em></strong></p>
+<p><strong><em>[quiz - paperless]</em></strong></p>
+<p><strong><em>[quiz - professional]</em></strong></p>
+</main>
+<aside class="sidebar right" aria-label="Lesson sidebar">
+  <div class="right-widgets">
+    <section class="widget next-page" aria-label="Next page">
+      <h3>Next Page</h3>
+      <p><a href="lesson-03-03-animating-in-harmony.html">Next lesson →</a></p>
+    </section>
+    <section class="widget lesson-files" aria-label="Lesson files">
+      <h3>Files in this Lesson</h3>
+      <div class="placeholder">Add file links or attachments here.</div>
+    </section>
+  </div>
+</aside>
+</div>
+</body>
+</html>

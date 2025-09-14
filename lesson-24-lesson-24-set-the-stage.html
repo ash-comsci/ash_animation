@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson - 24 - Set the Stage</title>
+<style>
+:root {
+  --retro-blue: #0A5CA5; /* Broncos retro royal blue */
+  --broncos-orange: #FB4F14; /* Broncos orange */
+  --text: #111111;
+  --bg: #ffffff;
+  --link: var(--retro-blue);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', sans-serif; line-height: 1.55; color: var(--text); background: var(--bg); }
+
+.page { display: grid; grid-template-columns: 10% minmax(0, 1fr) 20%; min-height: 100vh; }
+.sidebar { position: relative; }
+/* Horizontal gradients */
+.sidebar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--retro-blue) 0%, var(--broncos-orange) 100%); opacity: 0.12; }
+.sidebar.left::before { background: linear-gradient(90deg, var(--broncos-orange) 0%, var(--retro-blue) 100%); }
+
+.content { padding: 2rem 1.5rem 4rem; max-width: 980px; margin: 0 auto; }
+
+/* Right sidebar inner containers */
+.right-widgets { position: sticky; top: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.widget { background: #ffffffdd; border: 1px solid rgba(10,92,165,0.25); box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 0.85rem 1rem; }
+.widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
+.widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
+.widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
+.widget .placeholder { color: #6b7280; font-size: 0.95rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
+p { margin: 0.6em 0; }
+ul, ol { margin: 0.6em 0 0.6em 1.4em; }
+ul li::marker, ol li::marker { color: var(--broncos-orange); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+img { display: inline; max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 0 1fr 0; }
+  .right-widgets { position: static; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<aside class="sidebar left" aria-hidden="true"></aside>
+<main class="content" role="main">
+<h1>Lesson - 24 - Set the Stage</h1>
+<h1>Lesson - 24 - Set the Stage</h1>
+<p><strong><em>[video]</em></strong></p>
+<p></p>
+<h2><strong>About</strong></h2>
+<p>In this last lesson you will now need to apply all the skills you have developed throughout this course. You will be provided some creative freedom to design the elements to the Animated CNote character from the previous lesson.</p>
+<p><strong>Lesson Duration:</strong>  10 hours<br /><br /></p>
+<h3><strong>Task:</strong></h3>
+<ul>
+<li>Launch Toon Boom Harmony.  </li>
+<li>Open your Harmony file from the previous lesson.   You will need to remove the existing background images</li>
+<li>Take some time to investigate the construction of the <strong>Timeline</strong> layers and the <strong>Node</strong> View.  </li>
+<li><strong>Before starting, you should review your notes from previous lessons.</strong></li>
+<li>Your final animation must be no less than the duration of the project file from the Support file.</li>
+</ul>
+<p><strong>Part 1 - Create or Add a Multilayer parallax layers:</strong></p>
+<p></p>
+<p>You are to create the following in Photoshop, Illustrator or Harmony.  This must be done as separate layers.</p>
+<ul>
+<li>Layer - A Background Stage Design for CNote to perform his song.</li>
+<li>Layer - An object to be placed in front of CNotes&#x27; position (Maybe a crowd, person, speaker, etc.)</li>
+<li>Add these to your scene and position them along the Z axes to create some depth in your scene. </li>
+<li>CNote should be positioned in between these two layers.</li>
+</ul>
+<p></p>
+<p><strong>Part 2 - Add a Character:</strong></p>
+<p></p>
+<p>You are to create the following in Photoshop, Illustrator or Harmony.  This must be done as new layers.</p>
+<ul>
+<li>This character must be positioned in the foreground of the scene.</li>
+<li>Apply an Effect Node to the character.</li>
+<li>This character must move across the Camera View as CNote plays his song</li>
+</ul>
+<p></p>
+<p><strong>Part 3 - Apply depth and Camera Movement:</strong></p>
+<p></p>
+<p>Follow the steps in the Video to complete the following:</p>
+<ul>
+<li>Apply a Camera to your Scene.</li>
+<li>Animate the camera effectively to help tell the story of your scene.</li>
+</ul>
+<p></p>
+<p><strong>Part 4 - Apply Timing:</strong></p>
+<p></p>
+<ul>
+<li>Apply Easing to your animation</li>
+<li>Enhance the timing of your scene</li>
+</ul>
+<p></p>
+<p><strong>Part 5 - Export:</strong></p>
+<p></p>
+<ul>
+<li>Save your work.</li>
+<li>Go to <strong>File/Export/Movie</strong> as Final Animation</li>
+<li>Submit your animated scene</li>
+</ul>
+<p></p>
+<p><strong><em>[harmony certification quiz]</em></strong></p>
+<p></p>
+</main>
+<aside class="sidebar right" aria-label="Lesson sidebar">
+  <div class="right-widgets">
+    <section class="widget next-page" aria-label="Next page">
+      <h3>Next Page</h3>
+      <p><a href="lesson-25-lesson-25-harmony-certification.html">Next lesson →</a></p>
+    </section>
+    <section class="widget lesson-files" aria-label="Lesson files">
+      <h3>Files in this Lesson</h3>
+      <div class="placeholder">Add file links or attachments here.</div>
+    </section>
+  </div>
+</aside>
+</div>
+</body>
+</html>
