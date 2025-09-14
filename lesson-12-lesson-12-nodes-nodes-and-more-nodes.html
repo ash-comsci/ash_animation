@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson - 12 - Nodes, Nodes and more Nodes</title>
+<style>
+:root {
+  --retro-blue: #0A5CA5; /* Broncos retro royal blue */
+  --broncos-orange: #FB4F14; /* Broncos orange */
+  --text: #111111;
+  --bg: #ffffff;
+  --link: var(--retro-blue);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol', sans-serif; line-height: 1.55; color: var(--text); background: var(--bg); }
+
+.page { display: grid; grid-template-columns: 10% minmax(0, 1fr) 20%; min-height: 100vh; }
+.sidebar { position: relative; }
+/* Horizontal gradients */
+.sidebar::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--retro-blue) 0%, var(--broncos-orange) 100%); opacity: 0.12; }
+.sidebar.left::before { background: linear-gradient(90deg, var(--broncos-orange) 0%, var(--retro-blue) 100%); }
+
+.content { padding: 2rem 1.5rem 4rem; max-width: 980px; margin: 0 auto; }
+
+/* Right sidebar inner containers */
+.right-widgets { position: sticky; top: 1rem; padding: 1rem; display: flex; flex-direction: column; gap: 1rem; }
+.widget { background: #ffffffdd; border: 1px solid rgba(10,92,165,0.25); box-shadow: 0 1px 3px rgba(0,0,0,0.06); padding: 0.85rem 1rem; }
+.widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
+.widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
+.widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
+.widget .placeholder { color: #6b7280; font-size: 0.95rem; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
+p { margin: 0.6em 0; }
+ul, ol { margin: 0.6em 0 0.6em 1.4em; }
+ul li::marker, ol li::marker { color: var(--broncos-orange); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+u { text-decoration: underline; }
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+img { display: inline; max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 0 1fr 0; }
+  .right-widgets { position: static; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<aside class="sidebar left" aria-hidden="true"></aside>
+<main class="content" role="main">
+<h1>Lesson - 12 - Nodes, Nodes and more Nodes</h1>
+<h1>Lesson - 12 - Nodes, Nodes and more Nodes</h1>
+<h3>About this Lesson:</h3>
+<p>In this lesson you will now learn about different Filter Nodes in Harmony.  The Node view is a visual representation of how every element in your scene, be it drawing layers, pegs, effects and others are combined together to form the final composited image. It allows you to rig the elements in your scene together and add a wide range of effects to your scene. Getting to know how to use the Node view is important especially for rigging cut-out models, adding effects to the scene or managing the way your scene is composited, rendered and displayed in Harmony.<br /><br /><strong>TIP:  Experiment with each Node property to figure out the best filter result!</strong></p>
+<p><strong>Lesson Duration:</strong> 4 hours<br /></p>
+<h3><strong>Harmony Topics</strong></h3>
+<p><strong>The Auto-Patch Node:  </strong> Harmony has a very efficient node to automatically patch an articulation without you having to do any line adjustment or colour overlapping. You can draw your two pieces with their complete lines overlapping each other in semicircles and the Auto-patch node will create a perfect articulation from it. <br /><br /><strong>The Blending Node: </strong> By default, layers are composited onto each other directly. This means that opaque pixels in front-most layers hide pixels in layers further back, and semi-transparent pixels on front-most layers are blended with pixels further back proportionally to their alpha ratio. This does the job for solid objects. However, some types of layers and effects may look better when composited into the scene using more advanced approaches. The Blending node can be used to composite an element, effect or composite using one of many different algorithms that may make it look much better in the final render.<br /><br /><strong>The Box-Blur Node:  </strong>The Blur - Box effect is a quick and easy way to create a blurring effect. The Box blur changes the colour value of each pixel based on the pixels next to it in the vertical and horizontal directions. The look of the blur is similar to the look achieved using Gaussian blur, but renders much faster. This effect is useful when a fast rendering time is important, and the quality of the blur is less important. Also, you can use a matte with this effect to isolate areas of the image.<br /><br /><strong>The Composite Node: </strong>The Composite node allows you to use several images and output a single image. You can compare that to doing pre-compositions in editing software. You can connect several drawing, image generators and effect nodes in your Composite node and one bitmap (or vector in some cases) comes out of it.<br /><br /><strong>The Cutter Node:  </strong>You can use the Cutter node to hide parts of a drawing, a group or an effect. The Cutter node must be connected to a drawing that will serve as a matte. Parts of the drawing, group or effect that intersect with the matte drawing will be hidden.  Optionally, you can also invert the Cutter node&#x27;s matte, which will make parts of the drawing, group or effect that intersect with the matte drawing visible, and everything else will be hidden.<br /><br /><strong>The Glow Node:  </strong>The Glow effect turns your image into a glow area with a bright soft-edged light or diffuse light region around an image. The Glow effect is useful for creating a shining rim around objects, such as the sun or stars. Clone your layer or connect it a second time to the Composite node to display the original image on top of the glow.<br /><br /><strong>Render:  </strong>Most effects must be rendered so you can preview them properly. Some effects can be displayed in the OpenGL view, but most of them must be rendered and previewed in the Render Mode of the Camera view.<br />Once you preview your effect, you may want to adjust it. By default, as soon as you modify a parameter, Harmony will recalculate the preview image. If your scene is heavy and you do not want the preview rendered automatically, deselect the Auto-Render option and do the preview update manually.  <br /><br /><strong>Render Mode:</strong>  You cannot play back your animation in Render mode. You must perform a render or a preview render to see your animation with the final effects. Effects must be calculated before they can be viewed in real time.  To make your previews calculate faster, you may want to render them at a smaller resolution. You can use the Preview Resolution command so you will not have to modify the resolution of your scene every time you make a check preview. <br /><br /><strong>The Shadow Node: </strong> With the Shadow effect, you can turn a drawing into a shadow. It doesn&#x27;t matter if the drawing layer is a fully coloured character. The Shadow effect will render it into a grey, semitransparent, slightly blurry silhouette. You must connect your layer a second time to your Composite node to see the original image displayed on top of the shadow.</p>
+<p></p>
+<h3><strong>Task:</strong></h3>
+<p></p>
+<ul>
+<li>Download the support files (Using Pegs) from the Lesson Files, this time you will be applying Node effects to it.  </li>
+<li>Complete the Interactive lesson below and take notes on the topics presented in this lesson.  </li>
+<li>Apply the four different Filter Nodes to your animated version of CNote walking from the previous lesson. Be sure to<strong> save </strong>and<strong> export</strong> your Harmony four times<strong> </strong>in your<strong> Documents folder.</strong>  Be sure to continue to take notes in your sketchbook/notebook on how to use Harmony and any animation terminology as it will help you prepare for your certification exam at the end of this course.</li>
+</ul>
+<p><strong>Part 1 - Setting up CNote in Node View:</strong> </p>
+<p></p>
+<ul>
+<li>Unzip this into your Documents folder on your computer.</li>
+<li>Launch Toon Boom Harmony and open your previous What is a Peg activity.</li>
+<li>Continue to take notes to prepare for the certification exam.</li>
+<li>Resave it as <strong>YourName_CNote_FIlter </strong>in your<strong> Documents folder.</strong></li>
+<li>Complete the Steps provided, export and submit your projects as: CNote_Blur, CNote_Glow, CNote_Cutter and CNote_Shadow.</li>
+</ul>
+<h3><strong>Assessment:</strong></h3>
+<ul>
+<li>5 marks - Successfully completed CNote_Blur submitted </li>
+<li>5 marks - Successfully completed CNote_Glow submitted</li>
+<li>5 marks - Successfully completed CNote_Shadow submitted</li>
+<li>5 marks - Successfully completed CNote_Cutter submitted</li>
+<li><strong>Total:  20 marks</strong></li>
+</ul>
+<p> Required</p>
+<p> Completed</p>
+<p> Nodes, Nodes and more Nodes</p>
+<p><strong><em>[slideshow]</em></strong></p>
+<p></p>
+</main>
+<aside class="sidebar right" aria-label="Lesson sidebar">
+  <div class="right-widgets">
+    <section class="widget next-page" aria-label="Next page">
+      <h3>Next Page</h3>
+      <p><a href="lesson-13-lesson-13-rigging-dynamic-eyes.html">Next lesson →</a></p>
+    </section>
+    <section class="widget lesson-files" aria-label="Lesson files">
+      <h3>Files in this Lesson</h3>
+      <div class="placeholder">Add file links or attachments here.</div>
+    </section>
+  </div>
+</aside>
+</div>
+</body>
+</html>
