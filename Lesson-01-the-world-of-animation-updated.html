@@ -51,26 +51,25 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
 }
 </style>
 <style>
+  /* --- Updated sidebar button style --- */
 .nav-button {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.2s, background-color 0.3s;
+  background: linear-gradient(45deg, var(--broncos-orange) 0%, var(--retro-blue) 100%);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
 .nav-button:hover {
-    background-color: #ff8533;
-    transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(251,79,20,0.5), 0 0 8px rgba(10,92,165,0.5);
+  transform: scale(1.04);
 }
 .nav-button:active {
-    background-color: #cc5200;
-    transform: scale(0.95);
+  transform: scale(0.96);
 }
- 
 .video-container {
     position: relative;
     width: 90%;
@@ -80,7 +79,6 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
     height: 0;
     overflow: hidden;
 }
-
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -89,7 +87,6 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
     height: 100%;
     border: none;
 }
-
 </style></head>
 <body>
 <div class="page">
@@ -150,8 +147,8 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
 <aside aria-label="Lesson sidebar" class="sidebar right">
 <div class="right-widgets">
 <section aria-label="Next page" class="widget next-page">
-<h3>Next Page</h3>
-<p><a href="lesson-02-lesson-02-the-animation-pipeline.html">Next lesson →<button class="nav-button" onclick="location.href='index.html'">Home</button><button class="nav-button" onclick="location.href='Lesson-02.html'">Next Lesson</button></a></p>
+<h3>Next Lesson</h3>
+<p><button class="nav-button" onclick="location.href='index.html'">Home</button><button class="nav-button" onclick="location.href=lesson-02-lesson-02-the-animation-pipeline.html">Lesson 2</button></a></p>
 </section>
 <section aria-label="Lesson files" class="widget lesson-files">
 <h3>Files in this Lesson</h3>
