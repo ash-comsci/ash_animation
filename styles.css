@@ -2,6 +2,7 @@
   --retro-blue: #003DA5; /* Broncos retro royal blue */
   --broncos-orange: #FB4F14; /* Broncos orange */
   --text: #111111;
+  --white: #FFFFFF
   --bg: #ffffff;
   --link: var(--retro-blue);
 }
@@ -23,7 +24,7 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 .widget h3 { margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--retro-blue); }
 .widget.next-page { border-left: 4px solid var(--broncos-orange); border-radius: 10px; }
 .widget.lesson-files { border-left: 4px solid var(--retro-blue); border-radius: 18px; }
-.widget.lesson-links { border-left: 4px solid var(--text); border-radius: 13px; }
+.widget.lesson-links { border-left: 4px solid var(--white); border-radius: 13px; }
 .widget .placeholder { color: #6b7280; font-size: 0.95rem; }
 
 h1, h2, h3, h4, h5, h6 { line-height: 1.25; margin: 1.2em 0 0.4em; color: var(--retro-blue); }
