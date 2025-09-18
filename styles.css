@@ -82,49 +82,143 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
     border: none;
 }
 
-* === Video Card (TV/Movie screen look) === */
-.video-card { margin: 1.25rem 0 1.75rem; }
-.video-card .video-title { margin: 0 0 .5rem 0; color: var(--retro-blue); font-weight: 700; }
 
-/* Screen container: 16:9, rounded, shadows */
+/* ==== Base Video Card (works with or without the TV bezel) ==== */
+.video-card { margin: 1.25rem 0 1.75rem; }
+.video-card .video-title {
+  margin: 0 0 .5rem 0;
+  color: var(--retro-blue);
+  font-weight: 700;
+}
 .video-frame {
   position: relative;
   background: #000;
   border-radius: 16px;
   overflow: hidden;
+  /* Outer 'theatre' shadow */
   box-shadow: 0 18px 40px rgba(0,0,0,.35), 0 2px 10px rgba(0,0,0,.25);
+  /* 16:9 responsive screen */
   aspect-ratio: 16/9;
 }
-
-/* Soft vignette around the edges */
+/* Inner vignette for screen depth */
 .video-frame::before {
   content: "";
-  position: absolute; inset: 0; pointer-events: none;
-  box-shadow: inset 0 0 120px rgba(0,0,0,.55), inset 0 0 24px rgba(0,0,0,.3);
+  position: absolute; inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 120px rgba(0,0,0,.55),
+              inset 0 0 24px rgba(0,0,0,.3);
 }
-
-/* Subtle glassy glare */
+/* Subtle glass glare */
 .video-frame::after {
   content: "";
-  position: absolute; left: -20%; top: -60%; width: 140%; height: 120%;
+  position: absolute; left: -20%; top: -60%;
+  width: 140%; height: 120%;
   background: linear-gradient(120deg, rgba(255,255,255,.12), rgba(255,255,255,0) 60%);
   transform: rotate(8deg);
   pointer-events: none;
   mix-blend-mode: screen;
 }
-
-/* Iframe fills the frame */
 .video-frame iframe {
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   border: 0; display: block;
 }
-
 .video-caption {
   font-size: .95rem; color: #4b5563;
   margin: .5rem 0 0 0; text-align: center;
 }
-
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .video-card { margin: 1rem 0 1.25rem; }
+}
+
+/* ==== Retro TV Bezel Variant ==== */
+.tv-retro .tv-bezel {
+  display: grid;
+  grid-template-columns: 1fr 120px; /* screen | control panel */
+  gap: 12px;
+  background: #1f2937;             /* dark slate/plastic housing */
+  border-radius: 22px;
+  padding: 18px;
+  border: 6px solid #0f172a;        /* outer rim */
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.55),
+    inset 0 3px 0 rgba(255,255,255,.08),
+    inset 0 -3px 0 rgba(0,0,0,.3);
+  position: relative;
+}
+/* Broncos accent strip across the top rim */
+.tv-retro .tv-bezel::after {
+  content: "";
+  position: absolute; left: 12px; right: 12px; top: 10px; height: 4px;
+  background: linear-gradient(90deg, var(--broncos-orange), var(--retro-blue));
+  opacity: .9; border-radius: 2px;
+}
+.tv-retro .tv-inner { display: block; }
+/* Slightly tighter radius for the screen inside the bezel */
+.tv-retro .video-frame { border-radius: 12px; }
+
+/* Control panel to the right of the screen */
+.tv-retro .tv-controls {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  background: linear-gradient(180deg, #111827, #0b1220);
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.5);
+  box-shadow: inset 0 2px 8px rgba(0,0,0,.6);
+}
+
+/* Base dial styling */
+.tv-retro .tv-dial {
+  border-radius: 50%;
+  border: 2px solid #222;
+  box-shadow:
+    inset 0 2px 6px rgba(0,0,0,.5),
+    0 2px 6px rgba(0,0,0,.35);
+}
+
+/* === Broncos-colored knobs === */
+/* Large knob: Broncos Orange */
+.tv-retro .tv-dial-large {
+  width: 44px; height: 44px;
+  border-color: #a2320c; /* darker orange rim */
+  background:
+    radial-gradient(circle at 35% 35%,
+      #ffe1d5 0%, #ffc4a8 38%, #FB4F14 72%, #a2320c 100%);
+}
+/* Small knob: Retro Blue */
+.tv-retro .tv-dial-small {
+  width: 32px; height: 32px;
+  border-color: #00296e; /* darker blue rim */
+  background:
+    radial-gradient(circle at 35% 35%,
+      #e5ecff 0%, #c8d6ff 38%, #003DA5 72%, #00296e 100%);
+}
+
+/* Speaker grille */
+.tv-retro .tv-grille {
+  width: 100%; height: 84px; margin-top: 4px;
+  border-radius: 8px; border: 1px solid rgba(0,0,0,.5);
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,.55) 0, rgba(0,0,0,.55) 2px,
+      rgba(255,255,255,.08) 2px, rgba(255,255,255,.08) 4px
+  );
+  box-shadow: inset 0 2px 8px rgba(0,0,0,.6);
+}
+
+/* Little 'feet' shadow below the TV */
+.tv-retro .tv-bezel::before {
+  content: "";
+  position: absolute; left: 10%; right: 10%; bottom: -8px; height: 14px;
+  background: radial-gradient(closest-side, rgba(0,0,0,.4), rgba(0,0,0,0));
+  filter: blur(2px);
+}
+
+/* Mobile: controls move below screen, grille hides for space */
+@media (max-width: 800px) {
+  .tv-retro .tv-bezel { grid-template-columns: 1fr; padding: 14px; }
+  .tv-retro .tv-controls { flex-direction: row; justify-content: center; gap: 16px; padding: 10px; }
+  .tv-retro .tv-grille { display: none; }
 }
