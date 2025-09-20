@@ -134,8 +134,8 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
 /* Cards */
 .title-card {
   background: #96908f;
-  padding: 1.5rem;
-  border-radius: 14px;
+  padding: .5rem;
+  border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   margin-bottom: 2rem;  /* space between cards */
 }
