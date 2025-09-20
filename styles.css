@@ -15,7 +15,12 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
      }
 /* ... other styles ... */
 
-.page { display: grid; grid-template-columns: 10% minmax(0, 1fr) 20%; min-height: 100vh; }
+.page { 
+  
+  display: grid;
+  grid-template-columns: 1fr 20%;
+  min-height: 100vh;
+}
 .sidebar { position: relative; }
 /* Horizontal gradients */
 
