@@ -156,7 +156,7 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
 }
 }
 .title-card h1, .card h2, .card h3 {
-  color: var(--retro-blue);
+  color: #000000;
 }
 .card {
   background: var(--card);
