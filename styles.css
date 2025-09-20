@@ -137,7 +137,7 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
 
 .title-card {
   background: linear-gradient(135deg, #FB4F14, #003DA5, #C0C0C0, #FFFFFF);
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   margin-bottom: 2rem;
@@ -146,7 +146,7 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
   letter-spacing: 1px;
-  font-size: 1.4rem;
+  font-size: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
