@@ -51,7 +51,27 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
   .page { grid-template-columns: 0 1fr 0; }
   .right-widgets { position: static; }
 }
-  /* --- Updated sidebar button style --- */
+/*Indecx Button */
+.index-button {
+  background: #D3D3D3;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.index-button:hover {
+  box-shadow: 0 0 8px rgba(251,79,20,0.5), 0 0 8px rgba(10,92,165,0.5);
+  transform: scale(1.04);
+}
+.index-button:active {
+  transform: scale(0.96);
+}
+
+/* --- Updated sidebar button style --- */
 .nav-button {
   background: linear-gradient(45deg, var(--broncos-orange) 0%, var(--retro-blue) 100%);
   color: #fff;
