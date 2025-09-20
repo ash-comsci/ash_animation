@@ -14,6 +14,17 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
       background-attachment: fixed;
      }
 /* ... other styles ... */
+.glow-img {
+  display: block;            /* so margins/padding behave well */
+  width: 300px;              /* or whatever size you like */
+  border-radius: 12px;       /* optional rounded corners */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glow-img:hover {
+  transform: scale(1.05);    /* subtle “pop” */
+  box-shadow: 0 0 20px 6px rgba(255, 140, 0, 0.6); /* orange glow */
+}
 
 .page { 
   
