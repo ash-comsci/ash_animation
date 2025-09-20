@@ -80,7 +80,17 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
     height: 100%;
     border: none;
 }
-
+/* Cards */
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;  /* space between cards */
+}
+.card h1, .card h2, .card h3 {
+  color: var(--retro-blue);
+}
 /* ---------------------------------------------------------
    VIDEO CARD + RETRO TV BEZEL (Broncos-themed)
    HOW TO USE
