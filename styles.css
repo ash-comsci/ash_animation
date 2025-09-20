@@ -18,7 +18,7 @@ body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 .page { 
   
   display: grid;
-  grid-template-columns: 1fr 20%;
+  grid-template-columns: 80% 20%;
   min-height: 100vh;
 }
 .sidebar { position: relative; }
