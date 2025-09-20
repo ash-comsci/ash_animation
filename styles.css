@@ -134,7 +134,7 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
 /* Cards */
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
+/*
 .title-card {
   background: linear-gradient(135deg, #FB4F14, #003DA5, #C0C0C0, #FFFFFF);
   padding: .5rem;
@@ -148,6 +148,28 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
   letter-spacing: 1px;
   font-size: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+*/
+.title-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between image and text */
+  background: linear-gradient(135deg, #FB4F14, #003DA5, #C0C0C0, #FFFFFF);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  letter-spacing: 0.8px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.title-card img {
+  height: 40px; /* adjust as needed */
+  width: auto;
 }
 
 .title-card:hover {
