@@ -3,6 +3,7 @@
   --broncos-orange: #FB4F14; /* Broncos orange */
   --text: #111111;
   --white: #FFFFFF; --bg: #ffffff;
+  --card: #FFFFFF
   --link: var(--retro-blue);
 }
 * { box-sizing: border-box; }
