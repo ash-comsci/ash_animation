@@ -168,7 +168,7 @@ padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
 }
 
 .title-card img {
-  height: 40px; /* adjust as needed */
+  height: 80px; /* adjust as needed */
   width: auto;
 }
 
