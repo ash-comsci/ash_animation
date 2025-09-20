@@ -62,6 +62,19 @@ hr { border: none; border-top: 1px solid #e5e5e5; margin: 2rem 0; }
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.3s;
+
+  
+display: block;          /* allows width to apply and occupy its own line */
+width: 80%;              /* 80% of the .card's inner content width */
+text-align: left;        /* left-align the button label */
+white-space: normal;     /* wrap when label is long */
+  
+  /* Comfortable height: a taller line plus some vertical padding */
+line-height: 1.25;       /* makes the line slightly taller than the font size */
+padding-block: 0.4em;    /* vertical padding adds a bit more height */
+  /* keep your existing padding-inline from earlier (6px 14px) or tweak: */
+padding-inline: 0.875em; /* ≈ 14px; optional—use your preferred value */
+
 }
 .index-button:hover {
   box-shadow: 0 0 8px rgba(251,79,20,0.5), 0 0 8px rgba(10,92,165,0.5);
