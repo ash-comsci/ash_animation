@@ -10,49 +10,66 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background-color: #f9f9f9;
     }
+
     .page {
-      max-width: 960px;
+      max-width: 800px;
       margin: auto;
-      padding: 1rem;
+      padding: 20px;
     }
+
     .title-card {
-      text-align: center;
-      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
+
     .title-card img {
       max-width: 100px;
       height: auto;
     }
-    .card {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .card p {
+
+    .title-card h1 {
+      font-size: 1.8em;
       margin: 0;
     }
+
+    .card p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
     .index-button {
-      padding: 0.75rem 1.25rem;
-      font-size: 1rem;
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      margin: 8px auto;
+      padding: 12px 20px;
+      font-size: 1em;
       border: none;
+      border-radius: 6px;
       background-color: #0078d4;
       color: white;
-      border-radius: 5px;
       cursor: pointer;
-      width: 100%;
-      max-width: 300px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      text-align: left;
     }
+
     .index-button:hover {
       background-color: #005fa3;
     }
+
     @media (max-width: 600px) {
-      .index-button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+      .title-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .title-card h1 {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -61,36 +78,39 @@
   <div class="page">
     <main class="content" role="main">
       <section class="title-card">
-        <img src="images/ash_small.png" alt="Courseware Logo" />
+        <img src="images/ash_small.png" alt="Course logo" />
         <h1>Harmony Courseware – Lessons</h1>
       </section>
+
       <section class="card">
-        <p><button class="index-button" onclick="location.href='intro.html'">Intro Welcome</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-01.html'">01 - The World of Animation</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-02.html'">02 - Animation Pipeline</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-03.html'">03 - Animating in Harmony</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-04.html'">04 - User Interface & Set Up</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-05.html'">05 - Drawing Tools</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-06.html'">06 - The Principles of Animation</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-07.html'">07 - Paint Tools & Palettes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-08.html'">08 - What is a Peg</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-09.html'">09 - Drawing Substitutions</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-10.html'">10 - Importing Images</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-11.html'">11 - Pencils, Brushes and Shapes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-12.html'">12 - Nodes, Nodes and more Nodes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-13.html'">13 - Rigging Dynamic Eyes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-14.html'">14 - Lip-Sync</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-15.html'">15 - Importing Adobe Photoshop & Illustrator Files</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-16.html'">16 - Camera, Creating Multiplanes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-17.html'">17 - Setting up a Cut Out Character for Rigging</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-18.html'">18 - Adding Master Pegs</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-19.html'">19 - Adding Deformers</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-20.html'">20 - Animating a Character</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-21.html'">21 - Modifying Colour Palettes</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-22.html'">22 - Fly Little Bird</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-23.html'">23 - Exporting Templates</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-24.html'">24 - Set the Stage</button></p>
-        <p><button class="index-button" onclick="location.href='lesson-25.html'">25 - Harmony Certification</button></p>
+        <p>Select a lesson below:</p>
+
+        <button class="index-button" onclick="location.href='intro.html'">Intro Welcome</button>
+        <button class="index-button" onclick="location.href='lesson-01.html'">01 - The World of Animation</button>
+        <button class="index-button" onclick="location.href='lesson-02.html'">02 - Animation Pipeline</button>
+        <button class="index-button" onclick="location.href='lesson-03.html'">03 - Animating in Harmony</button>
+        <button class="index-button" onclick="location.href='lesson-04.html'">04 - User Interface & Set Up</button>
+        <button class="index-button" onclick="location.href='lesson-05.html'">05 - Drawing Tools</button>
+        <button class="index-button" onclick="location.href='lesson-06.html'">06 - The Principles of Animation</button>
+        <button class="index-button" onclick="location.href='lesson-07.html'">07 - Paint Tools & Palettes</button>
+        <button class="index-button" onclick="location.href='lesson-08.html'">08 - What is a Peg</button>
+        <button class="index-button" onclick="location.href='lesson-09.html'">09 - Drawing Substitutions</button>
+        <button class="index-button" onclick="location.href='lesson-10.html'">10 - Importing Images</button>
+        <button class="index-button" onclick="location.href='lesson-11.html'">11 - Pencils, Brushes and Shapes</button>
+        <button class="index-button" onclick="location.href='lesson-12.html'">12 - Nodes, Nodes and more Nodes</button>
+        <button class="index-button" onclick="location.href='lesson-13.html'">13 - Rigging Dynamic Eyes</button>
+        <button class="index-button" onclick="location.href='lesson-14.html'">14 - Lip-Sync</button>
+        <button class="index-button" onclick="location.href='lesson-15.html'">15 - Importing Adobe Photoshop & Illustrator Files</button>
+        <button class="index-button" onclick="location.href='lesson-16.html'">16 - Camera, Creating Multiplanes</button>
+        <button class="index-button" onclick="location.href='lesson-17.html'">17 - Setting up a Cut Out Character for Rigging</button>
+        <button class="index-button" onclick="location.href='lesson-18.html'">18 - Adding Master Pegs</button>
+        <button class="index-button" onclick="location.href='lesson-19.html'">19 - Adding Deformers</button>
+        <button class="index-button" onclick="location.href='lesson-20.html'">20 - Animating a Character</button>
+        <button class="index-button" onclick="location.href='lesson-21.html'">21 - Modifying Colour Palettes</button>
+        <button class="index-button" onclick="location.href='lesson-22.html'">22 - Fly Little Bird</button>
+        <button class="index-button" onclick="location.href='lesson-23.html'">23 - Exporting Templates</button>
+        <button class="index-button" onclick="location.href='lesson-24.html'">24 - Set the Stage</button>
+        <button class="index-button" onclick="location.href='lesson-25.html'">25 - Harmony Certification</button>
       </section>
     </main>
   </div>
