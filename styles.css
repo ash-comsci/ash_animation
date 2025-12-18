@@ -2,7 +2,6 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 
-/* Typography & colors (can be aligned with Broncos royal blue & orange if desired) */
 :root {
   --bg: #0b0d12;
   --card-bg: #121622;
@@ -17,20 +16,34 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
+  /* Stack header and main vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Layout helpers */
-.site-header, .site-footer { display: flex; justify-content: center; }
-main { display: flex; justify-content: center; padding: 1rem; }
+.site-header, .site-footer { 
+  display: flex; 
+  justify-content: center; 
+  width: 100%;
+}
 
-/* Title card at 80% of viewport width */
+main { 
+  display: flex; 
+  flex-direction: column; /* This forces the cards inside main to stack vertically */
+  align-items: center;    /* Keeps them centered horizontally */
+  padding: 1rem; 
+  width: 100%;
+}
+
+/* Title card */
 .title-card {
-  width: 80vw;               /* 80% of screen width */
-  max-width: 1200px;         /* optional max width */
+  width: 80vw;
+  max-width: 1200px;
   background: linear-gradient(135deg, var(--brand), var(--accent));
   color: white;
   padding: 1.25rem 1.5rem;
-  margin: 1.25rem auto;
+  margin: 1.25rem 0; /* Changed margin to work with flex centering */
   border-radius: 14px;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -42,13 +55,13 @@ main { display: flex; justify-content: center; padding: 1rem; }
 .logo { width: 64px; height: 64px; object-fit: contain; }
 .title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
 
-/* Content card also at 80% of viewport width */
+/* Content card */
 .card {
-  width: 80vw;               /* 80% of screen width */
-  max-width: 1200px;         /* optional max width */
+  width: 80vw;
+  max-width: 1200px;
   background: var(--card-bg);
   padding: 1.25rem 1.5rem;
-  margin: 0 auto 2rem;
+  margin-bottom: 2rem; /* Spacing between cards */
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
@@ -73,28 +86,5 @@ main { display: flex; justify-content: center; padding: 1rem; }
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .logo { width: 48px; height: 48px; }
-  .title-card { grid-template-columns: 1fr; text-align: center; }
-}
-
-/* === Force vertical stacking of header (title card) and main (lesson card) === */
-body {
-  /* Ensure no global flex/row layout forces horizontal alignment */
-  display: block;  /* prevents siblings from becoming a flex row */
-}
-
-/* Make sure header and main behave as full-width blocks */
-.site-header,
-mainmain {
-  display: block;
-  width: 100%;
-}
-
-/* Keep both cards centered at 80% of the viewport width */
-.title-card,
-.card {
-  display: block;          /* explicit block-level */
-  width: 80vw;             /* 80% of screen width */
-  max-width: 1200px;       /* optional max width */
-  margin-left: auto;
-  margin-right: auto;
+  .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
 }
