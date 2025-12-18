@@ -83,6 +83,62 @@ main {
   outline: none;
 }
 
+/* 1. Layout Container to hold Main and Sidebar side-by-side */
+.page {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* 2. Adjust Main to take up roughly 80% */
+main.content {
+  flex: 4; /* Takes up 4 parts of space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Overriding previous 100% to allow sidebar room */
+}
+
+/* 3. Style the Sidebar to take up roughly 20% */
+.sidebar.right {
+  flex: 1; /* Takes up 1 part of space (~20%) */
+  position: sticky; /* Keeps it visible as you scroll */
+  top: 1rem;
+}
+
+/* 4. Format Sidebar sections as Cards */
+.widget {
+  background: var(--card-bg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-left: 4px solid var(--brand); /* Gives it a look similar to the title card */
+}
+
+.widget h3 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive: Stack them on mobile */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+  .sidebar.right {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   .logo { width: 48px; height: 48px; }
