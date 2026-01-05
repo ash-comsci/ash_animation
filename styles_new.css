@@ -1,0 +1,284 @@
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  --bg: #0b0d12;
+  --card-bg: #121622;
+  --text: #ffffff;
+  --muted: #c7c9d1;
+  --accent: #ff7a00; /* Broncos orange */
+  --brand: #1d3ef3;  /* Broncos royal blue */
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  /* Stack header and main vertically */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout helpers */
+.site-header, .site-footer { 
+  display: flex; 
+  justify-content: center; 
+  width: 100%;
+}
+
+main { 
+  display: flex; 
+  flex-direction: column; /* This forces the cards inside main to stack vertically */
+  align-items: center;    /* Keeps them centered horizontally */
+  padding: 1rem; 
+  width: 100%;
+}
+
+/* Title card */
+.title-card {
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: white;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0; /* Changed margin to work with flex centering */
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.logo { width: 64px; height: 64px; object-fit: contain; }
+.title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
+
+/* Content card */
+.card {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--card-bg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem; /* Spacing between cards */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.card h2 { margin-top: 0; }
+.card p { color: var(--muted); }
+
+.lesson-list { list-style: none; padding: 0; margin: 0; }
+.lesson-list li { margin: 0.375rem 0; }
+.lesson-list a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+.lesson-list a:hover, .lesson-list a:focus {
+  background: rgba(255, 122, 0, 0.15);
+  outline: none;
+}
+
+/* 1. Layout Container to hold Main and Sidebar side-by-side */
+.page {
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* 2. Adjust Main to take up roughly 80% */
+main.content {
+  flex: 4; /* Takes up 4 parts of space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Overriding previous 100% to allow sidebar room */
+}
+
+/* 3. Style the Sidebar to take up roughly 20% */
+.sidebar.right {
+  flex: 1; /* Takes up 1 part of space (~30%) */
+  position: sticky; /* Keeps it visible as you scroll */
+  top: 1rem;
+}
+
+/* 4. Format Sidebar sections as Cards */
+.widget {
+  background: var(--card-bg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border-left: 4px solid var(--brand); /* Gives it a look similar to the title card */
+}
+
+.widget h3 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive: Stack them on mobile */
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+  }
+  .sidebar.right {
+    width: 80vw;
+    margin: 0 auto;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .logo { width: 48px; height: 48px; }
+  .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+}
+
+
+
+/* ------------------------------
+   Video: 75% width + responsive
+-------------------------------*/
+.video-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centers the video horizontally inside cards */
+}
+
+.video-wrap video,
+.video-wrap iframe { /* supports <video> or embedded players */
+  width: 75%;
+  max-width: 1200px; /* keeps it from growing too large on very wide screens */
+  height: auto; /* preserves aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+
+@media (max-width: 700px) {
+  .video-wrap video,
+  .video-wrap iframe {
+    width: 95%; /* breathe on small screens while staying centered */
+  }
+}
+
+/* ------------------------------
+   "Old School TV" Frames
+   Use with <div class="tv-frame tv-classic"> or tv-wood, tv-rounded
+-------------------------------*/
+.tv-frame {
+  position: relative;
+  display: inline-block; /* lets it size to content */
+  padding: 2.5rem; /* frame thickness */
+  background: #1a1a1a; /* base bezel color */
+  border-radius: 24px; /* overall TV outer shape */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 2px 8px rgba(255,255,255,0.05);
+}
+
+.tv-frame .screen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000; /* behind the video */
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* The actual video inside a screen */
+.tv-frame .screen video,
+.tv-frame .screen iframe {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto; /* center in screen */
+  border-radius: 6px;
+}
+
+/* Scanline overlay for retro effect */
+.tv-frame .screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 3px);
+  background-size: 100% 3px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Glass glare effect */
+.tv-frame .screen::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+  transform: skewY(-3deg);
+  pointer-events: none;
+}
+
+/* Knobs and speaker grill */
+.tv-frame .controls {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.tv-frame .knob {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #bbb, #666);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.25), 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.tv-frame .grill {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 30%;
+  height: 48px;
+  background-image: repeating-linear-gradient(90deg, rgba(0,0,0,0.6) 0 2px, rgba(255,255,255,0.08) 2px 4px);
+  border-radius: 8px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Theme variants */
+.tv-classic {
+  background: linear-gradient(135deg, #3a3a3a, #1f1f1f);
+  border: 6px solid #0e0e0e;
+}
+
+.tv-wood {
+  background: linear-gradient(135deg, #6b3f1e, #4a2b13);
+  border: 8px solid #2c1a0b;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.tv-rounded {
+  border-radius: 36px;
+}
+
+/* Align within your existing card layout */
+.card .video-wrap, .card .tv-frame { width: 100%; display: flex; justify-content: center; }
+.card .tv-frame .screen { width: 85%; margin: 0 auto; }
+
+/* Optional: wobble animation for fun */
+@keyframes subtle-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(0.2deg); }
+  50% { transform: rotate(-0.2deg); }
+  75% { transform: rotate(0.1deg); }
+}
+.wobble { animation: subtle-wobble 6s ease-in-out infinite; }
