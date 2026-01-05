@@ -12,20 +12,42 @@
 <main class="content" role="main">
 <section class="title-card"><img src="images/ash_small.png"><h1>Lesson 1 The World of Animation</h1></section>
  <!-- Card 1:  Video -->
-<section class="video-card">
-    <div class="video-card tv-retro">
-    <div class="tv-bezel">
-      <div class="tv-inner">
-        <div class="video-frame">
-          <iframe src="https://drive.google.com/file/d/15EAlzJCY2oP_Y0TtXc6V8xburNymrzd2/preview"></iframe>
-        </div>
-      </div>
-      <div class="tv-controls">
-        <div class="tv-dial tv-dial-large"></div>
-        <div class="tv-dial tv-dial-small"></div>
-        <div class="tv-grille"></div>
-      </div>
+
+<!-- History of Animation (Plain 75% width) -->
+<section class="card">
+  <h2>History of Animation (Video)</h2>
+  <div class="video-wrap">
+    <video controls poster="images/history-poster.jpg">
+      <source src="media/history-of-animation.mp4" type="video/mp4upport the video tag.
+    </video>
+  </div>
+  <p class="muted">This video is centered and sized to 75% width on any screen.</p>
+</section>
+
+<!-- Retro TV Frame (with knobs and grill) -->
+<section class="card">
+  <h2>Animation Techniques (Retro TV)</h2>
+
+  <!-- Choose one of: tv-classic | tv-wood | tv-rounded (can be combined) -->
+  <div class="tv-frame tv-wood wobble">
+    <!-- speaker grill (optional) -->
+    <div class="grill" aria-hidden="true"></div>
+
+    <!-- control knobs (optional) -->
+    <div class="controls" aria-hidden="true">
+      <div class="knob" title="Channel"></div>
+      <div class="knob" title="Volume"></div>
     </div>
+
+    <!-- the screen area + video -->
+    <div class="screen">
+      <video controls poster="images/techniques-poster.jpg">
+        <source src="media/animation-techniques.mp4" type="video/mpt support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <p class="muted">Try <code>tv-classic</code> or <code>tv-rounded</code> for different vibes.</p>
 </section>
   <section class="card">
   <h3>About this Lesson:</h3>
