@@ -144,3 +144,123 @@ main.content {
   .logo { width: 48px; height: 48px; }
   .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
 }
+/* --- Retro TV Video Section --- */
+
+.video-card {
+  width: 75%; /* Set to 75% width on all screens */
+  margin: 2rem auto; /* Centers the TV horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tv-retro {
+  background: #4a2c2a; /* Wood-grain brown */
+  padding: 20px;
+  border-radius: 25px;
+  border: 8px solid #361d1b;
+  box-shadow: 
+    inset 0 0 15px rgba(0,0,0,0.5),
+    0 10px 30px rgba(0,0,0,0.5);
+  width: 100%; /* Spans the full 75% of its parent */
+  position: relative;
+}
+
+/* The dark frame around the screen */
+.tv-bezel {
+  background: #1a1a1a;
+  padding: 25px 35px 25px 25px; /* Extra padding on right for controls */
+  border-radius: 15px;
+  display: flex;
+  gap: 20px;
+  border: 4px solid #111;
+}
+
+/* The actual screen area */
+.tv-inner {
+  flex: 4; /* Takes up most of the space */
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 10px solid #222;
+  box-shadow: inset 0 0 50px rgba(0,0,0,1);
+  aspect-ratio: 16 / 9; /* Keeps video proportional */
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: contrast(1.1) brightness(1.1); /* Slight vintage TV pop */
+}
+
+/* Control Panel with Knobs */
+.tv-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #111;
+  max-width: 100px;
+}
+
+.tv-dial {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(145deg, #555, #222);
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: relative;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.4);
+}
+
+/* The little pointer line on the knob */
+.tv-dial::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 3px;
+  height: 15px;
+  background: #ff7a00; /* Using your accent color */
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.tv-dial-small {
+  width: 25px;
+  height: 25px;
+}
+
+/* Speaker Grille effect */
+.tv-grille {
+  width: 50px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    0deg,
+    #111,
+    #111 2px,
+    #222 4px
+  );
+  border-radius: 4px;
+}
+
+/* Mobile adjustments: make the TV take up more space on tiny screens */
+@media (max-width: 600px) {
+  .video-card {
+    width: 95%; /* 75% is very small on phones, bumping slightly */
+  }
+  .tv-bezel {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .tv-controls {
+    flex-direction: row;
+    max-width: 100%;
+    height: 60px;
+  }
+}
