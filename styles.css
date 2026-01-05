@@ -144,123 +144,119 @@ main.content {
   .logo { width: 48px; height: 48px; }
   .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
 }
-/* --- Retro TV Video Section --- */
-
+/* --- Retro TV Container --- */
 .video-card {
-  width: 75%; /* Set to 75% width on all screens */
+  width: 75%; /* Forces the video card to 75% width */
   margin: 2rem auto; /* Centers the TV horizontally */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .tv-retro {
-  background: #4a2c2a; /* Wood-grain brown */
-  padding: 20px;
-  border-radius: 25px;
-  border: 8px solid #361d1b;
-  box-shadow: 
-    inset 0 0 15px rgba(0,0,0,0.5),
-    0 10px 30px rgba(0,0,0,0.5);
-  width: 100%; /* Spans the full 75% of its parent */
-  position: relative;
+  width: 100%;
+  background: var(--brand); /* Broncos Royal Blue frame */
+  padding: 18px;
+  border-radius: 24px;
+  border: 8px solid var(--accent); /* Broncos Orange trim */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  position: relative; /* Necessary for the power light positioning */
 }
 
-/* The dark frame around the screen */
+/* TV Bezel and Inner Screen */
 .tv-bezel {
-  background: #1a1a1a;
-  padding: 25px 35px 25px 25px; /* Extra padding on right for controls */
-  border-radius: 15px;
+  background: #111;
+  padding: 15px;
+  border-radius: 14px;
   display: flex;
-  gap: 20px;
-  border: 4px solid #111;
+  gap: 15px;
+  align-items: stretch;
 }
 
-/* The actual screen area */
 .tv-inner {
-  flex: 4; /* Takes up most of the space */
+  flex: 9; /* Video takes up 90% of the internal space */
   background: #000;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  border: 10px solid #222;
-  box-shadow: inset 0 0 50px rgba(0,0,0,1);
-  aspect-ratio: 16 / 9; /* Keeps video proportional */
+  border: 4px solid #222;
+  aspect-ratio: 16 / 9;
 }
 
 .video-frame iframe {
   width: 100%;
   height: 100%;
   border: none;
-  filter: contrast(1.1) brightness(1.1); /* Slight vintage TV pop */
 }
 
-/* Control Panel with Knobs */
+/* TV Controls (Dials & Grille) */
 .tv-controls {
-  flex: 1;
+  flex: 1; /* Slim control panel */
+  min-width: 70px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: #2a2a2a;
+  background: #1a1a1a;
   border-radius: 8px;
-  padding: 10px;
-  border: 2px solid #111;
-  max-width: 100px;
+  padding: 10px 5px;
 }
 
 .tv-dial {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(145deg, #555, #222);
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #444, #111);
+  border: 2px solid var(--accent); /* Orange dial highlight */
   border-radius: 50%;
-  border: 2px solid #000;
   position: relative;
-  box-shadow: 0 4px 5px rgba(0,0,0,0.4);
 }
 
-/* The little pointer line on the knob */
 .tv-dial::after {
   content: '';
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 50%;
-  width: 3px;
-  height: 15px;
-  background: #ff7a00; /* Using your accent color */
+  width: 2px;
+  height: 10px;
+  background: var(--accent); /* Orange dial pointer */
   transform: translateX(-50%);
+}
+
+.tv-grille {
+  width: 80%;
+  height: 50px;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--brand), /* Blue grille lines */
+    var(--brand) 2px,
+    #000 4px
+  );
   border-radius: 2px;
 }
 
-.tv-dial-small {
-  width: 25px;
-  height: 25px;
+/* Pulsing Power Light */
+.tv-power-light {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent); /* */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  right: 30px;
+  box-shadow: 0 0 5px var(--accent); /* */
+  animation: power-pulse 2s infinite ease-in-out;
 }
 
-/* Speaker Grille effect */
-.tv-grille {
-  width: 50px;
-  height: 60px;
-  background: repeating-linear-gradient(
-    0deg,
-    #111,
-    #111 2px,
-    #222 4px
-  );
-  border-radius: 4px;
+@keyframes power-pulse {
+  0% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
+  50% { opacity: 1; box-shadow: 0 0 12px var(--accent); }
+  100% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
 }
 
-/* Mobile adjustments: make the TV take up more space on tiny screens */
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .video-card { width: 90%; } /* Slightly wider on tablets */
+}
+
 @media (max-width: 600px) {
-  .video-card {
-    width: 95%; /* 75% is very small on phones, bumping slightly */
-  }
-  .tv-bezel {
-    flex-direction: column;
-    padding: 15px;
-  }
-  .tv-controls {
-    flex-direction: row;
-    max-width: 100%;
-    height: 60px;
-  }
+  .tv-bezel { flex-direction: column; }
+  .tv-controls { flex-direction: row; height: 60px; width: 100%; }
 }
