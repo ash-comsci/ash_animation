@@ -180,13 +180,17 @@ main.content {
   border: 4px solid #222;
   aspect-ratio: 16 / 9;
 }
+.video-frame {
+  width: 100%;
+  height: 100%;
+}
 
 .video-frame iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block; /* Removes any tiny gaps at the bottom */
 }
-
 /* TV Controls (Dials & Grille) */
 .tv-controls {
   flex: 1; /* Slim control panel */
