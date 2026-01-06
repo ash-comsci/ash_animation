@@ -1,326 +1,152 @@
 /* Base reset */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; min-height: 100vh; }
 
 :root {
-  --bg: #0b0d12;
-  --card-bg: #121622;
-  --text: #ffffff;
-  --muted: #c7c9d1;
-  --accent: #ff7a00; /* Broncos orange */
-  --brand: #1d3ef3;  /* Broncos royal blue */
+  --bg-white: #ffffff;
+  --bg-silver: #c0c0c0;
+  --card-bg: #f8f9fa; /* Lighter cards to match new theme */
+  --text: #121622;    /* Dark text for readability */
+  --muted: #4a4d55;
+  --accent: #ff7a00; 
+  --brand: #1d3ef3;  
 }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: var(--bg);
+  font-family: system-ui, -apple-system, sans-serif;
   color: var(--text);
   line-height: 1.5;
-  /* Stack header and main vertically */
   display: flex;
   flex-direction: column;
+  
+  /* --- Funky Swirl Background --- */
+  background: var(--bg-white);
+  background-image: 
+    radial-gradient(circle at 20% 30%, var(--bg-silver) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, var(--bg-white) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, var(--bg-silver) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, var(--bg-white) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, var(--bg-silver) 0%, transparent 40%);
+  background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: swirlMovement 12s ease-in-out infinite alternate;
 }
 
-/* Layout helpers */
-.site-header, .site-footer { 
-  display: flex; 
-  justify-content: center; 
-  width: 100%;
+@keyframes swirlMovement {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
 }
 
-main { 
-  display: flex; 
-  flex-direction: column; /* This forces the cards inside main to stack vertically */
-  align-items: center;    /* Keeps them centered horizontally */
-  padding: 1rem; 
-  width: 100%;
+/* Layout */
+.page {
+  display: flex;
+  flex-direction: row;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+main.content {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title card */
 .title-card {
   width: 100%;
-  max-width: 1200px;
   background: linear-gradient(135deg, var(--brand), var(--accent));
   color: white;
-  padding: 1.25rem 1.5rem;
-  margin: 1.25rem 0; /* Changed margin to work with flex centering */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 14px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
+  display: flex;
+  gap: 1.5rem;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .logo { width: 64px; height: 64px; object-fit: contain; }
-.title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
 
-/* Content card */
+/* Cards */
 .card {
   width: 100%;
-  max-width: 1200px;
-  background: var(--card-bg);
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 2rem; /* Spacing between cards */
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.card h2 { margin-top: 0; }
 .card p { color: var(--muted); }
 
-.lesson-list { list-style: none; padding: 0; margin: 0; }
-.lesson-list li { margin: 0.375rem 0; }
-.lesson-list a {
-  color: var(--text);
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  display: inline-block;
-}
-.lesson-list a:hover, .lesson-list a:focus {
-  background: rgba(255, 122, 0, 0.15);
-  outline: none;
-}
-
-/* 1. Layout Container to hold Main and Sidebar side-by-side */
-.page {
-  display: flex;
-  flex-direction: row; /* Horizontal layout */
-  align-items: flex-start;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-/* 2. Adjust Main to take up roughly 80% */
-main.content {
-  flex: 4; /* Takes up 4 parts of space */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: auto; /* Overriding previous 100% to allow sidebar room */
-}
-
-/* 3. Style the Sidebar to take up roughly 20% */
+/* Sidebar & Widgets */
 .sidebar.right {
-  flex: 1; /* Takes up 1 part of space (~30%) */
-  position: sticky; /* Keeps it visible as you scroll */
+  flex: 1;
+  position: sticky;
   top: 1rem;
+  min-width: 250px;
 }
 
-/* 4. Format Sidebar sections as Cards */
 .widget {
-  background: var(--card-bg);
+  background: white;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  border-left: 4px solid var(--brand); /* Gives it a look similar to the title card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--brand);
 }
 
 .widget h3 {
   margin-top: 0;
-  color: var(--accent);
-  font-size: 1.1rem;
+  color: var(--brand);
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-/* Responsive: Stack them on mobile */
-@media (max-width: 900px) {
-  .page {
-    flex-direction: column;
-  }
-  .sidebar.right {
-    width: 80vw;
-    margin: 0 auto;
-  }
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .logo { width: 48px; height: 48px; }
-  .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
-}
-/* --- Retro TV Container --- */
-.video-card {
-  width: 75%; /* Forces the video card to 75% width */
-  margin: 2rem auto; /* Centers the TV horizontally */
-  display: flex;
-  justify-content: center;
-}
-
-.tv-retro {
-  width: 100%;
-  background: var(--brand); /* Broncos Royal Blue frame */
-  padding: 18px;
-  border-radius: 24px;
-  border: 8px solid var(--accent); /* Broncos Orange trim */
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-  position: relative; /* Necessary for the power light positioning */
-}
-
-/* TV Bezel and Inner Screen */
-.tv-bezel {
-  background: #111;
-  padding: 15px;
-  border-radius: 14px;
-  display: flex;
-  gap: 15px;
-  align-items: stretch;
-}
-
-.tv-inner {
-  flex: 9; /* Video takes up 90% of the internal space */
-  background: #000;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 4px solid #222;
-  aspect-ratio: 16 / 9;
-}
-.video-frame {
-  width: 100%;
-  height: 100%;
-}
-
-.video-frame iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block; /* Removes any tiny gaps at the bottom */
-}
-/* TV Controls (Dials & Grille) */
-.tv-controls {
-  flex: 1; /* Slim control panel */
-  min-width: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: #1a1a1a;
-  border-radius: 8px;
-  padding: 10px 5px;
-}
-
-.tv-dial {
-  width: 35px;
-  height: 35px;
-  background: radial-gradient(circle, #444, #111);
-  border: 2px solid var(--accent); /* Orange dial highlight */
-  border-radius: 50%;
-  position: relative;
-}
-
-.tv-dial::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  width: 2px;
-  height: 10px;
-  background: var(--accent); /* Orange dial pointer */
-  transform: translateX(-50%);
-}
-
-.tv-grille {
-  width: 80%;
-  height: 50px;
-  background: repeating-linear-gradient(
-    0deg,
-    var(--brand), /* Blue grille lines */
-    var(--brand) 2px,
-    #000 4px
-  );
-  border-radius: 2px;
-}
-
-/* Pulsing Power Light */
-.tv-power-light {
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent); /* */
-  border-radius: 50%;
-  position: absolute;
-  bottom: 12px;
-  right: 30px;
-  box-shadow: 0 0 5px var(--accent); /* */
-  animation: power-pulse 2s infinite ease-in-out;
-}
-
-@keyframes power-pulse {
-  0% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
-  50% { opacity: 1; box-shadow: 0 0 12px var(--accent); }
-  100% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
-  .video-card { width: 90%; } /* Slightly wider on tablets */
-}
-
-@media (max-width: 600px) {
-  .tv-bezel { flex-direction: column; }
-  .tv-controls { flex-direction: row; height: 60px; width: 100%; }
-}
-
-
-
-/* --------------------------------------
-   Sidebar starts below header/banner
-   (tweak --banner-height to match your title-card)
----------------------------------------*/
-:root { --banner-height: 120px; }
-
-/* Default flow places sidebar below header; sticky keeps it visible while scrolling */
-.sidebar.right {
-  margin-top: 1rem;                /* visual gap below banner */
-  position: sticky;
-  top: calc(var(--banner-height) + 1rem); /* start below header */
-}
-
-/* If the banner gets taller on small screens, bump the offset */
-@media (max-width: 600px) {
-  :root { --banner-height: 150px; }
-}
-
-.nav-img {
-  width: 40%;
-  height: auto; /* keeps aspect ratio */
-  display: block; /* optional: removes inline spacing */
-}
-.home-img {
-  width: 60%;
-  height: auto; /* keeps aspect ratio */
-  display: block; /* optional: removes inline spacing */
-}
-
+/* --- Navigation Grid Fix --- */
 .lesson-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;  /* two equal columns */
-  grid-auto-rows: auto;
-  gap: 0.75rem;                    /* space between items */
-  align-items: center;             /* vertically align images within their cells */
-  justify-items: center;           /* center items horizontally in their cells */
+  grid-template-columns: 1fr 1fr; /* Two columns for Prev/Next */
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
 }
 
-/* Place items explicitly (optional, but clear) */
-.lesson-grid > a:nth-child(1) { grid-column: 1; }   /* Prev */
-.lesson-grid > a:nth-child(2) { grid-column: 2; }   /* Next */
-
-/* Home spans both columns on the second row */
-.lesson-grid .home-link {
-  grid-column: 1 / -1;             /* span all columns */
-  margin-top: 0.25rem;             /* a bit of space above, tweak as needed */
+.home-link {
+  grid-column: 1 / span 2; /* Forces home to sit centered below the two buttons */
+  margin-top: 10px;
 }
 
-.nav-img,
-.home-img {
-  display: block;                  /* avoid inline whitespace quirks */
-  height: 32px;                    /* keep consistent icon height */
+.nav-img, .home-img {
+  height: 35px;
   width: auto;
+  transition: transform 0.2s;
 }
 
-/* Optional: slightly larger home icon */
-.home-img { height: 36px; }
+.nav-img:hover, .home-img:hover {
+  transform: scale(1.1);
+}
+
+/* TV Section (Remains same but adjusted colors) */
+.video-card { width: 100%; margin-bottom: 2rem; }
+.tv-retro {
+  background: var(--brand);
+  padding: 15px;
+  border-radius: 20px;
+  border: 6px solid #222;
+}
+.tv-bezel { background: #111; padding: 10px; border-radius: 10px; display: flex; gap: 10px; }
+.tv-inner { flex: 9; aspect-ratio: 16/9; background: #000; overflow: hidden; }
+.video-frame iframe { width: 100%; height: 100%; border: none; }
+.tv-controls { flex: 1; display: flex; flex-direction: column; justify-content: space-around; background: #1a1a1a; padding: 10px; border-radius: 5px; }
+.tv-dial { width: 30px; height: 30px; background: #333; border-radius: 50%; border: 2px solid var(--accent); }
+
+/* Mobile */
+@media (max-width: 900px) {
+  .page { flex-direction: column; }
+  .sidebar.right { position: static; width: 100%; }
+}
