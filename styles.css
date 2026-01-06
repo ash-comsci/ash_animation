@@ -295,3 +295,32 @@ main.content {
   height: auto; /* keeps aspect ratio */
   display: block; /* optional: removes inline spacing */
 }
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* two equal columns */
+  grid-auto-rows: auto;
+  gap: 0.75rem;                    /* space between items */
+  align-items: center;             /* vertically align images within their cells */
+  justify-items: center;           /* center items horizontally in their cells */
+}
+
+/* Place items explicitly (optional, but clear) */
+.lesson-grid > a:nth-child(1) { grid-column: 1; }   /* Prev */
+.lesson-grid > a:nth-child(2) { grid-column: 2; }   /* Next */
+
+/* Home spans both columns on the second row */
+.lesson-grid .home-link {
+  grid-column: 1 / -1;             /* span all columns */
+  margin-top: 0.25rem;             /* a bit of space above, tweak as needed */
+}
+
+.nav-img,
+.home-img {
+  display: block;                  /* avoid inline whitespace quirks */
+  height: 32px;                    /* keep consistent icon height */
+  width: auto;
+}
+
+/* Optional: slightly larger home icon */
+.home-img { height: 36px; }
