@@ -264,3 +264,32 @@ main.content {
   .tv-bezel { flex-direction: column; }
   .tv-controls { flex-direction: row; height: 60px; width: 100%; }
 }
+
+/* --------------------------------------
+   Global Background: white → silver/grey
+---------------------------------------*/
+body {
+  /* Soft multi-stop gradient with subtle texture */
+  background: linear-gradient(180deg, #ffffff 0%, #f3f4f7 40%, #e6e9ef 100%);
+  background-attachment: fixed; /* pleasant parallax feel */
+}
+
+/* --------------------------------------
+   Full-width Title Card Banner at top
+---------------------------------------*/
+.site-header { width: 100%; }
+.title-card {
+  width: 100%;
+  max-width: none;            /* span full viewport */
+  border-radius: 0;           /* banner look */
+  margin: 0;                  /* flush to top */
+  padding: 1.75rem 2rem;
+  /* keep your brand gradient */
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+}
+
+/* Ensure content sits below nicely */
+.page { padding-top: 1rem; }
+
+/* Optional: elevate the banner slightly */
+.title-card { box-shadow: 0 6px 12px rgba(0,0,0,0.18); }
