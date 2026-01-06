@@ -4,32 +4,26 @@ html, body { margin: 0; padding: 0; min-height: 100vh; }
 
 :root {
   --bg-white: #ffffff;
-  --bg-silver: #c0c0c0;
-  --card-bg: #f8f9fa; /* Lighter cards to match new theme */
-  --text: #121622;    /* Dark text for readability */
-  --muted: #4a4d55;
-  --accent: #ff7a00; 
-  --brand: #1d3ef3;  
+  --bg-silver: #e8e8e8;
+  --card-bg: #ffffff;
+  --text: #121622;
+  --accent: #ff7a00; /* Broncos orange */
+  --brand: #1d3ef3;  /* Broncos royal blue */
 }
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
   color: var(--text);
   line-height: 1.5;
-  display: flex;
-  flex-direction: column;
-  
-  /* --- Funky Swirl Background --- */
+  /* Swirl Background Animation */
   background: var(--bg-white);
   background-image: 
-    radial-gradient(circle at 20% 30%, var(--bg-silver) 0%, transparent 40%),
-    radial-gradient(circle at 80% 20%, var(--bg-white) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, var(--bg-silver) 0%, transparent 60%),
-    radial-gradient(circle at 10% 80%, var(--bg-white) 0%, transparent 40%),
-    radial-gradient(circle at 90% 90%, var(--bg-silver) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, var(--bg-silver) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, var(--bg-silver) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, var(--bg-white) 0%, transparent 60%);
   background-attachment: fixed;
   background-size: 200% 200%;
-  animation: swirlMovement 12s ease-in-out infinite alternate;
+  animation: swirlMovement 20s ease-in-out infinite alternate;
 }
 
 @keyframes swirlMovement {
@@ -37,116 +31,135 @@ body {
   100% { background-position: 100% 100%; }
 }
 
-/* Layout */
 .page {
   display: flex;
-  flex-direction: row;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
 }
 
 main.content {
-  flex: 4;
+  flex: 3;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-/* Title card */
-.title-card {
-  width: 100%;
-  background: linear-gradient(135deg, var(--brand), var(--accent));
-  color: white;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 14px;
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.logo { width: 64px; height: 64px; object-fit: contain; }
-
-/* Cards */
-.card {
-  width: 100%;
-  background: white;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.card p { color: var(--muted); }
-
-/* Sidebar & Widgets */
+/* Sidebar Sticky Fix */
 .sidebar.right {
   flex: 1;
+  min-width: 260px;
+}
+
+.sticky-container {
   position: sticky;
-  top: 1rem;
-  min-width: 250px;
+  top: 2rem; /* Sidebar stays 2rem from the top when scrolling */
 }
 
-.widget {
-  background: white;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+/* TV Container - Exact Pixel Dimensions */
+.video-card {
+  width: 811px;
+  height: 456px;
+  margin: 0 auto 2rem auto;
+}
+
+.tv-retro {
+  width: 100%;
+  height: 100%;
+  background: var(--brand);
+  padding: 12px;
+  border-radius: 20px;
+  border: 6px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-bezel {
+  background: #111;
+  padding: 10px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-left: 5px solid var(--brand);
+  display: flex;
+  gap: 10px;
+  flex: 1; /* Fills the height of the tv-retro */
 }
 
-.widget h3 {
-  margin-top: 0;
-  color: var(--brand);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.tv-inner {
+  flex: 8;
+  background: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
 }
 
-/* --- Navigation Grid Fix --- */
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.tv-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 5px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+.tv-dial {
+  width: 25px;
+  height: 25px;
+  background: #333;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+}
+
+.tv-grille {
+  height: 40px;
+  background: repeating-linear-gradient(0deg, #333 0 2px, #000 2px 4px);
+}
+
+/* Nav Grid - Prev and Next on one line */
 .lesson-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for Prev/Next */
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  align-items: center;
   justify-items: center;
+  align-items: center;
 }
 
 .home-link {
-  grid-column: 1 / span 2; /* Forces home to sit centered below the two buttons */
+  grid-column: 1 / span 2;
   margin-top: 10px;
 }
 
-.nav-img, .home-img {
-  height: 35px;
-  width: auto;
-  transition: transform 0.2s;
+.nav-img { height: 32px; }
+.home-img { height: 38px; }
+
+/* Widgets and Cards */
+.widget, .card {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.nav-img:hover, .home-img:hover {
-  transform: scale(1.1);
+.widget { border-left: 6px solid var(--brand); }
+.widget h3 { margin: 0 0 1rem 0; color: var(--brand); font-size: 0.9rem; text-transform: uppercase; }
+
+.title-card {
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* TV Section (Remains same but adjusted colors) */
-.video-card { width: 100%; margin-bottom: 2rem; }
-.tv-retro {
-  background: var(--brand);
-  padding: 15px;
-  border-radius: 20px;
-  border: 6px solid #222;
-}
-.tv-bezel { background: #111; padding: 10px; border-radius: 10px; display: flex; gap: 10px; }
-.tv-inner { flex: 9; aspect-ratio: 4/3; background: #000; overflow: hidden; }
-.video-frame iframe { width: 100%; height: 100%; border: none; }
-.tv-controls { flex: 1; display: flex; flex-direction: column; justify-content: space-around; background: #1a1a1a; padding: 10px; border-radius: 5px; }
-.tv-dial { width: 30px; height: 30px; background: #333; border-radius: 50%; border: 2px solid var(--accent); }
-
-/* Mobile */
-@media (max-width: 900px) {
-  .page { flex-direction: column; }
-  .sidebar.right { position: static; width: 100%; }
-}
+.logo { width: 50px; }
