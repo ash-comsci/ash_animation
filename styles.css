@@ -284,3 +284,9 @@ main.content {
 @media (max-width: 600px) {
   :root { --banner-height: 150px; }
 }
+
+.nav-img {
+  width: 60%;
+  height: auto; /* keeps aspect ratio */
+  display: block; /* optional: removes inline spacing */
+}
