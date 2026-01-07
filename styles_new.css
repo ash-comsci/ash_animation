@@ -456,7 +456,6 @@ hover {
 /* --- Quiz Styles --- */
 #quiz-container {
   max-width: 800px;
-  max-height: 500px;
   margin: 0 auto;
 }
 /* --- Single Question Mode Styles --- */
