@@ -38,19 +38,28 @@ main {
 
 /* Title card */
 .title-card {
-  width: 100%;
-  max-width: 1200px;
+/* Layout & Positioning */
+  position: sticky;       /* Makes it stick */
+  top: 0;                 /* Sticks to the very top */
+  z-index: 1000;          /* Ensures it floats ABOVE the scrolling content */
+  
+  /* Size & Shape */
+  width: 100%;            /* Spans the whole page width */
+  max-width: 100%;        /* Removes the card width limit */
+  margin: 0;              /* Removes the floating gaps */
+  border-radius: 14;       /* Removes rounded corners for a "header" look */
+  
+  /* Keep your existing styling */
   background: linear-gradient(135deg, var(--brand), var(--accent));
   color: white;
-  padding: 1.25rem 1.5rem;
-  margin: 1.25rem 0; /* Changed margin to work with flex centering */
-  border-radius: 14px;
+  padding: 1rem 2rem;     /* Adjusted padding slightly */
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35); /* Reduced shadow slightly for a header */
 }
+
 
 .logo { width: 64px; height: 64px; object-fit: contain; }
 .title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
