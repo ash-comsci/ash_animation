@@ -11,7 +11,7 @@ html, body { margin: 0; padding: 0; }
   padding: 2rem 1rem;   /* Adds some breathing room below the sticky header */
 }
 :root {
-  --banner-height: 110px;
+  --banner-height: 140px;
   --bg: #0b0d12;
   --card-bg: #121622;
   --text: #ffffff;
@@ -50,14 +50,14 @@ main {
 .title-card {
 /* Layout & Positioning */
   position: sticky;       /* Makes it stick */
-  top: 0;                 /* Sticks to the very top */
+  top: 1rem;                 /* Sticks to the very top */
   z-index: 1000;          /* Ensures it floats ABOVE the scrolling content */
   
   /* Size & Shape */
-  width: 100%;            /* Spans the whole page width */
+  width: 90%;            /* Spans the whole page width */
   max-width: 100%;        /* Removes the card width limit */
   margin: 0;              /* Removes the floating gaps */
-  border-radius: 14;       /* Removes rounded corners for a "header" look */
+  border-radius: 18;       /* Removes rounded corners for a "header" look */
   
   /* Keep your existing styling */
   background: linear-gradient(135deg, var(--brand), var(--accent));
