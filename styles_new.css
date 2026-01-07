@@ -350,17 +350,29 @@ body {
   min-height: 100vh; /* Ensures the gradient covers the whole screen */
 }
 /* --- Slideshow Styles --- */
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
+/* 1. Set a fixed height for the slide container so the page doesn't jump */
 .mySlides {
   display: none;
+  height: 400px; /* Adjust this number to match your preferred height */
+  background-color: #000; /* Black background fills the empty space around the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+/* 2. Style the images to fit perfectly inside that container */
+.mySlides img {
+  width: 100%;       /* It can take up full width if needed */
+  height: 100%;      /* It forces the image to stay within the 400px height */
+  object-fit: contain; /* CRITICAL: This prevents stretching! */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
