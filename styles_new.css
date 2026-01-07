@@ -107,7 +107,7 @@ main.content {
 .sidebar.right {
   flex: 1; /* Takes up 1 part of space (~30%) */
   position: sticky; /* Keeps it visible as you scroll */
-  top: 1rem;
+  top: 0rem;
 }
 
 /* 4. Format Sidebar sections as Cards */
