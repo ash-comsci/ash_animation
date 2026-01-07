@@ -1,8 +1,17 @@
 /* Base reset */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-
+.page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;       /* Centers the content below the header */
+  gap: 1rem;
+  padding: 2rem 1rem;   /* Adds some breathing room below the sticky header */
+}
 :root {
+  --banner-height: 110px;
   --bg: #0b0d12;
   --card-bg: #121622;
   --text: #ffffff;
