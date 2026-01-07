@@ -38,7 +38,7 @@ function showSlides(n) {
 }
 // QUIZ FUNCTIONS
 
-function checkAnswers() 
+function checkAnswers() {
 let currentQuestionIndex = 0;
 let score = 0;
 let isQuestionAnswered = false; // Tracks if we are ready to move to next
@@ -120,4 +120,5 @@ function showResults(total) {
   if(score === total) {
     scoreText.innerHTML += " <br>🎉 Perfect score!";
   }
+}
 }
