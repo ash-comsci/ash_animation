@@ -395,10 +395,15 @@ body {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+hover {
+  background: #152db5;
+  transform: scale(1.05);
+}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: var(--accent); /* Uses your Broncos Orange */
+  background: #152db5;
+  transform: scale(1.05);
+ /* background-color: var(--accent); /* Uses your Broncos Orange */
 }
 
 /* Caption text */
@@ -453,7 +458,41 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+/* --- Single Question Mode Styles --- */
+.question-block {
+  display: none; /* Hidden by default */
+  animation: fadeEnter 0.5s;
+}
 
+.question-block.active-question {
+  display: block; /* Only show if it has this class */
+}
+
+@keyframes fadeEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Update the action button to look distinct */
+#quiz-action-btn {
+  background: var(--brand);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: block;
+  margin: 2rem auto 0; /* Center it */
+  min-width: 200px;
+}
+
+#quiz-action-btn:hover {
+  background: #152db5;
+  transform: scale(1.05);
+}
 .quiz-header {
   display: flex;
   align-items: center;
