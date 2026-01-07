@@ -71,7 +71,7 @@ main {
 }
 
 
-.logo { width: 64px; height: 64px; object-fit: contain; }
+.logo { width: 104px; height: 104px; object-fit: contain; }
 .title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
 
 /* Content card */
