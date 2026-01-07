@@ -38,43 +38,90 @@ function showSlides(n) {
 }
 // QUIZ FUNCTIONS
 
-function checkAnswers() {
-  // 1. Define the correct answers here
-  // Format: 'questionID': 'correctValue'
-  const answers = {
-    q1: "false", // Example: Auto-save is usually in Preferences > General, not Auto-Save tab
-    q2: "true"
-  };
+function checkAnswers() 
+let currentQuestionIndex = 0;
+let score = 0;
+let isQuestionAnswered = false; // Tracks if we are ready to move to next
 
-  let score = 0;
-  let totalQuestions = Object.keys(answers).length;
+function handleQuizAction() {
+  const questions = document.querySelectorAll('.question-block');
+  const actionBtn = document.getElementById('quiz-action-btn');
+  const currentQ = questions[currentQuestionIndex];
+  
+  // 1. If we haven't answered yet, we are in "CHECK" mode
+  if (!isQuestionAnswered) {
+    // Find selected input in the current block
+    const selectedOption = currentQ.querySelector('input:checked');
+    const feedbackDiv = currentQ.querySelector('.feedback');
+    const correctValue = currentQ.getAttribute('data-correct'); // Read truth from HTML
 
-  // 2. Loop through each question to check answers
-  for (let question in answers) {
-    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-    const feedbackDiv = document.getElementById(`feedback-${question}`);
-    
-    // Reset display
-    feedbackDiv.style.display = "block";
-    feedbackDiv.className = "feedback"; // clear previous color classes
-
-    if (selectedOption) {
-      if (selectedOption.value === answers[question]) {
-        // Correct Answer
-        score++;
-        feedbackDiv.innerHTML = "✅ Correct!";
-        feedbackDiv.classList.add("correct-text");
-      } else {
-        // Incorrect Answer
-        feedbackDiv.innerHTML = "❌ Incorrect. Please review the lesson.";
-        feedbackDiv.classList.add("incorrect-text");
-      }
-    } else {
-      // No answer selected
-      feedbackDiv.innerHTML = "⚠️ Please select an answer.";
-      feedbackDiv.style.color = "orange";
+    if (!selectedOption) {
+      alert("Please select an answer first!");
+      return;
     }
+
+    // Show feedback
+    feedbackDiv.style.display = "block";
+    if (selectedOption.value === correctValue) {
+      feedbackDiv.innerHTML = "✅ Correct!";
+      feedbackDiv.className = "feedback correct-text";
+      score++;
+    } else {
+      feedbackDiv.innerHTML = "❌ Incorrect.";
+      feedbackDiv.className = "feedback incorrect-text";
+    }
+
+    // Change Button to "Next" mode
+    isQuestionAnswered = true;
+    
+    // Check if this was the last question
+    if (currentQuestionIndex === questions.length - 1) {
+      actionBtn.innerText = "See Results";
+    } else {
+      actionBtn.innerText = "Next Question";
+    }
+  } 
+  
+  // 2. If we HAVE answered, we are in "NEXT" mode
+  else {
+    // Hide current
+    currentQ.classList.remove('active-question');
+    
+    // Increment index
+    currentQuestionIndex++;
+
+    // Check if quiz is over
+    if (currentQuestionIndex >= questions.length) {
+      showResults(questions.length);
+      return;
+    }
+
+    // Show next question
+    const nextQ = questions[currentQuestionIndex];
+    nextQ.classList.add('active-question');
+    
+    // Update progress text
+    document.getElementById('quiz-progress').innerText = 
+      `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+
+    // Reset button for the new question
+    actionBtn.innerText = "Check Answer";
+    isQuestionAnswered = false;
   }
+}
+
+function showResults(total) {
+  document.getElementById('quiz-action-btn').style.display = 'none'; // Hide button
+  document.getElementById('quiz-end-screen').style.display = 'block'; // Show score
+  
+  const scoreText = document.getElementById('final-score-text');
+  scoreText.innerHTML = `You scored <strong>${score} / ${total}</strong>`;
+  
+  if(score === total) {
+    scoreText.innerHTML += " <br>🎉 Perfect score!";
+  }
+}
+
 
   // 3. Display Final Score
   const resultDiv = document.getElementById("quiz-result");
