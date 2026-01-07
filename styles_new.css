@@ -29,7 +29,71 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* --- Creative Index Buttons --- */
 
+/* 1. The Container for the buttons */
+.card .index-button {
+  display: block;             /* Forces them to stack vertically */
+  width: 100%;                /* Full width of the card */
+  margin-bottom: 0.8rem;      /* Spacing between buttons */
+  
+  /* Styling */
+  background: linear-gradient(90deg, #1a1f2e 0%, var(--card-bg) 100%);
+  color: var(--text);
+  padding: 1.2rem 1.5rem;
+  
+  /* Typography */
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;           /* Aligns text to the left for easier reading */
+  
+  /* Border & Shape */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 6px solid var(--muted); /* The gray stripe on the left */
+  border-radius: 8px;
+  
+  /* Interaction */
+  cursor: pointer;
+  position: relative;         /* Needed for the sliding arrow effect */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth 'pop' animation */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* 2. Hover Effects */
+.card .index-button:hover {
+  background: linear-gradient(90deg, #252b40 0%, #1a1f2e 100%);
+  border-left-color: var(--accent); /* Changes the gray stripe to Orange */
+  transform: translateX(10px) scale(1.01); /* Slides right and slightly grows */
+  box-shadow: 0 4px 15px rgba(255, 122, 0, 0.25); /* Adds an orange glow */
+  padding-left: 2rem; /* Slides the text slightly for dynamic feel */
+}
+
+/* 3. The Hidden Arrow */
+.card .index-button::after {
+  content: '➜';
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%) translateX(-20px); /* Start slightly hidden/shifted */
+  opacity: 0;
+  color: var(--accent);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* 4. Reveal Arrow on Hover */
+.card .index-button:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0); /* Slides into place */
+}
+
+/* 5. Mobile Adjustment */
+@media (max-width: 600px) {
+  .card .index-button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
 /* Layout helpers */
 .site-header, .site-footer { 
   display: flex; 
