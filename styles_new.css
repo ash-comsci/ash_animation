@@ -356,9 +356,7 @@ body {
   position: relative;
   margin: auto;
 }
-.mySlides {
-  display: none;
-}
+
 /* 1. Set a fixed height for the slide container so the page doesn't jump */
 .mySlides {
   display: none;
