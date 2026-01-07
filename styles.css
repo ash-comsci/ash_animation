@@ -30,7 +30,10 @@ body {
 .card-title {
   font-weight: 600 !important;
 }
-
+.wide-container {
+  width: 95% !important; /* Matches your header width */
+  max-width: 1600px !important; /* Optional cap for very large screens */
+}
 /* --- PRESERVED HEADER (The "Title Card") --- */
 .title-card {
   /* Sticky positioning handled by CSS, logic kept */
