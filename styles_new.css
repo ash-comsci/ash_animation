@@ -324,3 +324,28 @@ main.content {
 
 /* Optional: slightly larger home icon */
 .home-img { height: 36px; }
+
+:root {
+  --bg: #0b0d12;
+  --card-bg: #121622;
+  --text: #ffffff;
+  --muted: #c7c9d1;
+  --accent: #ff7a00; /* Broncos orange */
+  --brand: #1d3ef3;  /* Broncos royal blue */
+  /* NEW SILVER COLOR */
+  --silver: #C0C0C0; 
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  
+  /* UPDATED BACKGROUND */
+  background: linear-gradient(180deg, var(--silver) 0%, var(--accent) 100%);
+  background-attachment: fixed; /* Keeps the gradient fixed while you scroll */
+  
+  color: var(--text);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the gradient covers the whole screen */
+}
