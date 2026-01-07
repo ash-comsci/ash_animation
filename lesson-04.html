@@ -137,46 +137,41 @@
     
     
 <!-- QUIZ SECTION -->
-  <section class="card" aria-label="Quiz Section">
+<section class="card" aria-label="Quiz Section">
   <div id="quiz-container">
     <div class="quiz-header">
-      <img src="images/logo.png" alt="Logo" class="quiz-logo" style="max-height: 40px;"> 
-      <h2>Harmony User Interface & Preferences Quiz</h2>
+      <h2>Harmony UI Quiz</h2>
+      <span id="quiz-progress" style="margin-left:auto; font-weight:bold; color:var(--muted);">Question 1 of 2</span>
     </div>
 
-    <div class="question-block" id="q1-block">
+    <div class="question-block active-question" data-correct="false">
       <div class="question-image">
-        <img src="images/lesson-04/slide1.png" alt="Question 1" onerror="this.style.display='none'"> 
+        <img src="images/lesson-04/slide1.png" alt="Preferences Window" onerror="this.style.display='none'"> 
       </div>
       <p class="question-text">1. I enabled Auto-Save which is found in Preferences / General.</p>
-      
       <div class="options">
-        <label class="option-btn">
-          <input type="radio" name="q1" value="true"> True
-        </label>
-        <label class="option-btn">
-          <input type="radio" name="q1" value="false"> False
-        </label>
+        <label class="option-btn"><input type="radio" name="q1" value="true"> True</label>
+        <label class="option-btn"><input type="radio" name="q1" value="false"> False</label>
       </div>
-      <div class="feedback" id="feedback-q1"></div>
+      <div class="feedback"></div>
     </div>
 
-    <div class="question-block" id="q2-block">
+    <div class="question-block" data-correct="true">
       <p class="question-text">2. The Timeline View is used to set the timing of your animation.</p>
       <div class="options">
-        <label class="option-btn">
-          <input type="radio" name="q2" value="true"> True
-        </label>
-        <label class="option-btn">
-          <input type="radio" name="q2" value="false"> False
-        </label>
+        <label class="option-btn"><input type="radio" name="q2" value="true"> True</label>
+        <label class="option-btn"><input type="radio" name="q2" value="false"> False</label>
       </div>
-      <div class="feedback" id="feedback-q2"></div>
+      <div class="feedback"></div>
+    </div>
+    
+    <div id="quiz-end-screen" style="display:none; text-align:center;">
+      <h3 id="final-score-title">Quiz Complete!</h3>
+      <p id="final-score-text" style="font-size:1.2rem; margin-bottom:1.5rem;">You scored ...</p>
+      <button onclick="location.reload()" class="check-btn" style="width:auto;">Restart Quiz</button>
     </div>
 
-    <button class="check-btn" onclick="checkAnswers()">Check Answers &raquo;</button>
-    
-    <div id="quiz-result"></div>
+    <button id="quiz-action-btn" onclick="handleQuizAction()">Check Answer</button>
   </div>
 </section>
 </main>
