@@ -380,15 +380,15 @@ main.content {
   display: grid;
   grid-template-columns: 1fr 1fr;  /* two equal columns */
   grid-auto-rows: auto;
-  gap: 0.75rem;                    /* space between items */
+  gap: 0.5rem;                    /* space between items */
   align-items: center;             /* vertically align images within their cells */
   justify-items: center;           /* center items horizontally in their cells */
 }
 
 /* Place items explicitly (optional, but clear) */
 .lesson-grid > a:nth-child(1) { grid-column: 1; }   /* Prev */
-.lesson-grid > a:nth-child(2) { grid-column: 2; }   /* Next */
-
+.lesson-grid > a:nth-child(2) { grid-column: 2; }   /* Home */
+.lesson-grid > a:nth-child(3) { grid-column: 3; }   /* Next */
 /* Home spans both columns on the second row */
 .lesson-grid .home-link {
   grid-column: 1 / -1;             /* span all columns */
@@ -398,12 +398,12 @@ main.content {
 .nav-img,
 .home-img {
   display: block;                  /* avoid inline whitespace quirks */
-  height: 52px;                    /* keep consistent icon height */
+  height: 40px;                    /* keep consistent icon height */
   width: auto;
 }
 
 /* Optional: slightly larger home icon */
-.home-img { height: 56px; }
+.home-img { height: 40px; }
 
 :root {
   --banner-height: 170px;
@@ -422,7 +422,7 @@ main.content {
   position: sticky;
   
   /* This calculates: 170px + 16px gap = Sticks at 186px from top */
-  top: calc(var(--banner-height) + 1rem); 
+  top: 170px; 
 }
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
