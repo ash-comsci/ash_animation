@@ -36,7 +36,7 @@ function showSlides(n) {
   
   // Show the current slide
   if (slides[slideIndex-1]) {
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display = "flex";
   }
   
   // Highlight the corresponding dot (if it exists)
