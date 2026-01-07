@@ -188,12 +188,7 @@ main.content {
   width: auto; /* Overriding previous 100% to allow sidebar room */
 }
 
-/* 3. Style the Sidebar to take up roughly 20% */
-.sidebar.right {
-  flex: 1; /* Takes up 1 part of space (~30%) */
-  position: sticky; /* Keeps it visible as you scroll */
-  top: 20rem);
-}
+
 
 /* 4. Format Sidebar sections as Cards */
 .widget {
@@ -411,6 +406,7 @@ main.content {
 .home-img { height: 56px; }
 
 :root {
+  --banner-height: 170px;
   --bg: #0b0d12;
   --card-bg: #121622;
   --text: #ffffff;
@@ -420,7 +416,14 @@ main.content {
   /* NEW SILVER COLOR */
   --silver: #C0C0C0; 
 }
-
+.sidebar.right {
+  flex: 1;
+  margin-top: 1rem;
+  position: sticky;
+  
+  /* This calculates: 170px + 16px gap = Sticks at 186px from top */
+  top: calc(var(--banner-height) + 1rem); 
+}
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   
