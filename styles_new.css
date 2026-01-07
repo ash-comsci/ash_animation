@@ -362,7 +362,6 @@ body {
   display: none;
   height: 400px; /* Adjust this number to match your preferred height */
   background-color: #000; /* Black background fills the empty space around the image */
-  display: flex;
   align-items: center;
   justify-content: center;
 }
