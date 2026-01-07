@@ -193,8 +193,8 @@ main.content {
 /* 4. Format Sidebar sections as Cards */
 .widget {
   background: var(--card-bg);
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
+  padding: .25rem;
+  margin-bottom: .5rem;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   border-left: 4px solid var(--brand); /* Gives it a look similar to the title card */
