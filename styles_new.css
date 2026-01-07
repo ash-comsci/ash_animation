@@ -11,7 +11,7 @@ html, body { margin: 0; padding: 0; }
   padding: 2rem 1rem;   /* Adds some breathing room below the sticky header */
 }
 :root {
-  --banner-height: 140px;
+  --banner-height: 110px;
   --bg: #0b0d12;
   --card-bg: #121622;
   --text: #ffffff;
@@ -34,8 +34,7 @@ body {
 .site-header, .site-footer { 
   display: flex; 
   justify-content: center; 
-  width: 90%;
-  padding: 1rem;
+  width: 100%;
 }
 
 main { 
@@ -48,28 +47,31 @@ main {
 
 /* Title card */
 .title-card {
-/* Layout & Positioning */
-  position: sticky;       /* Makes it stick */
-  top: 1rem;                 /* Sticks to the very top */
-  z-index: 1000;          /* Ensures it floats ABOVE the scrolling content */
+  /* 1. Floating Positioning */
+  position: sticky;
+  top: 1rem;              /* Creates the gap from the top of the screen */
+  z-index: 1000;
   
-  /* Size & Shape */
-  width: 90%;            /* Spans the whole page width */
-  max-width: 100%;        /* Removes the card width limit */
-  margin: 0;              /* Removes the floating gaps */
-  border-radius: 18;       /* Removes rounded corners for a "header" look */
+  /* 2. Sizing & Centering */
+  width: 95%;             /* Shows the background on the sides */
+  max-width: 1400px;      /* Matches your page width limit */
+  margin: 0 auto 1rem auto; /* Centers the bar and adds spacing below it */
   
-  /* Keep your existing styling */
+  /* 3. Style / Appearance */
+  border-radius: 16px;    /* Restores rounded corners */
   background: linear-gradient(135deg, var(--brand), var(--accent));
   color: white;
-  padding: 1rem 2rem;     /* Adjusted padding slightly */
+  padding: 1rem 2rem;
+  
+  /* Layout inside the card */
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35); /* Reduced shadow slightly for a header */
+  
+  /* Enhanced shadow to make it "pop" off the background */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
 }
-
 
 .logo { width: 104px; height: 104px; object-fit: contain; }
 .title-card h1 { margin: 0; font-size: clamp(1.25rem, 2.5vw, 2rem); }
