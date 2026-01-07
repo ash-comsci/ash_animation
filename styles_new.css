@@ -406,7 +406,7 @@ main.content {
 .home-img { height: 40px; }
 
 :root {
-  --banner-height: 170px;
+  --banner-height: 140px;
   --bg: #0b0d12;
   --card-bg: #121622;
   --text: #ffffff;
@@ -418,11 +418,10 @@ main.content {
 }
 .sidebar.right {
   flex: 1;
-  margin-top: 1rem;
+  margin-top: .5rem;
   position: sticky;
-  
   /* This calculates: 170px + 16px gap = Sticks at 186px from top */
-  top: 170px; 
+  top: 140px; 
 }
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
