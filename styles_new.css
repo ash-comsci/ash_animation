@@ -380,7 +380,7 @@ main.content {
   display: flex;
   grid-template-columns: 1fr 1fr;  /* two equal columns */
   grid-auto-rows: auto;
-  gap: 0.5rem;                    /* space between items */
+  gap: 15px;                    /* space between items */
   align-items: center;             /* vertically align images within their cells */
   justify-items: center;           /* center items horizontally in their cells */
 }
