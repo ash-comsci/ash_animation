@@ -8,7 +8,7 @@ html, body { margin: 0; padding: 0; }
   max-width: 1400px;
   margin: 0 auto;       /* Centers the content below the header */
   gap: 1rem;
-  padding: 2rem 1rem;   /* Adds some breathing room below the sticky header */
+  padding: 6rem 1rem;   /* Adds some breathing room below the sticky header */
 }
 :root {
   --banner-height: 240px;
