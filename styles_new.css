@@ -318,12 +318,12 @@ main.content {
 .nav-img,
 .home-img {
   display: block;                  /* avoid inline whitespace quirks */
-  height: 32px;                    /* keep consistent icon height */
+  height: 52px;                    /* keep consistent icon height */
   width: auto;
 }
 
 /* Optional: slightly larger home icon */
-.home-img { height: 36px; }
+.home-img { height: 56px; }
 
 :root {
   --bg: #0b0d12;
@@ -356,7 +356,9 @@ body {
   position: relative;
   margin: auto;
 }
-
+.mySlides {
+  display: none;
+}
 /* 1. Set a fixed height for the slide container so the page doesn't jump */
 .mySlides {
   display: none;
