@@ -1,516 +1,232 @@
-/* --- Material Design Variables --- */
+/* --- VARIABLES (Preserved from your original) --- */
 :root {
-  /* Core Colors */
-  --md-primary: #1d3ef3;    /* Broncos Royal Blue */
-  --md-on-primary: #ffffff;
-  --md-secondary: #ff7a00;  /* Broncos Orange */
-  --md-on-secondary: #ffffff;
-  --md-bg: #0b0d12;
-  
-  /* Surfaces */
-  --md-surface: #1e222e;    /* Card Background */
-  --md-surface-bright: #2b3040;
-  --md-text-primary: #ffffff;
-  --md-text-secondary: #c7c9d1;
-  
-  /* Silver Gradient Base */
-  --bg-gradient-start: #C0C0C0; 
-  --bg-gradient-end: #ff7a00;
-
-  /* Dimensions */
-  --radius-l: 24px;
-  --radius-m: 16px;
-  --radius-s: 8px;
-  --header-height: 140px;
+  --accent: #ff7a00; /* Broncos orange */
+  --brand: #1d3ef3;  /* Broncos royal blue */
+  --silver: #C0C0C0; 
+  --text: #ffffff;
 }
 
-/* Base Reset & Typography */
-* { box-sizing: border-box; }
+/* --- MATERIAL DESIGN OVERRIDES --- */
 
 body {
-  font-family: 'Roboto', sans-serif; /* Material Standard */
-  background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-  background-attachment: fixed;
-  color: var(--md-text-primary);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  /* Using your gradient background preference */
+  background: linear-gradient(180deg, var(--silver) 0%, #e0e0e0 100%) fixed;
   min-height: 100vh;
 }
 
-/* --- Layout --- */
-.page {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-  padding: 2rem 1rem;
+/* Add extra spacing for the container */
+.main-container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
-main.content {
-  flex: 3;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* Card Styling: Rounded corners + visual lift */
+.rounded-card {
+  border-radius: 16px !important;
+  overflow: hidden; /* Ensures images/headers respect the radius */
+  border: 1px solid rgba(255,255,255,0.5);
 }
 
-/* --- Header (Material Top App Bar style) --- */
+.card-title {
+  font-weight: 600 !important;
+}
+
+/* --- PRESERVED HEADER (The "Title Card") --- */
 .title-card {
+  /* Sticky positioning handled by CSS, logic kept */
   position: sticky;
   top: 1rem;
   z-index: 1000;
+  
   width: 95%;
-  max-width: 1200px;
-  margin: 0 auto 1rem auto;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto; /* Spacing below header */
   
-  background: rgba(29, 62, 243, 0.95); /* Primary with slight transparency */
-  backdrop-filter: blur(10px);
-  color: var(--md-on-primary);
-  
-  border-radius: var(--radius-l);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+  color: white;
   padding: 1rem 2rem;
   
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.logo { width: 64px; height: 64px; object-fit: contain; }
-
-.header-text h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.overline {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
-  opacity: 0.8;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.header-icon { font-size: 2rem; opacity: 0.5; }
-
-/* --- Cards (Material Surface) --- */
-.card {
-  background: var(--md-surface);
-  border-radius: var(--radius-l);
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  color: var(--md-secondary);
-}
-
-.card-header h3 { margin: 0; font-size: 1.25rem; font-weight: 500; }
-.card-header .icon { font-size: 1.5rem; }
-
-.card p {
-  color: var(--md-text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-/* --- Chips --- */
-.chip-container {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.chip-static {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  font-size: 0.85rem;
-  color: var(--md-text-primary);
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.chip-static .material-symbols-rounded { font-size: 1rem; }
-
-/* --- Step Lists --- */
-.step-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 1rem;
-}
-
-.step-item {
-  display: flex;
   align-items: center;
-  gap: 1rem;
-  background: rgba(255,255,255,0.03);
-  padding: 1rem;
-  border-radius: var(--radius-m);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
 }
 
-.step-number {
-  background: var(--md-secondary);
-  color: var(--md-on-secondary);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  flex-shrink: 0;
+.logo { width: 80px; height: 80px; object-fit: contain; }
+.title-card h1 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.2; }
+
+@media (max-width: 600px) {
+  .title-card { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .logo { width: 50px; height: 50px; }
 }
 
-/* --- Quiz Design (Selection Chips) --- */
-.quiz-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 1rem;
-}
-
-.quiz-title { display: flex; align-items: center; gap: 10px; }
-.quiz-title h2 { margin: 0; font-size: 1.5rem; }
-
-.badge {
-  background: rgba(255,255,255,0.1);
-  padding: 4px 12px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.question-block {
-  animation: fadeEnter 0.4s ease-out;
-  display: none;
-}
-.question-block.active-question { display: block; }
-
-.question-image img {
-  width: 100%;
-  border-radius: var(--radius-m);
-  margin-bottom: 1.5rem;
-  border: 2px solid rgba(255,255,255,0.1);
-}
-
-.options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 1.5rem 0;
-}
-
-/* Material Selection Chip logic */
-.option-btn {
-  position: relative;
-  cursor: pointer;
-}
-
-.option-btn input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.radio-label {
-  display: inline-block;
-  padding: 10px 24px;
-  background: transparent;
-  border: 1px solid var(--md-text-secondary);
-  border-radius: 50px;
-  color: var(--md-text-secondary);
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-.option-btn:hover .radio-label {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--md-text-primary);
-  color: var(--md-text-primary);
-}
-
-/* Checked State */
-.option-btn input:checked ~ .radio-label {
-  background: var(--md-secondary);
-  border-color: var(--md-secondary);
-  color: var(--md-on-secondary);
-  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.4);
-}
-
-.btn-filled {
-  background: var(--md-primary);
-  color: white;
-  border: none;
-  padding: 12px 32px;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: block;
-  margin: 2rem auto 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.btn-filled:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(29, 62, 243, 0.4);
-  background: #2f4df5;
-}
-
-.feedback {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: var(--radius-s);
-  font-weight: 500;
-  text-align: center;
-  display: none;
-}
-.correct-text { background: rgba(76, 175, 80, 0.2); color: #81c784; }
-.incorrect-text { background: rgba(244, 67, 54, 0.2); color: #e57373; }
-
-/* --- Sidebar (Navigation Drawer / FABs) --- */
-.sidebar.right {
-  flex: 1;
-  position: sticky;
-  top: 160px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Floating Action Button Navigation */
-.fab-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.fab-item {
-  width: 56px;
-  height: 56px;
-  background: var(--md-surface);
-  border-radius: 16px; /* Squircle */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--md-text-primary);
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(255,255,255,0.05);
-}
-
-.fab-item.home {
-  background: var(--md-secondary);
-  color: white;
-  transform: scale(1.1);
-}
-
-.fab-item:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-
-.fab-item .material-symbols-rounded { font-size: 24px; }
-
-.widget {
-  background: var(--md-surface);
-  border-radius: var(--radius-m);
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.widget h3 {
-  margin-top: 0;
-  font-size: 1rem;
-  color: var(--md-text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* --- Slideshow Overhaul --- */
-.slideshow-wrapper {
-  position: relative;
-  background: #000;
-  border-radius: var(--radius-m);
-  overflow: hidden;
-}
-
-.mySlides {
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mySlides img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.1);
-  color: white;
-  padding: 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  margin: 0 10px;
-  transition: background 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.next { right: 0; }
-.prev:hover, .next:hover { background: var(--md-primary); }
-
-.text {
-  background: linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
-  padding: 20px;
-  font-size: 1rem;
-}
-
-.dot {
-  background-color: rgba(255,255,255,0.3);
-  width: 10px; height: 10px;
-  margin: 0 4px;
-}
-.dot.active { background-color: var(--md-secondary); transform: scale(1.2); }
-
-/* --- Retro TV Container (Preserved but Polished) --- */
-.video-card {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
+/* --- PRESERVED RETRO TV (With tweaks for grid fitting) --- */
 .tv-retro {
-  background: var(--md-primary);
-  padding: 16px;
-  border-radius: 32px; /* Smoother outer corners */
-  border: 6px solid var(--md-secondary);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  position: relative;
-  max-width: 800px;
   width: 100%;
+  max-width: 600px; /* Limit max width */
+  margin: 0 auto;
+  background: var(--brand); 
+  padding: 18px;
+  border-radius: 24px;
+  border: 8px solid var(--accent); 
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  position: relative; 
+  display: inline-block; /* Helps with centering */
 }
 
-/* Standard Bezel */
 .tv-bezel {
   background: #111;
-  padding: 12px;
-  border-radius: 20px;
+  padding: 15px;
+  border-radius: 14px;
   display: flex;
-  gap: 12px;
+  gap: 15px;
+  align-items: stretch;
 }
 
 .tv-inner {
-  flex: 1;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 2px solid #333;
-  aspect-ratio: 16/9;
+  flex: 9; 
   background: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 4px solid #222;
+  aspect-ratio: 16 / 9;
 }
 
-.video-frame, iframe { width: 100%; height: 100%; border: none; }
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 .tv-controls {
-  width: 60px;
+  flex: 1; 
+  min-width: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
   background: #1a1a1a;
-  border-radius: 12px;
-  padding: 10px 0;
+  border-radius: 8px;
+  padding: 10px 5px;
 }
 
 .tv-dial {
-  width: 40px; height: 40px;
-  background: radial-gradient(circle at 30% 30%, #444, #111);
-  border: 2px solid var(--md-secondary);
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #444, #111);
+  border: 2px solid var(--accent);
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  position: relative;
+}
+.tv-dial::after {
+  content: ''; position: absolute; top: 4px; left: 50%; width: 2px; height: 10px;
+  background: var(--accent); transform: translateX(-50%);
+}
+
+.tv-grille {
+  width: 80%;
+  height: 40px;
+  background: repeating-linear-gradient(0deg, var(--brand), var(--brand) 2px, #000 4px);
 }
 
 .tv-power-light {
-  width: 8px; height: 8px;
-  background: var(--md-secondary);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 24px; right: 36px;
-  box-shadow: 0 0 10px var(--md-secondary);
-  animation: power-pulse 2s infinite;
+  width: 10px; height: 10px; background-color: var(--accent);
+  border-radius: 50%; position: absolute; bottom: 12px; right: 30px;
+  box-shadow: 0 0 5px var(--accent);
+  animation: power-pulse 2s infinite ease-in-out;
 }
 
 @keyframes power-pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; transform: scale(1.2); }
+  0% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
+  50% { opacity: 1; box-shadow: 0 0 12px var(--accent); }
+  100% { opacity: 0.4; box-shadow: 0 0 2px var(--accent); }
 }
 
+@media (max-width: 600px) {
+  .tv-bezel { flex-direction: column; }
+  .tv-controls { flex-direction: row; height: 60px; width: 100%; }
+}
+
+/* --- UTILITIES --- */
+.mt-2 { margin-top: 1rem !important; }
+
+.hover-pop {
+  transition: transform 0.3s;
+}
+.hover-pop:hover {
+  transform: scale(1.1);
+}
+
+/* --- SLIDESHOW (Materialize Adaptation) --- */
+/* Kept mostly custom because the script.js relies on it */
+.slideshow-container {
+  position: relative;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.mySlides { display: none; background: #000; text-align: center; }
+.mySlides img { max-height: 400px; object-fit: contain; }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.4);
+}
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: var(--brand); }
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot.active, .dot:hover { background-color: var(--accent); }
+
+/* --- QUIZ STYLES --- */
+.question-block {
+  display: none; /* Hidden by default */
+  animation: fadeEnter 0.5s;
+}
+.question-block.active-question { display: block; }
 @keyframes fadeEnter {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Tweaks */
-@media (max-width: 900px) {
-  .page { flex-direction: column; }
-  .sidebar.right { position: relative; top: 0; width: 100%; flex-direction: row; flex-wrap: wrap; }
-  .fab-nav { width: 100%; justify-content: center; margin-bottom: 1rem; }
-  .widget { flex: 1; }
-  .tv-bezel { flex-direction: column; }
-  .tv-controls { flex-direction: row; width: 100%; height: 60px; }
-  .tv-power-light { bottom: 35px; right: 25px; }
-}
-
-.footer-msg {
-  text-align: center;
-  color: var(--md-text-secondary);
-  font-weight: 500;
-  margin-top: 2rem;
-  opacity: 0.8;
-}
+.correct-text { color: #2e7d32; font-weight: bold; padding: 10px; }
+.incorrect-text { color: #c62828; font-weight: bold; padding: 10px; }
