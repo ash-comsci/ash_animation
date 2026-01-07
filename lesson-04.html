@@ -135,7 +135,50 @@
   </div>
 </section>
     </main>
+    
+<!-- QUIZ SECTION -->
+  <section class="card" aria-label="Quiz Section">
+  <div id="quiz-container">
+    <div class="quiz-header">
+      <img src="images/logo.png" alt="Logo" class="quiz-logo" style="max-height: 40px;"> 
+      <h2>Harmony User Interface & Preferences Quiz</h2>
+    </div>
 
+    <div class="question-block" id="q1-block">
+      <div class="question-image">
+        <img src="images/lesson-04/slide1.png" alt="Question 1" onerror="this.style.display='none'"> 
+      </div>
+      <p class="question-text">1. I enabled Auto-Save which is found in Preferences / General.</p>
+      
+      <div class="options">
+        <label class="option-btn">
+          <input type="radio" name="q1" value="true"> True
+        </label>
+        <label class="option-btn">
+          <input type="radio" name="q1" value="false"> False
+        </label>
+      </div>
+      <div class="feedback" id="feedback-q1"></div>
+    </div>
+
+    <div class="question-block" id="q2-block">
+      <p class="question-text">2. The Timeline View is used to set the timing of your animation.</p>
+      <div class="options">
+        <label class="option-btn">
+          <input type="radio" name="q2" value="true"> True
+        </label>
+        <label class="option-btn">
+          <input type="radio" name="q2" value="false"> False
+        </label>
+      </div>
+      <div class="feedback" id="feedback-q2"></div>
+    </div>
+
+    <button class="check-btn" onclick="checkAnswers()">Check Answers &raquo;</button>
+    
+    <div id="quiz-result"></div>
+  </div>
+</section>
     <aside class="sidebar right" aria-label="Lesson sidebar">
       <div class="right-widgets">
         <nav class="widget next-page" aria-label="Lessons navigation">
