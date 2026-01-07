@@ -357,7 +357,7 @@ main.content {
 .sidebar.right {
   margin-top: 1rem;                /* visual gap below banner */
   position: sticky;
-  top: calc(var(--banner-height) + 1rem); /* start below header */
+  top: 160px;
 }
 
 /* If the banner gets taller on small screens, bump the offset */
@@ -377,7 +377,7 @@ main.content {
 }
 */
 .lesson-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;  /* two equal columns */
   grid-auto-rows: auto;
   gap: 0.5rem;                    /* space between items */
