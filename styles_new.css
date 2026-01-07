@@ -111,8 +111,8 @@ main {
 
 /* Title card */
 .title-card {
-  /* 1. Floating Positioning */
-  position: sticky;
+  /* 1. Floating Positioning 
+  position: sticky;*/
   top: 1rem;              /* Creates the gap from the top of the screen */
   z-index: 1000;
   
