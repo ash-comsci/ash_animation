@@ -1,3 +1,4 @@
+/* --- SLIDESHOW FUNCTIONS --- */
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,17 +29,26 @@ function showSlides(n) {
   }
   
   // Remove "active" class from all dots
+  // (Check if dots exist to prevent errors if you have fewer dots than slides)
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   
-  // Show the current slide and highlight the corresponding dot
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  // Show the current slide
+  if (slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";
+  }
+  
+  // Highlight the corresponding dot (if it exists)
+  if (dots[slideIndex-1]) {
+    dots[slideIndex-1].className += " active";
+  }
 }
-// QUIZ FUNCTIONS
 
-function checkAnswers() {
+/* --- QUIZ FUNCTIONS --- */
+
+// REMOVED the broken "function checkAnswers()" line here
+
 let currentQuestionIndex = 0;
 let score = 0;
 let isQuestionAnswered = false; // Tracks if we are ready to move to next
@@ -62,6 +72,8 @@ function handleQuizAction() {
 
     // Show feedback
     feedbackDiv.style.display = "block";
+    
+    // Check if the value matches the data-correct attribute
     if (selectedOption.value === correctValue) {
       feedbackDiv.innerHTML = "✅ Correct!";
       feedbackDiv.className = "feedback correct-text";
@@ -120,5 +132,4 @@ function showResults(total) {
   if(score === total) {
     scoreText.innerHTML += " <br>🎉 Perfect score!";
   }
-}
 }
