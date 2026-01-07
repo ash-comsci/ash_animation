@@ -366,16 +366,16 @@ main.content {
 }
 
 .nav-img {
-  width: 40%;
+  width: 30%;
   height: auto; /* keeps aspect ratio */
   display: block; /* optional: removes inline spacing */
 }
-.home-img {
+/*.home-img {
   width: 60%;
   height: auto; /* keeps aspect ratio */
   display: block; /* optional: removes inline spacing */
 }
-
+*/
 .lesson-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;  /* two equal columns */
