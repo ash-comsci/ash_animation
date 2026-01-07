@@ -121,16 +121,3 @@ function showResults(total) {
     scoreText.innerHTML += " <br>🎉 Perfect score!";
   }
 }
-
-
-  // 3. Display Final Score
-  const resultDiv = document.getElementById("quiz-result");
-  resultDiv.innerHTML = `You scored ${score} out of ${totalQuestions}`;
-  
-  if (score === totalQuestions) {
-    resultDiv.innerHTML += " — Great job! 🎉";
-    resultDiv.style.color = "var(--accent)";
-  } else {
-    resultDiv.style.color = "var(--text)";
-  }
-}
