@@ -448,3 +448,120 @@ body {
   from {opacity: .4}
   to {opacity: 1}
 }
+/* --- Quiz Styles --- */
+#quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--muted);
+  padding-bottom: 1rem;
+}
+
+.question-block {
+  background: rgba(255, 255, 255, 0.05); /* Slight highlight on dark bg */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.question-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--muted);
+}
+
+.question-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Option Buttons Container */
+.options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* The Clickable Button Style */
+.option-btn {
+  background: var(--card-bg);
+  border: 2px solid var(--muted);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: bold;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+/* Hide the native radio circle somewhat but keep it accessible */
+.option-btn input[type="radio"] {
+  accent-color: var(--accent);
+  transform: scale(1.2);
+}
+
+.option-btn:hover {
+  border-color: var(--accent);
+  background: rgba(255, 122, 0, 0.15);
+}
+
+/* Style for when a button contains a checked input */
+.option-btn:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff; /* White text on orange background */
+}
+
+/* Feedback & Results */
+.feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: none; /* Hidden until checked */
+}
+
+.check-btn {
+  background: var(--brand); /* Broncos Blue */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.check-btn:hover {
+  background: #152db5; /* Darker Blue */
+}
+
+#quiz-result {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  min-height: 2em;
+}
+
+/* Feedback Text Colors */
+.correct-text { color: #4CAF50; } /* Green */
+.incorrect-text { color: #f44336; } /* Red */
