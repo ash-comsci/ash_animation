@@ -6,6 +6,7 @@
       overflow: hidden;
       width: 70vw;
       margin: 0 auto 12px; /* auto left/right centers it */
+      border-radius: 10px !important;
 
     }
     
