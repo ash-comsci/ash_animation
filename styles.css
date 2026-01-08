@@ -47,8 +47,8 @@ body {
   z-index: 1000;
   width: 95%;
   max-width: 1400px;
-  margin: 0 auto 2rem auto; /* Spacing below header */
-  border-radius: 16px;
+  margin: 2rem auto 2rem auto; /* Spacing below header */
+  border-radius: 20px;
   background: linear-gradient(135deg, var(--brand), var(--accent));
   color: white;
   padding: 1rem 2rem;
@@ -59,7 +59,7 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,0.45);
 }
 
-.logo { width: 80px; height: 80px; object-fit: contain; }
+.logo { width: 100px; height: 100px; object-fit: contain; }
 .title-card h1 { margin: 0; font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.2; }
 
 @media (max-width: 600px) {
@@ -214,7 +214,6 @@ body {
 /* --- STICKY SIDEBAR WRAPPER --- */
 .sidebar-sticky {
   /* This makes it stick! */
-  position: -webkit-sticky; /* For Safari */
   position: sticky;
   
   /* Calculate where it sticks: 
