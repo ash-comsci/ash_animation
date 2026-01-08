@@ -37,7 +37,7 @@ body {
 /* --- PRESERVED HEADER (The "Title Card") --- */
 .title-card {
   /* Sticky positioning handled by CSS, logic kept */
-  position: sticky;
+  position: flex;
   top: 1rem;
   z-index: 1000;
   
