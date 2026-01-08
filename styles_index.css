@@ -4,6 +4,9 @@
       margin-bottom: 12px;
       position: relative;
       overflow: hidden;
+      width: 80vw;
+      margin: 0 auto 12px; /* auto left/right centers it */
+
     }
     
     .lesson-card:hover {
