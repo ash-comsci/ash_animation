@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson Template</title> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="mario.png">
+</head>
+<body class="grey lighten-5">
+
+  <header class="title-card">
+    <img src="images/ash_animation.png" alt="Lesson Logo" class="logo">
+    <h1>Lesson XX - Template Title</h1> </header>
+
+  <div class="row">
+      
+    <main class="col s12 l9">
+      <div class="container main-container wide-container">
+        
+        <div class="card z-depth-1 rounded-card">
+          <div class="card-content">
+            <span class="card-title blue-text text-darken-2" style="font-weight:bold;">Section Title 1</span>
+            
+            <p class="flow-text">
+              Replace this text with your introduction, overview, or first section of content.
+            </p>
+            
+          </div>
+        </div>
+
+        <div class="card hoverable z-depth-2 rounded-card">
+          <div class="card-content">      
+            <span class="card-title grey-text text-darken-3" style="font-weight: bold;">Section Title 2</span>
+            
+            <ul class="browser-default">
+              <li><strong>Topic A:</strong> Description of topic.</li>
+              <li><strong>Topic B:</strong> Description of topic.</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="card hoverable z-depth-2 rounded-card">
+          <div class="card-content">
+            <span class="card-title orange-text text-darken-2">
+              <i class="material-icons left">assignment</i>Section Title 3 (Tasks)
+            </span>
+            
+            <p>Describe the task or steps the student needs to take here.</p>
+            
+            <div class="card-action" style="padding-left: 0; padding-bottom: 0;">
+              <a href="#" class="btn blue waves-effect waves-light">Action Button</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <aside class="col s12 l3">
+      <div class="sidebar-sticky"> 
+        
+        <div class="card z-depth-1 rounded-card">
+          <div class="card-content">
+            <span class="card-title center-align">Navigation</span>
+            <div class="row valign-wrapper center-align" style="margin-bottom:0;">
+              <div class="col s4">
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Previous">
+                  <img src="images/prev1.png" alt="Previous Lesson" class="responsive-img hover-pop">
+                </a>
+              </div>
+              <div class="col s4">
+                <a href="index.html" class="tooltipped" data-position="bottom" data-tooltip="Home">
+                  <img src="images/Home3.png" alt="Home" class="responsive-img hover-pop">
+                </a>
+              </div>
+              <div class="col s4">
+                <a href="#" class="tooltipped" data-position="bottom" data-tooltip="Next">
+                  <img src="images/next1.png" alt="Next Lesson" class="responsive-img hover-pop">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="collection with-header z-depth-1 rounded-card" style="border:none;">
+          <li class="collection-header blue lighten-5"><h6><i class="material-icons tiny">attach_file</i> Lesson Files</h6></li>
+          <li class="collection-item placeholder-text">Add file links here...</li>
+        </ul>
+
+        <ul class="collection with-header z-depth-1 rounded-card" style="border:none;">
+          <li class="collection-header orange lighten-5"><h6><i class="material-icons tiny">link</i> Useful Links</h6></li>
+          <li class="collection-item"><a href="#!">Harmony Documentation</a></li>
+          <li class="collection-item"><a href="#!">Toon Boom Forum</a></li>
+        </ul>
+
+      </div> 
+    </aside>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Initialize Materialize Components
+    document.addEventListener('DOMContentLoaded', function() {
+      var tooltips = document.querySelectorAll('.tooltipped');
+      M.Tooltip.init(tooltips);
+      var materialbox = document.querySelectorAll('.materialboxed');
+      M.Materialbox.init(materialbox);
+    });
+  </script>
+</body>
+</html>
