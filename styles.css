@@ -216,9 +216,9 @@ body {
      Header Height (~120px) + Gap (~20px) = approx 140px */
   top: 140px; 
   
-  /* Optional: Adds a scrollbar if the sidebar is taller than the screen */
+  /* Optional: Adds a scrollbar if the sidebar is taller than the screen
   max-height: calc(100vh - 140px);
-  overflow-y: auto;
+  overflow-y: auto; */
 }
 
 .prev, .next {
