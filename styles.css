@@ -212,17 +212,28 @@ body {
   /* Reduce top padding */
   padding-top: 0.5rem !important; 
 }
+/* FIX: Forces columns to be equal height so sticky works */
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap; /* Ensures it still stacks on mobile */
+}
 
-/* --- STICKY SIDEBAR WRAPPER --- */
+/* Ensure the sticky container knows where to stop */
 .sidebar-sticky {
-  /* This makes it stick! */
+  position: sticky;
+  top: 140px; /* Adjusts for your header height */
+  z-index: 10; /* Keeps it above other content if overlaps occur */
+}
+/* --- STICKY SIDEBAR WRAPPER --- 
+.sidebar-sticky {
+   This makes it stick!
   position: sticky;
   
-  /* Calculate where it sticks: 
-     Header Height (~120px) + Gap (~20px) = approx 140px */
+   Calculate where it sticks: 
+     Header Height (~120px) + Gap (~20px) = approx 140px
   top: 140px; 
   
-  /* Optional: Adds a scrollbar if the sidebar is taller than the screen
+   Optional: Adds a scrollbar if the sidebar is taller than the screen
   max-height: calc(100vh - 140px);
   overflow-y: auto; */
 }
