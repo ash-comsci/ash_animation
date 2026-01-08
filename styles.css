@@ -322,3 +322,9 @@ ul.arrow-list li::before {
   font-size: 1.2rem;
   line-height: 1.2rem;
 }
+/* 2. Style the Sub-Arrows (Optional: Make them lighter/smaller) */
+ul.arrow-list ul li::before {
+  content: "›"; /* Changes the big arrow to a smaller chevron */
+  font-size: 1.5rem;
+  line-height: 1.1rem;
+}
