@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 03 – Animating in Harmony</title>
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Small utility chips for inline meta */
+    .chip {display:inline-flex; align-items:center; gap:.35rem; padding:.35rem .6rem; border-radius:16px; background: rgba(255,255,255,.15); color:#fff; font-size:.9rem;}
+    .section-title {display:flex; align-items:center; gap:.5rem; margin:0 0 .5rem 0;}
+    .section-title .material-icons {color: var(--accent);}
+    .card-content p {margin:.5rem 0;}
+    .list-icon {vertical-align: text-bottom; margin-right:.35rem; color: var(--accent);}    
+    .nav-links a {display:inline-flex; align-items:center; gap:.35rem; padding:.5rem .75rem; border-radius:12px; background:rgba(255,255,255,.15); color:#fff; text-decoration:none;}
+    .nav-links a:hover {background: rgba(255,255,255,.25);}    
+  </style>
+</head>
+<body>
+  <!-- Title Card / Header -->
+  <header class="title-card wide-container">
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>Lesson 03 – Animating in Harmony</h1>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.5rem;">
+        <span class="chip"><span class="material-icons">schedule</span> Duration: 4 hours</span>
+        <span class="chip"><span class="material-icons">movie</span> 24 FPS · Animated on ones/twos/threes</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container wide-container">
+    <!-- About This Lesson -->
+    <section class="card rounded-card">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">info</span> About this Lesson</h2>
+        <p>Time to jump right into animating in Toon Boom Harmony. In this lesson you will learn how to start, create and export an animated project in Harmony. Whether this is your first time opening up Toon boom Harmony or you are a seasoned Pro, we will show you a quick warm-up exercise to get you animating in Harmony right away. This animation will be completed at 24 Frames Per Second and will be animated on ones. We will be making an animated scene where two dots are chasing or playing with each other as they cross the camera in Harmony.</p>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">menu_book</span> Topics</h2>
+        <ul>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Animating on Ones</strong>: An animation technique of drawing on every single frame of an animated sequence. Animating on the ones creates a smooth animated sequence, but is extremely time consuming.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Animating on Twos</strong>: An animation technique of drawing on every second frame of an animated sequence. The following empty frame is filled with the previous drawing frame. Most classical animations and animated television shows animate on the twos. Animating on the twos provides a fluid animation and is less time consuming than animating on Ones.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Animating on Threes</strong>: An animation technique of drawing on every third frame in an animated sequence. Most Anime uses this technique, which makes it less time consuming to animate complex characters on a tighter budget.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Exporting</strong>: Compiles an animated project into a playable video format which universal digital players can play. Harmony can export animated scenes into video files, GIFs, images and more.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Frames Per Second (FPS)</strong>: An animated sequence must have at least 2 frames, but to create an optical illusion it is recommended that 24 frames are used to create one second of animation. The default frame rate in Harmony is 24 Frames Per Second.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Frame Rate</strong>: When you create an animation, the images you animate must move fluidly to produce the correct effect. If they don't, you will have a jumpy animation, which won't look good. To get a fluid movement between the drawings, you need several images per second. You need a minimum of 12 images per second, any slower than that and the animation becomes jumpy. An image can also be called a frame; therefore the frame rate is the number of frames you play per second in your animation.</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Frame Size</strong>: The size of your project is the width and height of your camera frame in pixels. A pixel is the smallest element of an image displayed on a monitor or TV screen. Pixels are composed of three colours (RGB—Red, Green, Blue).</li>
+          <li><span class="material-icons list-icon">arrow_forward</span><strong>Straight Ahead Animation</strong>: One of the Principles of Animation. It is completed by creating drawings on numerous frames in sequence along a timeline to create an optical illusion.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Harmony Topics -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">layers</span> Harmony Topics</h2>
+        <ul>
+          <li><strong>Xstage file</strong>: Native computer extension for Toon Boom Harmony.</li>
+          <li><strong>User Interface</strong>: Knowing how to manage the Toon Boom Harmony Advanced interface helps you to work efficiently and organize your workspace conveniently. There are a series of views and toolbars you can use as you perform different operations. Usually, each person has a specific way of working in the interface and prefer particular views and toolbars. In this chapter, you will learn about the main elements of the interface and how to manage them.</li>
+          <li><strong>Colour View</strong>: The Colour view is where you create colours and palettes and import existing palettes into your project. The Colour view is also necessary for drawing, painting and creating colour styling.</li>
+          <li><strong>Timeline View</strong>: To set your animation timing, you will mostly work with the Timeline and Xsheet views. It's extremely useful to become familiar with the Timeline view, how it works, and its interface. The Timeline view is the main view used when adjusting the timing of drawings, adding keyframes and ordering layers. It displays layers, effects, sounds, keyframe values, scene length, layer names, drawings, keyframes, timing, and frames.</li>
+          <li><strong>Tools Toolbar</strong>: The Tools toolbar contains the main tools you need to work in Harmony. In the default workspace, this toolbar is located on the left edge of the application window.</li>
+          <li><strong>Camera View</strong>: The Camera view is the centre of operations in Harmony. In this view, you can draw, paint, animate, set up your scene, manipulate objects, open symbols and preview your animation. The Camera view also has a top and bottom toolbar that you can use to navigate in the view, change the display mode or go up your symbol hierarchy.</li>
+          <li><strong>Tool Properties</strong>: The Tool Properties view contains the most common options and operations related to the currently selected tool. When you select a tool from the Tools toolbar, the Tool Properties view updates.</li>
+          <li><strong>Onion Skin</strong>: Displays the previous and next frames of an animation. Useful when animating cut-out and paperless characters.</li>
+          <li><strong>Exporting</strong>: Harmony supports several formats for all your rendering needs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Task / Hands-On Activity -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">draw</span> Task</h2>
+        <h3>Hands-On Activity – Fun with Dots</h3>
+        <ul>
+          <li>Begin by watching and taking notes on <em>Your First Animation</em> video (above) and the topics presented in this lesson. Continue to take notes in your sketchbook/notebook.</li>
+          <li>Download and review the Shortcuts PDF in the Lesson Files.</li>
+          <li>Animate and complete your first animation. Save and export your Harmony file as <strong>YourName_FunWithDots</strong> in your Documents folder. Submit your animated video using the <em>Submit File</em> section at the bottom of this page.</li>
+        </ul>
+        <h4>Step 1</h4>
+        <ul>
+          <li>Launch Toon Boom Harmony.</li>
+          <li>In the Welcome Window, create a new scene called: <strong>Dots</strong></li>
+          <li>Browse and set the location to your Documents Folder.</li>
+          <li>Keep the Camera Size at the default <strong>HDTV_1080p24 1080p</strong> (1920 × 1080 pixels and the frame rate is 24 frames per second).</li>
+          <li>Click <strong>Create Scene</strong>.</li>
+          <li>Select the Brush Tool <span class="material-icons" title="Brush">brush</span>.</li>
+          <li><strong>Hint:</strong> Quick overview of the Harmony UI: Tools (left), Camera View (center) next to Drawing View, Timeline (bottom), Colour view (right of Camera View), Tool Properties (above Colour view).</li>
+        </ul>
+        <h4>Step 2</h4>
+        <ul>
+          <li>Go to the Timeline and rename the existing Layer to “Dot 1”.</li>
+          <li>Ensure the Brush Tool <span class="material-icons" title="Brush">brush</span> is selected. Choose black in the Colour view and place the cursor in the Camera view.</li>
+          <li>Hold down the <strong>O</strong> key to adjust brush size by dragging in the Camera view.</li>
+          <li>Draw a dot along the left side of the camera box. A small rectangle appears next to the <em>Dot 1</em> layer indicating artwork on the first frame.</li>
+          <li>Use the <strong>,</strong> (comma) and <strong>.</strong> (period) keys to toggle between previous and next frames.</li>
+          <li>Enable Onion Skin <span class="material-icons" title="Onion Skin">layers</span> to see previous frame positions in red.</li>
+          <li>Animate the dot across the Camera View using a dynamic path over <strong>30 frames</strong>.</li>
+          <li>Vary spacing and size between frames. Try elongating some dots for a sense of movement.</li>
+          <li>At frame 30, click <span class="material-icons" title="Stop">stop</span> in the Timeline Panel to end the scene. Scrub the playhead to review.</li>
+          <li>Adjust positioning and size of the dots on any frames as needed.</li>
+          <li>Enable <span class="material-icons" title="Loop">loop</span> on the Timeline Panel and click <span class="material-icons" title="Play">play_arrow</span> to watch the animation.</li>
+        </ul>
+        <h4>Step 3</h4>
+        <ul>
+          <li>Save your work (<strong>File → Save</strong> or <strong>CMD/CTRL + S</strong>).</li>
+          <li>Add a new Drawing Layer named “Dot 2”.</li>
+          <li>In the Colour view, pick a new colour for your Brush tool (avoid red/green which are used by Onion Skin).</li>
+          <li>Animate Dot 2 to chase/play with Dot 1 across the Camera View.</li>
+          <li>Review by scrubbing the Playhead or pressing <span class="material-icons">play_arrow</span> in the Timeline Panel.</li>
+          <li>Double the duration to <strong>60 frames</strong> and apply <em>animating on the twos</em> for added fluidity.</li>
+          <li>In the Timeline, Shift-select frame 1 on “Dot 1” and frame 30 on “Dot 2” to highlight all frames.</li>
+          <li>Right-click frame 30 → <strong>Exposure → Set Exposure to 2</strong> (each drawing extends to two frames).</li>
+          <li>Select frame 60 and click <span class="material-icons">stop</span> in the Timeline Panel. Play your animation.</li>
+          <li><strong>Hint:</strong> Harmony exports with a transparent background (often black in players). Add a Colour Card for a background colour as needed.</li>
+        </ul>
+        <h4>Step 4</h4>
+        <ul>
+          <li>In the Timeline, add a <strong>Colour Card</strong> via the <span class="material-icons">add</span> icon, then choose a colour via the mixer.</li>
+          <li>Review your animated scene.</li>
+          <li>Export: <strong>File → Export → Animated GIF</strong>. Choose your Documents folder as the destination.</li>
+          <li>Test the exported animation in a browser.</li>
+          <li>Submit your work.</li>
+        </ul>
+        <p><strong>Congrats</strong>, you animated your first scene in this course. Don’t forget to submit your exported animation.</p>
+      </div>
+    </section>
+
+    <!-- Optional: Retro TV video frame placeholder matching styles.css -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">ondemand_video</span> Your First Animation (Video)</h2>
+        <div class="tv-retro mt-2">
+          <div class="tv-bezel">
+            <div class="tv-inner">
+              <div class="video-frame">
+                <!-- Replace src with your actual video URL -->
+                <iframe src="" title="Lesson video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="tv-controls">
+              <div class="tv-dial hover-pop" title="Channel"></div>
+              <div class="tv-grille" title="Speaker"></div>
+            </div>
+          </div>
+          <div class="tv-power-light" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lesson Files & Links -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">attach_file</span> Lesson Files</h2>
+        <p>Add file links.</p>
+      </div>
+    </section>
+
+    <section class="card rounded-card mt-2">
+      <div class="card-content">
+        <h2 class="section-title"><span class="material-icons">link</span> Lesson Links</h2>
+        <p>Links</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="card rounded-card mt-2">
+      <div class="card-content nav-links" style="display:flex; gap:.75rem; flex-wrap:wrap;">
+        <a href="lesson-02.html"><span class="material-icons">arrow_back</span> Previous Lesson</a>
+        <a href="index.html"><span class="material-icons">home</span> Home</a>
+        <a href="lesson-04.html"><span class="material-icons">arrow_forward</span> Next Lesson</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
