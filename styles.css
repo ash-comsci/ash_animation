@@ -195,6 +195,32 @@ body {
 .mySlides { display: none; background: #000; text-align: center; }
 .mySlides img { max-height: 400px; object-fit: contain; }
 
+/* --- REDUCE GAP (Move content up) --- */
+.title-card {
+  /* Reduce the bottom margin so content starts higher */
+  margin-bottom: 0.5rem !important; 
+}
+
+.main-container {
+  /* Reduce top padding */
+  padding-top: 0.5rem !important; 
+}
+
+/* --- STICKY SIDEBAR WRAPPER --- */
+.sidebar-sticky {
+  /* This makes it stick! */
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  
+  /* Calculate where it sticks: 
+     Header Height (~120px) + Gap (~20px) = approx 140px */
+  top: 140px; 
+  
+  /* Optional: Adds a scrollbar if the sidebar is taller than the screen */
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
