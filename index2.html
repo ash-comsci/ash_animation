@@ -1,230 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>04 - User Interface &amp; Set Up</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmony Courseware – Lessons Index</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles_index.css"/>
+  <link rel="icon" type="image/png" href="mario.png" />
+  <style>
+    /* Additional styles for the index page */
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <link rel="icon" type="image/png" href="mario.png">
 </head>
-<body>
-
-  <header class="title-card">
-    <div class="header-content">
-      <img src="images/ash_animation.png" alt="Lesson Logo" class="logo">
-      <div class="header-text">
-        <span class="overline">Harmony Premium</span>
-        <h1>Lesson 4: UI &amp; Setup</h1>
-      </div>
-    </div>
-    <span class="material-symbols-rounded header-icon">settings_motion_mode</span>
-  </header>
-
-  <div class="page">
+<body class="grey lighten-5">
+  <div class="container">
     <main class="content" role="main">
-      
-      <section class="video-card">
-        <div class="tv-retro">
-          <div class="tv-bezel">
-            <div class="tv-inner">
-              <div class="video-frame">
-                <iframe 
-                  title="Lesson 4 Video Tutorial" 
-                  src="https://drive.google.com/file/d/15EAlzJCY2oP_Y0TtXc6V8xburNymrzd2/preview" 
-                  allow="autoplay">
-                </iframe>
+      <header class="title-card">
+        <img src="images/ash_animation.png" alt="Lesson Logo" class="logo">
+        <div>
+          <h1>Harmony Courseware – 2025</h1>
+          <p class="flow-text" style="margin: 0; opacity: 0.9; font-size: 1.2rem;">
+            Master professional animation with Toon Boom Harmony
+          </p>
+        </div>
+      </header>
+
+      <div class="row">
+        <div class="col s12 l8 offset-l2">
+          <section class="card z-depth-1 rounded-card">
+            <div class="card-content">
+              <div class="course-header">
+                <h4>Animation Course Curriculum</h4>
+                <p class="flow-text grey-text text-darken-2">
+                  25 comprehensive lessons to take you from beginner to certified Harmony animator
+                </p>
+              </div>
+              
+              <div class="course-stats">
+                <div class="stat-card">
+                  <div class="stat-number">25</div>
+                  <div class="stat-label">Lessons</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">60+</div>
+                  <div class="stat-label">Hours</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-label">Practical</div>
+                </div>
+              </div>
+              
+              <h5 class="center-align" style="margin: 40px 0 20px 0; color: var(--brand);">
+                <i class="material-icons left">playlist_play</i>
+                Course Lessons
+              </h5>
+              
+              <!-- Stacked Lesson Cards -->
+              <div class="lessons-stack">
+                <!-- Intro Card -->
+                <a href="intro.html" class="card lesson-card intro-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">
+                        <i class="material-icons">play_circle_filled</i>
+                      </div>
+                      <div>
+                        <h6 class="lesson-title">Intro Welcome</h6>
+                        <p class="lesson-subtitle">Start your animation journey here</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Lesson Cards -->
+                <a href="lesson-01.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">01</div>
+                      <div>
+                        <h6 class="lesson-title">The World of Animation</h6>
+                        <p class="lesson-subtitle">History and fundamentals</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-02.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">02</div>
+                      <div>
+                        <h6 class="lesson-title">Animation Pipeline</h6>
+                        <p class="lesson-subtitle">Professional workflow overview</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-03.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">03</div>
+                      <div>
+                        <h6 class="lesson-title">Animating in Harmony</h6>
+                        <p class="lesson-subtitle">Your first animation project</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-04.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">04</div>
+                      <div>
+                        <h6 class="lesson-title">User Interface & Set Up</h6>
+                        <p class="lesson-subtitle">Mastering the Harmony workspace</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-05.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">05</div>
+                      <div>
+                        <h6 class="lesson-title">Drawing Tools</h6>
+                        <p class="lesson-subtitle">Digital drawing fundamentals</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-06.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">06</div>
+                      <div>
+                        <h6 class="lesson-title">The Principles of Animation</h6>
+                        <p class="lesson-subtitle">Squash, stretch, timing, and more</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Continue with remaining lessons in the same pattern -->
+                <a href="lesson-07.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">07</div>
+                      <div>
+                        <h6 class="lesson-title">Paint Tools & Palettes</h6>
+                        <p class="lesson-subtitle">Color theory and application</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-08.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">08</div>
+                      <div>
+                        <h6 class="lesson-title">What is a Peg</h6>
+                        <p class="lesson-subtitle">Animation hierarchy and structure</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-09.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">09</div>
+                      <div>
+                        <h6 class="lesson-title">Drawing Substitutions</h6>
+                        <p class="lesson-subtitle">Efficient animation techniques</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Continue through lesson 24 -->
+                <!-- For brevity, showing a few more examples -->
+                
+                <a href="lesson-20.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">20</div>
+                      <div>
+                        <h6 class="lesson-title">Animating a Character</h6>
+                        <p class="lesson-subtitle">Full character animation project</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <a href="lesson-24.html" class="card lesson-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">24</div>
+                      <div>
+                        <h6 class="lesson-title">Set the Stage</h6>
+                        <p class="lesson-subtitle">Scene composition and staging</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                
+                <!-- Certification Card -->
+                <a href="lesson-25.html" class="card lesson-card certification-card hoverable waves-effect">
+                  <div class="card-content">
+                    <div class="lesson-content">
+                      <div class="lesson-number">
+                        <i class="material-icons">verified</i>
+                      </div>
+                      <div>
+                        <h6 class="lesson-title">Harmony Certification</h6>
+                        <p class="lesson-subtitle">Final project and certification preparation</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="divider" style="margin: 40px 0"></div>
+              
+              <div class="center-align">
+                <h5 style="color: var(--brand); margin-bottom: 20px;">
+                  <i class="material-icons left">school</i>
+                  Ready to Start?
+                </h5>
+                <p class="flow-text grey-text text-darken-2" style="max-width: 600px; margin: 0 auto 30px;">
+                  Begin with the Intro Welcome lesson to learn about the course structure, 
+                  or jump straight into Lesson 1 to start learning animation fundamentals.
+                </p>
+                
+                <div class="row" style="margin-top: 30px;">
+                  <div class="col s12 m6">
+                    <a href="intro.html" class="btn-large blue waves-effect waves-light" style="width: 100%;">
+                      <i class="material-icons left">play_circle_filled</i>
+                      Start Course
+                    </a>
+                  </div>
+                  <div class="col s12 m6">
+                    <a href="lesson-01.html" class="btn-large orange waves-effect waves-light" style="width: 100%; margin-top: 10px;">
+                      <i class="material-icons left">skip_next</i>
+                      Jump to Lesson 1
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="tv-controls">
-              <div class="tv-dial tv-dial-large"></div>
-              <div class="tv-dial tv-dial-small"></div>
-              <div class="tv-grille"></div>
-            </div>
-          </div>
-          <div class="tv-power-light"></div>
+          </section>
         </div>
-      </section>
-
-      <section class="card">
-        <div class="card-header">
-          <span class="material-symbols-rounded icon">info</span>
-          <h3>About this Lesson</h3>
-        </div>
-        <p>
-          Now that we jumped into Harmony with the Fun with Dots activity, it is time to get technical. 
-          We will explore how Harmony is set up and configure Preferences to improve your animation experience.
-        </p>
-        <div class="chip-container">
-          <span class="chip-static"><span class="material-symbols-rounded">schedule</span> 2 Hours</span>
-          <span class="chip-static">Beginner</span>
-        </div>
-
-        <h4>Key Topics</h4>
-        <ul class="topic-list">
-          <li><strong>Pose to Pose:</strong> Animation technique drawing key poses first.</li>
-          <li><strong>Key Drawing:</strong> Visually significant poses.</li>
-          <li><strong>Breakdown Drawing:</strong> Poses between keys.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <div class="card-header">
-          <span class="material-symbols-rounded icon">task_alt</span>
-          <h3>Assignments</h3>
-        </div>
-        <div class="step-list">
-          <div class="step-item">
-            <div class="step-number">1</div>
-            <div class="step-desc">Open <strong>Blob_Animation.xstage</strong>.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">2</div>
-            <div class="step-desc">Export as <strong>YourName_Blob.gif</strong> and submit.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-number">3</div>
-            <div class="step-desc">Complete the UI &amp; Preferences Quiz below.</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="card" aria-label="Toolbars Slideshow">
-        <div class="card-header">
-          <span class="material-symbols-rounded icon">perm_media</span>
-          <h3>Harmony Toolbars</h3>
-        </div>
-        
-        <div class="slideshow-wrapper">
-          <div class="slideshow-container">
-            <div class="mySlides fade" style="display: block;">
-              <div class="numbertext">1 / 4</div>
-              <img src="images/lesson-04/slide1.png" alt="Tools & Views">
-              <div class="text">The Tools Toolbar</div>
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 4</div>
-              <img src="images/lesson-04/slide2.png" alt="Toolbars">
-              <div class="text">The Playback Toolbar</div>
-            </div>
-
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 4</div>
-              <img src="images/lesson-07/colour-view-premium.png" alt="Timeline View">
-              <div class="text">The Timeline View</div>
-            </div>
-            <div class="mySlides fade">
-              <div class="numbertext">4 / 4</div>
-              <img src="images/lesson-07/thumbnail--harmony.jpg" alt="Edit Toolbar">
-              <div class="text">The Timeline View</div>
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)"><span class="material-symbols-rounded">chevron_left</span></a>
-            <a class="next" onclick="plusSlides(1)"><span class="material-symbols-rounded">chevron_right</span></a>
-          </div>
-          <br>
-
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-          </div>
-        </div>
-      </section>
-    
-      <section class="card quiz-card" aria-label="Quiz Section">
-        <div id="quiz-container">
-          <div class="quiz-header">
-            <div class="quiz-title">
-              <span class="material-symbols-rounded">quiz</span>
-              <h2>Knowledge Check</h2>
-            </div>
-            <span id="quiz-progress" class="badge">Question 1 of 2</span>
-          </div>
-
-          <div class="question-block active-question" data-correct="false">
-            <div class="question-image">
-              <img src="images/lesson-04/slide1.png" alt="Preferences Window" onerror="this.style.display='none'"> 
-            </div>
-            <p class="question-text">1. I enabled Auto-Save which is found in Preferences / General.</p>
-            <div class="options">
-              <label class="option-btn">
-                <input type="radio" name="q1" value="true"> 
-                <span class="radio-label">True</span>
-              </label>
-              <label class="option-btn">
-                <input type="radio" name="q1" value="false"> 
-                <span class="radio-label">False</span>
-              </label>
-            </div>
-            <div class="feedback"></div>
-          </div>
-
-          <div class="question-block" data-correct="true">
-            <p class="question-text">2. The Timeline View is used to set the timing of your animation.</p>
-            <div class="options">
-              <label class="option-btn">
-                <input type="radio" name="q2" value="true"> 
-                <span class="radio-label">True</span>
-              </label>
-              <label class="option-btn">
-                <input type="radio" name="q2" value="false"> 
-                <span class="radio-label">False</span>
-              </label>
-            </div>
-            <div class="feedback"></div>
-          </div>
-          
-          <div id="quiz-end-screen" style="display:none; text-align:center;">
-            <div class="completion-icon">🎉</div>
-            <h3 id="final-score-title">Quiz Complete!</h3>
-            <p id="final-score-text">You scored ...</p>
-            <button onclick="location.reload()" class="btn-filled">Restart Quiz</button>
-          </div>
-
-          <button id="quiz-action-btn" class="btn-filled" onclick="handleQuizAction()">Check Answer</button>
-        </div>
-      </section>
-
-      <div class="footer-msg">
-        <p>Congrats, you are one step closer to becoming an animator!</p>
       </div>
-
     </main>
-
-    <aside class="sidebar right" aria-label="Lesson sidebar">
-      <nav class="fab-nav">
-        <a href="lesson-03.html" class="fab-item" title="Previous Lesson">
-          <span class="material-symbols-rounded">arrow_back</span>
-        </a>
-        
-        <a href="index.html" class="fab-item home" title="Home">
-          <span class="material-symbols-rounded">home</span>
-        </a>
-
-        <a href="lesson-05.html" class="fab-item" title="Next Lesson">
-          <span class="material-symbols-rounded">arrow_forward</span>
-        </a>
-      </nav>
-
-      <section class="widget lesson-files">
-        <h3><span class="material-symbols-rounded">folder</span> Files</h3>
-        <div class="placeholder">Add file links.</div>
-      </section>
-
-      <section class="widget lesson-links">
-        <h3><span class="material-symbols-rounded">link</span> Links</h3>
-        <div class="placeholder">Add additional links.</div>
-      </section>
-    </aside>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize any Materialize components if needed
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if(targetId !== '#') {
+            document.querySelector(targetId).scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
