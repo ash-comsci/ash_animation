@@ -6,7 +6,7 @@
   --text: #ffffff;
 }
 .inline-icon {
-  height: 3em;            /* 1. Makes it the exact height of the font */
+  height: 2.5em;            /* 1. Makes it a bit larger than the height of the font */
   width: auto;            /* 2. Keeps aspect ratio */
   vertical-align: middle; /* 3. Aligns it with the center of the text */
   margin: 0 4px;          /* 4. Adds a little breathing room on sides */
