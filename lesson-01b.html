@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 1 - The World of Animation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="mario.png">
+  <style>
+    /* Additional styles for lesson-01 */
+    .history-card {
+      border-left: 4px solid #2196F3;
+      margin-bottom: 25px;
+    }
+    
+    .techniques-card {
+      border-left: 4px solid #FF9800;
+      margin-bottom: 25px;
+    }
+    
+    .topic-card {
+      border-left: 4px solid #4CAF50;
+      margin-bottom: 25px;
+    }
+    
+    .task-card {
+      border-left: 4px solid #9C27B0;
+      margin-bottom: 25px;
+    }
+    
+    .topic-item {
+      display: flex;
+      align-items: flex-start;
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      transition: all 0.3s;
+    }
+    
+    .topic-item:hover {
+      background: #f5f5f5;
+      transform: translateX(5px);
+    }
+    
+    .topic-item:last-child {
+      border-bottom: none;
+    }
+    
+    .topic-badge {
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    
+    .topic-content h6 {
+      margin: 0 0 5px 0;
+      color: #333;
+    }
+    
+    .topic-content p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .category-header {
+      background: linear-gradient(135deg, var(--brand), rgba(29, 62, 243, 0.1));
+      padding: 10px 15px;
+      margin: 20px -15px 15px -15px;
+      border-radius: 0 0 8px 8px;
+      color: white;
+    }
+    
+    .technique-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .technique-item {
+      background: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+    
+    .technique-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    .technique-icon {
+      font-size: 2.5rem;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .technique-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .topic-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .topic-badge {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body class="grey lighten-5">
+
+  <header class="title-card">
+    <img src="images/ash_animation.png" alt="Lesson Logo" class="logo">
+    <h1>Lesson 1 - The World of Animation</h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      
+      <main class="col s12 l9">
+        <div class="container main-container wide-container">
+          
+          <!-- History of Animation Video -->
+          <section class="section">
+            <div class="card z-depth-1 rounded-card history-card">
+              <div class="card-content">
+                <span class="card-title blue-text text-darken-2">
+                  <i class="material-icons left">history</i>
+                  History of Animation
+                </span>
+                
+                <div class="video-wrap center-align" style="margin: 20px 0;">
+                  <video controls poster="images/history-poster.jpg" class="responsive-video" style="width: 75%; max-width: 800px;">
+                    <source src="media/history-of-animation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                
+                <p class="grey-text text-darken-2 center-align">
+                  Journey through the evolution of animation from 19th century optical toys to modern digital techniques.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Animation Techniques Retro TV -->
+          <section class="section center-align">
+            <div class="card z-depth-1 rounded-card techniques-card">
+              <div class="card-content">
+                <span class="card-title orange-text text-darken-2">
+                  <i class="material-icons left">movie</i>
+                  Animation Techniques
+                </span>
+                
+                <div class="tv-retro scale-transition scale-in" style="max-width: 800px; margin: 20px auto;">
+                  <div class="tv-bezel">
+                    <div class="tv-inner">
+                      <div class="video-frame">
+                        <video controls poster="images/techniques-poster.jpg" style="width: 100%; height: 100%;">
+                          <source src="media/animation-techniques.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                    <div class="tv-controls">
+                      <div class="tv-dial tv-dial-large"></div>
+                      <div class="tv-dial tv-dial-small"></div>
+                      <div class="tv-grille"></div>
+                    </div>
+                  </div>
+                  <div class="tv-power-light"></div>
+                </div>
+                
+                <p class="grey-text text-darken-2">
+                  Explore various animation methods from traditional hand-drawn to cutting-edge digital techniques.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- About This Lesson -->
+          <div class="card hoverable z-depth-2 rounded-card">
+            <div class="card-content">
+              <span class="card-title green-text text-darken-2">
+                <i class="material-icons left">info</i>
+                About This Lesson
+              </span>
+              
+              <div class="chip blue lighten-5 blue-text text-darken-3" style="font-weight: 500; margin-bottom: 15px;">
+                <i class="material-icons tiny left">schedule</i> 
+                Duration: 1 hour
+              </div>
+              
+              <p class="flow-text" style="font-size: 1.1rem; line-height: 1.6;">
+                Begin your journey into the wonderful world of animation. Discover the rich history of animation 
+                from 19th-century optical toys to modern cinematic achievements. Explore how ongoing artistic and 
+                technological experimentation has shaped the animation industry we know today.
+              </p>
+              
+              <div class="divider" style="margin: 25px 0;"></div>
+              
+              <p style="font-size: 1rem;">
+                Many of the nineteenth-century inventions designed to animate images began as children's amusements. 
+                These optical toys evolved into sophisticated entertainment that captivated audiences worldwide, 
+                laying the foundation for modern animation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Topics Stack -->
+          <div class="card hoverable z-depth-2 rounded-card topic-card">
+            <div class="card-content">
+              <span class="card-title purple-text text-darken-2">
+                <i class="material-icons left">category</i>
+                Lesson Topics
+              </span>
+              <p style="margin-bottom: 20px;">
+                Covered in videos, lesson files, and interactive timeline. Review these topics thoroughly as they 
+                will prepare you for quizzes and the certification exam.
+              </p>
+              
+              <div class="category-header">
+                <h6><i class="material-icons tiny">visibility</i> Foundations</h6>
+              </div>
+              <div class="collection" style="border: none;">
+                <div class="topic-item">
+                  <div class="topic-badge">1</div>
+                  <div class="topic-content">
+                    <h6>Persistence of Vision</h6>
+                    <p>The scientific principle behind animation</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge">2</div>
+                  <div class="topic-content">
+                    <h6>Optical Toys</h6>
+                    <p>19th-century animation precursors</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="category-header" style="background: linear-gradient(135deg, #FF9800, rgba(255, 152, 0, 0.1));">
+                <h6><i class="material-icons tiny">settings</i> Innovation & Technology</h6>
+              </div>
+              <div class="collection" style="border: none;">
+                <div class="topic-item">
+                  <div class="topic-badge">3</div>
+                  <div class="topic-content">
+                    <h6>The Movie Camera</h6>
+                    <p>Revolutionizing animation capture</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge">4</div>
+                  <div class="topic-content">
+                    <h6>Winsor McCay & Gertie the Dinosaur</h6>
+                    <p>Pioneering character animation</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge">5</div>
+                  <div class="topic-content">
+                    <h6>Disney Innovations</h6>
+                    <p>Sound, color, and multiplane technology</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="category-header" style="background: linear-gradient(135deg, #4CAF50, rgba(76, 175, 80, 0.1));">
+                <h6><i class="material-icons tiny">palette</i> Animation Techniques</h6>
+              </div>
+              
+              <div class="technique-grid">
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">gesture</i>
+                  </div>
+                  <h6>Traditional Animation</h6>
+                  <p class="grey-text text-darken-1">Hand-drawn frame-by-frame animation</p>
+                </div>
+                
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">content_cut</i>
+                  </div>
+                  <h6>Digital Cut-out</h6>
+                  <p class="grey-text text-darken-1">Pre-drawn assets animated digitally</p>
+                </div>
+                
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">stop</i>
+                  </div>
+                  <h6>Stop-Motion</h6>
+                  <p class="grey-text text-darken-1">Claymation, puppet, and object animation</p>
+                </div>
+                
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">motion_photos_on</i>
+                  </div>
+                  <h6>Motion Capture</h6>
+                  <p class="grey-text text-darken-1">Real-time performance capture</p>
+                </div>
+                
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">draw</i>
+                  </div>
+                  <h6>Paperless Animation</h6>
+                  <p class="grey-text text-darken-1">Direct digital drawing and painting</p>
+                </div>
+                
+                <div class="technique-item">
+                  <div class="technique-icon">
+                    <i class="material-icons">view_in_ar</i>
+                  </div>
+                  <h6>3D Animation</h6>
+                  <p class="grey-text text-darken-1">Computer-generated imagery</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tasks Stack -->
+          <div class="card hoverable z-depth-2 rounded-card task-card">
+            <div class="card-content">
+              <span class="card-title deep-orange-text text-darken-2">
+                <i class="material-icons left">assignment</i>
+                Your Tasks
+              </span>
+              
+              <div class="collection" style="border: none; margin-top: 20px;">
+                <div class="topic-item">
+                  <div class="topic-badge" style="background: #FF9800;">①</div>
+                  <div class="topic-content">
+                    <h6>Watch & Review</h6>
+                    <p>Study the History of Animation video, Animation Techniques video, and Interactive Timeline</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge" style="background: #2196F3;">②</div>
+                  <div class="topic-content">
+                    <h6>Download Materials</h6>
+                    <p>Review PDFs in Lesson Files (right sidebar) for detailed exam preparation</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge" style="background: #4CAF50;">③</div>
+                  <div class="topic-content">
+                    <h6>Take Notes & Sketch</h6>
+                    <p>Document your learning in a sketchbook/notebook for certification exam preparation</p>
+                  </div>
+                </div>
+                
+                <div class="topic-item">
+                  <div class="topic-badge" style="background: #9C27B0;">④</div>
+                  <div class="topic-content">
+                    <h6>Complete Quiz</h6>
+                    <p>Test your knowledge with the History of Animation and Techniques quiz</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card-action" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                <a href="#!" class="btn blue waves-effect waves-light">
+                  <i class="material-icons left">quiz</i>
+                  Take Quiz
+                </a>
+                
+                <a href="#!" class="btn green waves-effect waves-light right">
+                  <i class="material-icons left">timeline</i>
+                  View Timeline
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Card -->
+          <div class="card-panel teal lighten-5 center-align z-depth-2 rounded-card">
+            <h5><i class="material-icons large">star</i></h5>
+            <h4>Great Start!</h4>
+            <p class="flow-text" style="margin-bottom: 20px;">
+              You've completed the foundational lesson. Understanding animation history and techniques 
+              is crucial for becoming a skilled animator. Continue to Lesson 2 to learn about the 
+              animation production pipeline.
+            </p>
+            
+            <a href="lesson-02.html" class="btn-large teal waves-effect waves-light">
+              <i class="material-icons left">arrow_forward</i>
+              Continue to Lesson 2
+            </a>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="col s12 l3">
+        <div class="sidebar-sticky">
+          <!-- Navigation Card -->
+          <div class="card z-depth-1 rounded-card">
+            <div class="card-content">
+              <span class="card-title center-align">
+                <i class="material-icons">navigation</i>
+                Navigation
+              </span>
+              <div class="collection" style="border: none; margin-top: 20px;">
+                <a href="intro.html" class="collection-item waves-effect">
+                  <i class="material-icons left">arrow_back</i>
+                  Intro Welcome
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">chevron_left</i>
+                  </span>
+                </a>
+                
+                <a href="lesson-02.html" class="collection-item waves-effect">
+                  <i class="material-icons left">arrow_forward</i>
+                  Lesson 2
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">chevron_right</i>
+                  </span>
+                </a>
+                
+                <a href="index.html" class="collection-item waves-effect">
+                  <i class="material-icons left">home</i>
+                  Course Index
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">chevron_right</i>
+                  </span>
+                </a>
+              </div>
+              
+              <div class="row valign-wrapper center-align" style="margin-top: 20px; margin-bottom: 0;">
+                <div class="col s4">
+                  <a href="intro.html" class="tooltipped" data-position="bottom" data-tooltip="Previous">
+                    <img src="images/prev1.png" alt="Previous Lesson" class="responsive-img hover-pop">
+                  </a>
+                </div>
+                <div class="col s4">
+                  <a href="index.html" class="tooltipped" data-position="bottom" data-tooltip="Home">
+                    <img src="images/Home3.png" alt="Home" class="responsive-img hover-pop">
+                  </a>
+                </div>
+                <div class="col s4">
+                  <a href="lesson-02.html" class="tooltipped" data-position="bottom" data-tooltip="Next">
+                    <img src="images/next1.png" alt="Next Lesson" class="responsive-img hover-pop">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson Files Card -->
+          <div class="card z-depth-1 rounded-card">
+            <div class="card-content">
+              <span class="card-title">
+                <i class="material-icons left">folder</i>
+                Lesson Files
+              </span>
+              <div class="collection" style="border: none; margin-top: 15px;">
+                <a href="#!" class="collection-item waves-effect">
+                  <i class="material-icons left">picture_as_pdf</i>
+                  History of Animation PDF
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">download</i>
+                  </span>
+                </a>
+                
+                <a href="#!" class="collection-item waves-effect">
+                  <i class="material-icons left">picture_as_pdf</i>
+                  Animation Techniques PDF
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">download</i>
+                  </span>
+                </a>
+                
+                <a href="#!" class="collection-item waves-effect">
+                  <i class="material-icons left">history_edu</i>
+                  Interactive Timeline
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">open_in_new</i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Useful Links Card -->
+          <div class="card z-depth-1 rounded-card">
+            <div class="card-content">
+              <span class="card-title">
+                <i class="material-icons left">link</i>
+                History Resources
+              </span>
+              <div class="collection" style="border: none; margin-top: 15px;">
+                <a href="https://animationobsessive.com/" target="_blank" class="collection-item waves-effect">
+                  <i class="material-icons left">newspaper</i>
+                  Animation History
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">open_in_new</i>
+                  </span>
+                </a>
+                
+                <a href="https://www.earlycinema.org/" target="_blank" class="collection-item waves-effect">
+                  <i class="material-icons left">theaters</i>
+                  Early Cinema
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">open_in_new</i>
+                  </span>
+                </a>
+                
+                <a href="https://www.disneyanimation.com/" target="_blank" class="collection-item waves-effect">
+                  <i class="material-icons left">movie_filter</i>
+                  Disney Archives
+                  <span class="secondary-content">
+                    <i class="material-icons tiny">open_in_new</i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Materialize components
+      var tooltips = document.querySelectorAll('.tooltipped');
+      M.Tooltip.init(tooltips);
+      
+      // Initialize video players if needed
+      var videos = document.querySelectorAll('video');
+      videos.forEach(video => {
+        video.addEventListener('click', function() {
+          if(this.paused) {
+            this.play();
+          } else {
+            this.pause();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
