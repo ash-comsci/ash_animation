@@ -298,3 +298,27 @@ body {
 
 .correct-text { color: #2e7d32; font-weight: bold; padding: 10px; }
 .incorrect-text { color: #c62828; font-weight: bold; padding: 10px; }
+
+/* --- CREATIVE LIST STYLES --- */
+
+/* Base settings for all creative lists to align text correctly */
+ul.creative-list {
+  list-style: none; /* Hides the default dot */
+  padding-left: 0;
+}
+ul.creative-list li {
+  position: relative;
+  padding-left: 2rem; /* Make room for the icon */
+  margin-bottom: 0.8rem;
+}
+
+/* STYLE A: The "Modern Arrow" (Clean & Professional) */
+/* great for general information */
+ul.arrow-list li::before {
+  content: "➤";       /* Unicode Arrow */
+  position: absolute;
+  left: 0;
+  color: var(--brand); /* Your Royal Blue */
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
