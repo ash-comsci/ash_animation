@@ -3,158 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lesson 12 - Nodes, Nodes and more Nodes</title>
+  <title>Lesson - 12 - Nodes, Nodes and more Nodes</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="mario.png">
-  <style>
-    /* specific tweaks for list legibility inside cards */
-    .step-list li { margin-bottom: 10px; }
-    .step-list strong { color: var(--brand); }
-    .mark-badge { font-weight: bold; background-color: #e3f2fd; color: var(--brand); padding: 2px 8px; border-radius: 4px; margin-right: 8px;}
-  </style>
 </head>
 <body class="grey lighten-5">
 
   <header class="title-card">
-    <img src="images/ash_animation.png" alt="Lesson Logo" class="logo">
-    <h1>Lesson 12 - Nodes, Nodes and more Nodes</h1> 
+    <img src="images/ash_small.png" alt="Lesson Logo" class="logo">
+    <h1>Lesson - 12 - Nodes, Nodes and more Nodes</h1>
   </header>
 
- <div class="row equal-height-row">
+  <div class="row equal-height-row">
       
     <main class="col s12 l9">
       <div class="container main-container wide-container">
-
-        <section class="section center-align">
-          <div class="tv-retro scale-transition scale-in">
-            <div class="tv-bezel">
-              <div class="tv-inner">
-                <div class="video-frame">
-                  <iframe 
-                    title="Node View Tutorial" 
-                    src="https://www.youtube.com/embed/placeholder" 
-                    allow="autoplay">
-                  </iframe>
-                </div>
-              </div>
-              <div class="tv-controls">
-                <div class="tv-dial tv-dial-large"></div>
-                <div class="tv-dial tv-dial-small"></div>
-                <div class="tv-grille"></div>
-              </div>
-            </div>
-            <div class="tv-power-light"></div>
-          </div>
-        </section>
-
+        
+        <!-- About This Lesson Card -->
         <div class="card z-depth-1 rounded-card">
           <div class="card-content">
             <span class="card-title blue-text text-darken-2" style="font-weight:bold;">About This Lesson</span>
             <p class="flow-text">
-              In this lesson you will learn about different Filter Nodes in Harmony. The Node view is a visual representation of how every element in your scene (drawing layers, pegs, effects) is combined to form the final image.
+              In this lesson you will now learn about different Filter Nodes in Harmony. The Node view is a visual representation of how every element in your scene, be it drawing layers, pegs, effects and others are combined together to form the final composited image. It allows you to rig the elements in your scene together and add a wide range of effects to your scene. Getting to know how to use the Node view is important especially for rigging cut-out models, adding effects to the scene or managing the way your scene is composited, rendered and displayed in Harmony.
             </p>
-            <p>
-              It allows you to rig elements together and add a wide range of effects. Mastering the Node view is essential for rigging cut-out models and managing composition.
-            </p>
-            <br>
-            <div class="chip">
-              <i class="material-icons left">schedule</i> Duration: 4 Hours
-            </div>
-            <div class="chip">
-              <i class="material-icons left">lightbulb_outline</i> Tip: Experiment with each Node property!
-            </div>
+            <p><strong>TIP: Experiment with each Node property to figure out the best filter result!</strong></p>
+            <p><strong>Lesson Duration:</strong> 4 hours</p>
           </div>
         </div>
 
-       <div class="card hoverable z-depth-2 rounded-card">
-          <div class="card-content">      
-            <span class="card-title grey-text text-darken-3" style="font-weight: bold;">Harmony Topics: Filter Nodes</span>
-                        <ul class="creative-list arrow-list">
-              <li>
-                <strong>The Auto-Patch Node:</strong> Automatically patches an articulation without line adjustment. Overlap two pieces with complete lines, and this node creates a perfect articulation.
-              </li>
-              <li>
-                <strong>The Blending Node:</strong> Composites elements using advanced algorithms rather than simple opacity. Useful for effects that need specific blend modes to look correct in the final render.
-              </li>
-              <li>
-                <strong>The Box-Blur Node:</strong> A quick way to create a blurring effect. Similar to Gaussian blur but renders faster. Useful when speed is important or for isolating areas with a matte.
-              </li>
-              <li>
-                <strong>The Composite Node:</strong> Takes several input images (drawings, effects) and outputs a single flattened image. Similar to pre-compositions in editing software.
-              </li>
-              <li>
-                <strong>The Cutter Node:</strong> Hides parts of a drawing based on a matte. You can invert it to make only the intersecting parts visible.
-              </li>
-                            <li>
-                <strong>The Glow Node:</strong> Creates a bright soft-edged light or diffuse region around an image. Useful for shining rims (sun, stars). Connect it twice to the Composite to keep the original image on top.
-              </li>
-                             <li>
-                <strong>The Shadow Node:</strong> Turns a drawing into a grey, semi-transparent, blurry silhouette. Connect your layer a second time to the Composite node to see the original object above its shadow.
-              </li>
-              <li>
-                <strong>Render & Render Mode:</strong> Most effects (like blurs and glows) must be rendered to be seen properly. Use the "Render Mode" in the Camera view to preview them. If the scene is heavy, turn off "Auto-Render" and update manually.
-              </li>
-            </ul>
-          </div>
-        </div>
-
+        <!-- Harmony Topics Card -->
         <div class="card hoverable z-depth-2 rounded-card">
-            <div class="card-content">
-              <span class="card-title orange-text text-darken-2">
-                <i class="material-icons left">settings</i>Part 1: Setting up CNote in Node View</span>
-              <p>Prepare your file for the effect tasks:</p>
-              <ul class="browser-default step-list">
-                  <li>Download the support files (<strong>Using Pegs</strong>) from the Lesson Files sidebar.</li>
-                  <li>Unzip this into your Documents folder.</li>
-                  <li>Launch Toon Boom Harmony and open your previous <em>What is a Peg</em> activity.</li>
-                  <li><strong>Save As:</strong> Rename the scene to <code>YourName_CNote_Filter</code> in your Documents folder.</li>
-              </ul>
+          <div class="card-content">      
+            <span class="card-title grey-text text-darken-3" style="font-weight: bold;">Harmony Topics</span>
+            
+            <div class="section">
+              <h6><strong>The Auto-Patch Node:</strong></h6>
+              <p>Harmony has a very efficient node to automatically patch an articulation without you having to do any line adjustment or colour overlapping. You can draw your two pieces with their complete lines overlapping each other in semicircles and the Auto-patch node will create a perfect articulation from it.</p>
             </div>
-          </div>
 
+            <div class="section">
+              <h6><strong>The Blending Node:</strong></h6>
+              <p>By default, layers are composited onto each other directly. This means that opaque pixels in front-most layers hide pixels in layers further back, and semi-transparent pixels on front-most layers are blended with pixels further back proportionally to their alpha ratio. This does the job for solid objects. However, some types of layers and effects may look better when composited into the scene using more advanced approaches. The Blending node can be used to composite an element, effect or composite using one of many different algorithms that may make it look much better in the final render.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>The Box-Blur Node:</strong></h6>
+              <p>The Blur - Box effect is a quick and easy way to create a blurring effect. The Box blur changes the colour value of each pixel based on the pixels next to it in the vertical and horizontal directions. The look of the blur is similar to the look achieved using Gaussian blur, but renders much faster. This effect is useful when a fast rendering time is important, and the quality of the blur is less important. Also, you can use a matte with this effect to isolate areas of the image.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>The Composite Node:</strong></h6>
+              <p>The Composite node allows you to use several images and output a single image. You can compare that to doing pre-compositions in editing software. You can connect several drawing, image generators and effect nodes in your Composite node and one bitmap (or vector in some cases) comes out of it.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>The Cutter Node:</strong></h6>
+              <p>You can use the Cutter node to hide parts of a drawing, a group or an effect. The Cutter node must be connected to a drawing that will serve as a matte. Parts of the drawing, group or effect that intersect with the matte drawing will be hidden. Optionally, you can also invert the Cutter node's matte, which will make parts of the drawing, group or effect that intersect with the matte drawing visible, and everything else will be hidden.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>The Glow Node:</strong></h6>
+              <p>The Glow effect turns your image into a glow area with a bright soft-edged light or diffuse light region around an image. The Glow effect is useful for creating a shining rim around objects, such as the sun or stars. Clone your layer or connect it a second time to the Composite node to display the original image on top of the glow.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>Render:</strong></h6>
+              <p>Most effects must be rendered so you can preview them properly. Some effects can be displayed in the OpenGL view, but most of them must be rendered and previewed in the Render Mode of the Camera view. Once you preview your effect, you may want to adjust it. By default, as soon as you modify a parameter, Harmony will recalculate the preview image. If your scene is heavy and you do not want the preview rendered automatically, deselect the Auto-Render option and do the preview update manually.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>Render Mode:</strong></h6>
+              <p>You cannot play back your animation in Render mode. You must perform a render or a preview render to see your animation with the final effects. Effects must be calculated before they can be viewed in real time. To make your previews calculate faster, you may want to render them at a smaller resolution. You can use the Preview Resolution command so you will not have to modify the resolution of your scene every time you make a check preview.</p>
+            </div>
+
+            <div class="section">
+              <h6><strong>The Shadow Node:</strong></h6>
+              <p>With the Shadow effect, you can turn a drawing into a shadow. It doesn't matter if the drawing layer is a fully coloured character. The Shadow effect will render it into a grey, semitransparent, slightly blurry silhouette. You must connect your layer a second time to your Composite node to see the original image displayed on top of the shadow.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Task Card -->
         <div class="card hoverable z-depth-2 rounded-card">
           <div class="card-content">
             <span class="card-title orange-text text-darken-2">
-              <i class="material-icons left">build</i>Part 2: Applying Filter Nodes</span>
+              <i class="material-icons left">assignment</i>Task</span>
             
-            <p><strong>Goal:</strong> Apply four different Filter Nodes to your animated version of CNote walking.</p>
-            <ul class="creative-list arrow-list">
-                <li><strong>Blur:</strong> Apply the Box-Blur node to CNote. Export image as <code>CNote_Blur</code>.</li>
-                <li><strong>Glow:</strong> Apply the Glow node. Remember to wire it correctly so the original character remains visible. Export image as <code>CNote_Glow</code>.</li>
-                <li><strong>Shadow:</strong> Apply the Shadow node to create a drop shadow for CNote. Export image as <code>CNote_Shadow</code>.</li>
-                <li><strong>Cutter:</strong> Use the Cutter node to mask part of the character (e.g., hiding part of the body behind an object). Export image as <code>CNote_Cutter</code>.</li>
-                <li><em>Note:</em> Ensure you take notes on animation terminology for the certification exam.</li>
+            <ul class="browser-default">
+              <li>Download the support files (Using Pegs) from the Lesson Files, this time you will be applying Node effects to it.</li>
+              <li>Complete the Interactive lesson below and take notes on the topics presented in this lesson.</li>
+              <li>Apply the four different Filter Nodes to your animated version of CNote walking from the previous lesson. Be sure to <strong>save</strong> and <strong>export</strong> your Harmony four times in your <strong>Documents folder</strong>. Be sure to continue to take notes in your sketchbook/notebook on how to use Harmony and any animation terminology as it will help you prepare for your certification exam at the end of this course.</li>
             </ul>
+
+            <div class="section">
+              <h6><strong>Part 1 - Setting up CNote in Node View:</strong></h6>
+              <ul class="browser-default">
+                <li>Unzip this into your Documents folder on your computer.</li>
+                <li>Launch Toon Boom Harmony and open your previous What is a Peg activity.</li>
+                <li>Continue to take notes to prepare for the certification exam.</li>
+                <li>Resave it as <strong>YourName_CNote_Filter</strong> in your <strong>Documents folder</strong>.</li>
+                <li>Complete the Steps provided, export and submit your projects as: CNote_Blur, CNote_Glow, CNote_Cutter and CNote_Shadow.</li>
+              </ul>
+            </div>
+
           </div>
         </div>
 
-        <div class="card z-depth-1 rounded-card grey lighten-3">
-            <div class="card-content">
-                <span class="card-title center-align">Assessment Criteria (20 Marks)</span>
-                <p class="center-align">Upload your four exported images below.</p>
-                <br>
-                <ul class="collection">
-                    <li class="collection-item">
-                        <span class="mark-badge">5 Marks</span> Successfully completed <strong>CNote_Blur</strong>
-                    </li>
-                    <li class="collection-item">
-                        <span class="mark-badge">5 Marks</span> Successfully completed <strong>CNote_Glow</strong>
-                    </li>
-                    <li class="collection-item">
-                        <span class="mark-badge">5 Marks</span> Successfully completed <strong>CNote_Shadow</strong>
-                    </li>
-                    <li class="collection-item">
-                        <span class="mark-badge">5 Marks</span> Successfully completed <strong>CNote_Cutter</strong>
-                    </li>
-                </ul>
-                <div class="center-align mt-2">
-                    <a href="#" class="btn btn-large blue waves-effect waves-light">
-                        <i class="material-icons left">cloud_upload</i> Submit Assignments
-                    </a>
-                </div>
+        <!-- Assessment Card -->
+        <div class="card hoverable z-depth-2 rounded-card">
+          <div class="card-content">
+            <span class="card-title red-text text-darken-2">
+              <i class="material-icons left">grade</i>Assessment</span>
+            
+            <ul class="browser-default">
+              <li>5 marks - Successfully completed CNote_Blur submitted</li>
+              <li>5 marks - Successfully completed CNote_Glow submitted</li>
+              <li>5 marks - Successfully completed CNote_Shadow submitted</li>
+              <li>5 marks - Successfully completed CNote_Cutter submitted</li>
+              <li><strong>Total: 20 marks</strong></li>
+            </ul>
+
+            <div class="divider"></div>
+            
+            <div class="section">
+              <p><strong>Required</strong></p>
+              <p><strong>Completed</strong></p>
+              <p><strong>Nodes, Nodes and more Nodes</strong></p>
             </div>
+
+            <!-- Slideshow Placeholder -->
+            <div class="section">
+              <p><strong><em>[slideshow]</em></strong></p>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -163,6 +148,7 @@
     <aside class="col s12 l3">
       <div class="sidebar-sticky"> 
         
+        <!-- Navigation -->
         <ul class="collection with-header z-depth-1 rounded-card" style="border:none;">
           <li class="collection-header red lighten-4">
             <h6><i class="material-icons tiny">explore</i> Navigation</h6>
@@ -188,16 +174,33 @@
           </li>
         </ul>
 
+        <!-- Lesson Files -->
         <ul class="collection with-header z-depth-1 rounded-card" style="border:none;">
-          <li class="collection-header blue lighten-4"><h6><i class="material-icons tiny">attach_file</i> Lesson Files</h6></li>
+          <li class="collection-header blue lighten-4">
+            <h6><i class="material-icons tiny">attach_file</i> Lesson Files</h6>
+          </li>
           <li class="collection-item">
-              <a href="#!" class="valign-wrapper"><i class="material-icons tiny left">folder_zip</i> Using Pegs (Support Files)</a>
+            <p>Download support files for this lesson:</p>
+            <a href="#!" class="waves-effect waves-light btn-small blue">
+              <i class="material-icons left">cloud_download</i>Download Files
+            </a>
           </li>
         </ul>
 
+        <!-- Useful Links -->
         <ul class="collection with-header z-depth-1 rounded-card" style="border:none;">
-          <li class="collection-header orange lighten-4"><h6><i class="material-icons tiny">link</i> Useful Links</h6></li>
-          <li class="collection-item"><a href="#!" target="_blank">Harmony Node Documentation</a></li>
+          <li class="collection-header orange lighten-4">
+            <h6><i class="material-icons tiny">link</i> Useful Links</h6>
+          </li>
+          <li class="collection-item">
+            <a href="#!" class="blue-text">Harmony Documentation</a>
+          </li>
+          <li class="collection-item">
+            <a href="#!" class="blue-text">Node View Tutorial</a>
+          </li>
+          <li class="collection-item">
+            <a href="#!" class="blue-text">Filter Nodes Guide</a>
+          </li>
         </ul>
 
       </div> 
