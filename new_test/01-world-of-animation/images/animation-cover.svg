@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Animation lesson illustration</title>
+  <desc id="desc">Stylized animation frames, play button, timeline and drawing pencil.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#082f49"/>
+      <stop offset="0.55" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <g opacity="0.18" fill="none" stroke="#fff" stroke-width="3">
+    <circle cx="165" cy="165" r="105"/>
+    <circle cx="165" cy="165" r="70"/>
+    <circle cx="1030" cy="550" r="125"/>
+    <path d="M0 540 C280 430, 390 720, 670 585 S1020 470, 1200 530"/>
+  </g>
+  <g transform="translate(170 150)">
+    <rect x="0" y="0" width="620" height="350" rx="28" fill="#fff" opacity="0.96"/>
+    <rect x="38" y="42" width="544" height="235" rx="20" fill="#111827"/>
+    <circle cx="310" cy="158" r="66" fill="url(#accent)"/>
+    <path d="M290 119 L290 197 L356 158 Z" fill="#fff"/>
+    <g fill="#cbd5e1">
+      <rect x="38" y="300" width="82" height="18" rx="9"/>
+      <rect x="136" y="300" width="82" height="18" rx="9"/>
+      <rect x="234" y="300" width="82" height="18" rx="9"/>
+      <rect x="332" y="300" width="82" height="18" rx="9"/>
+      <rect x="430" y="300" width="82" height="18" rx="9"/>
+    </g>
+  </g>
+  <g transform="translate(835 110) rotate(12)">
+    <rect x="0" y="0" width="170" height="230" rx="18" fill="#f8fafc" opacity="0.94"/>
+    <circle cx="85" cy="80" r="40" fill="#f59e0b"/>
+    <path d="M50 155 Q85 115 120 155" fill="none" stroke="#0f766e" stroke-width="13" stroke-linecap="round"/>
+    <path d="M48 188 H122" stroke="#7c3aed" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(865 390) rotate(-12)">
+    <path d="M0 80 L225 0 L250 25 L25 105 Z" fill="#fbbf24"/>
+    <path d="M225 0 L280 -18 L250 25 Z" fill="#e2e8f0"/>
+    <path d="M280 -18 L300 -25 L288 -4 Z" fill="#111827"/>
+  </g>
+</svg>
