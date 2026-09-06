@@ -10,7 +10,7 @@
   Leave a value as "" until that lesson page is ready.
 */
 window.LESSON_LINKS = {
-  1: "../01-world-of-animation/index.html",
+  1: "./01-world-of-animation/index.html",
   2: "",
   3: "",
   4: "",
