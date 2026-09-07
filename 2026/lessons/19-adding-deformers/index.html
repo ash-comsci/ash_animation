@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="ASH Animation Lesson 19: Adding Deformers" name="description"/><title>19 - Adding Deformers | ASH Animation</title><link href="../../assets/css/site.css" rel="stylesheet"/></head>
+<body data-lesson="19" data-root="../../">
+<header class="course-shell-header"><div class="container course-shell-inner">
+<a class="course-brand" href="../../index.html"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><span><strong>ASH Animation</strong><small>Introduction to Animation</small></span></a>
+<nav class="course-shell-nav"><a href="../../index.html">Course Home</a><a class="hide-tablet" href="../../index.html#lessons">All Lessons</a><div class="lesson-jump"><button type="button">Jump to Lesson ▾</button><div class="lesson-jump-menu"></div></div></nav>
+</div></header>
+<div class="course-progress-nav"><div class="container course-progress-inner"><a class="prev" href="../../lessons/18-adding-master-pegs/index.html">← Adding Master Pegs</a><div class="lesson-position">Lesson 19 of 25<strong>Adding Deformers</strong></div><a class="next" href="../../lessons/20-animating-a-character/index.html">Animating a Character →</a></div></div>
+<main>
+<section class="lesson-shell-hero"><div class="container"><span class="lesson-count">Lesson 19 · Rigging</span><h1>Adding Deformers</h1><p>Work through the lesson notes, demonstrations, tasks and activities below. Use the navigation above to move through the course.</p></div></section>
+<section class="lesson-content-section"><div class="container"><div class="source-video"><video controls="" playsinline="" preload="none"><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/HarmonyTrainingVideos/13_Adding_Deformers.mp4#t=0.001"/></video><p>Main lesson video</p></div><div class="source-layout"><article class="source-card source-article">
+<h2>About this Lesson:</h2>
+In the last lesson you prepared a cut out character to be rigged by adding Master pegs. In this lesson you will learn how Deformations let you animate bitmap or vector-based graphics. Deformations act as a skeleton with limbs and articulations you can bend, reshape, and curve. You can deform a character made out of one, or many, drawing or image layers and make it move as if it were a cut-out puppet. This also allows you to take an area in a single bitmap image and create animation by distortion.  A deformation skeleton is composed of deformation nodes, which are the various pieces required to articulate or deform your drawings.<br/><br/>
+<p><strong>Lesson Duration:</strong>  8 hours</p>
+<br/>
+<h3><strong>Harmony Topics:</strong></h3>
+<blockquote><strong>Please note:</strong> There is a presentation on Deformers on the bottom of this lesson  </blockquote>
+<ul>
+<li><strong>Types of Deformers:</strong> The 4 types (each type has its own advantages and limitations and need to be rigged and handled in different ways) of deformers are:
+<ul>
+<li>Bone</li>
+<li>Game Bone</li>
+<li>Curve  </li>
+<li>Envelope</li>
+</ul>
+</li>
+<li><b>Deformation Toolbar:</b>  The Deformation toolbar contains the various tools and options used to create a deformation rig. This toolbar is displayed in the default interface.</li>
+<li><strong>Rigging Tool:</strong>  In Harmony, a character rig is basically a template based on your character's model, but in which all movable parts are broken down into different layers, and arranged in a hierarchy that facilitates digital animation, also known as cut-out animation. To make a character rig, we must first make sure you have a character model to build on. If you have any drawing of a character available, import it into a new scene, then scale and position it to your liking. Otherwise, you can draw your character's model directly in Harmony. Once you have a model ready, we can start breaking it down into parts to build your rig with.</li>
+<li><strong>Inverse Kinematics:</strong>  The Inverse Kinematics (IK) tool allows you to pull on a character's extremities, such as the hands and feet, and have the rest of the body follow. It can be used on any piece connected in a hierarchy. However, you don't have to use IK every time you have a hierarchy rig. This tool is useful when you want to bend a character's knees, make it sit and move the rest of the body, and so on. It will also assist you with posing difficult moves.</li>
+<li><strong>Inverse Kinematics Tool (IK):</strong>  This tool helps you achieve complex motions, such as sitting down or knee bending. The Inverse Kinematics tool moves and rotates every selected element as a chain.   Inverse kinematics means that the element is animated from the child up to the parent. In other words, if the hand is animated, then the forearm, arm and shoulder follow the hand in a fairly natural way in terms of the movement, rotation and bending.</li>
+<li><strong>Kinematic Output:</strong>  The Kinematic Output node lets you hook a separate element that you want to be linked to the deformation chain but not be part of the deformation, such as a hand to an arm or an arm to the body. These elements will follow the movement of the chain just like a regular cut-out character hierarchy piece without being influenced by the deformation of the arm. If you don't use the Kinematic Output, the piece's pivot will not follow the deformation.  Connect a Kinematic Output node below the deformation node you want your drawing to follow.</li>
+<li><strong>Nudging:</strong>  In the same way you create multiplane backgrounds (depth), you can perform a micro nudge of the part to be reordered and see it in front of the other elements, even if its layer is actually behind the other ones in the Timeline view. The forward-backward position can also be animated over time.</li>
+</ul>
+<br/><br/>
+<h3>Task:<br/><br/></h3>
+<ul>
+<li>
+<p>Download the support files from the Lesson Files.  </p>
+</li>
+<li>
+<p>Watch, complete and take notes on the <strong>Deformers</strong> video tutorial and the topics presented in this lesson.  There is an interactive presentation on <strong>Deformers</strong> on the bottom of this lesson. Taking notes in your sketchbook/notebook on how to use Harmony and any animation terminology will help you prepare for your certification exam at the end of this course.</p>
+</li>
+<li>
+<p>Be sure to save your Harmony file as:  <strong>YourName_Deformers</strong> in your Documents folder.  </p>
+</li>
+</ul>
+<blockquote><strong>Hint:</strong>  <strong>Space bar</strong> is freehand,<strong> 1</strong> is Zoom out and<strong> 2</strong> is Zoom in.  These shortcuts will help you navigate the <strong>Node</strong> view.</blockquote>
+<br/>
+<p><strong>Part 1 - Using the Bone Tool: </strong><br/><br/></p>
+<ul>
+<li>
+<p>Launch Toon Boom Harmony.   </p>
+</li>
+<li>In the Welcome Window, open <strong>13_using_deformers</strong> </li>
+<li>Take some time to investigate the construction of the Timeline layers and the Node View.   You may also want to review your notes from the previous lesson.</li>
+</ul>
+<img alt="Screen Shot 2021 08 15 at 4.32.36 PM" loading="lazy" src="images/Screen_Shot_2021-08-15_at_4.32.36_PM.png"><br/>
+<ul>
+<li>Go to the Body <strong>Backdrop</strong> in<strong> Node</strong> view and select the Body Drawing layer node.</li>
+<li>Now go to the <strong>Timeline</strong> View, press <strong>o</strong> on the keyboard and it will highlight the Body Drawing layer. </li>
+</ul>
+<img alt="o key highlight" loading="lazy" src="images/o_key_highlight.png"/><br/>
+<ul>
+<li> Use <strong>Solo</strong> mode on the Body layer in the <strong>Timeline</strong>.</li>
+<li>Go to the <strong>Deformation Toolbar</strong>, next to the <strong>Advanced Animation toolbar</strong>.</li>
+</ul>
+<div><img alt="deformer tool and solo" loading="lazy" src="images/deformer_tool_and_solo.png"/></div>
+<br/>
+<ul>
+<li>Select the <strong>Rigging</strong> Tool.</li>
+<li>In the <strong>Tool Property</strong> select the <strong>Bone Mode</strong>.</li>
+</ul>
+<img alt="tool property deformers" loading="lazy" src="images/tool_property_deformers.png"/><br/>
+<ul>
+<li>Use the <strong>Bone</strong> mode deformer to add a skeleton to the body in <strong>Camera</strong> view.   Be sure to add the <strong>bone</strong> tool selection points to where the spine of Cnote would be.  </li>
+</ul>
+<img alt="bone tool" loading="lazy" src="images/bone_tool.png"/><br/>
+<ul>
+<li>Start by clicking the bottom of the Body art, next the center, and last the top.  Enlarge the articulation feature in the middle of your skeleton so it is approximately the size of CNotes' waist.</li>
+</ul>
+<video autoplay="autoplay" controls="" loop="loop" playsinline="" preload="none" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Deformers/bone_tool_belly.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>Test the Bone rig using the <strong>Transform</strong> tool in the Toolbar.</li>
+<li>Disable <strong>Solo</strong> mode.</li>
+</ul>
+<b>Part 2 - Controlling Cnotes' entire body:</b><br/><br/>
+<ul>
+<li>You will be using the same Bone deformer to control CNotes' entire body.</li>
+<li>In <strong>Node</strong> view, find the <strong>Deformer</strong> Node which was added in the Body backdrop.</li>
+<li>Select the Deformer Node, hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key  and drag it above the backdrops.  Release the mouse and keyboard key.</li>
+</ul>
+<img alt="move def node" loading="lazy" src="images/move_def_node.png"/><br/><br/>
+<ul>
+<li>Using the hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key and drag it into the waypoint between <strong>Upper Body MasterPe</strong><strong>g </strong>and the<strong> CNNote MasterPeg.</strong></li>
+</ul>
+<img alt="waypoints" loading="lazy" src="images/waypoints.png"/><br/>
+<ul>
+<li>Now everything under this node will be influenced by this deformer. </li>
+<li>You will need to add a <strong>Kinematic Output (Bone)</strong> node from the <strong>Node Library</strong>, which will prevent certain art not to be deformed.</li>
+<li>Reposition the <strong>Kinematic Output (Bone)</strong> node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Head Backdrop</strong> and the <strong>Upper Body MasterPe</strong><strong>g.</strong></li>
+<li>Rename the <strong>Kinematic Output (Bone) </strong>as<strong> KO. </strong> </li>
+<li>Copy and paste the <strong>KO</strong> node. </li>
+<li>Reposition the new <strong>KO </strong>node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Front Arm Backdrop</strong> and the <strong>Upper Body MasterPe</strong><strong>g.</strong></li>
+<li>Paste the <strong>KO</strong> node again</li>
+<li>Reposition the new <strong>KO </strong>node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Back Arm Backdrop</strong> and the <strong>Upper Body MasterPe</strong><strong>g.</strong></li>
+<li>Paste the <strong>KO</strong> node again</li>
+<li>Reposition the new <strong>KO </strong>node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Guitar Backdrop</strong> and the <strong>Upper Body MasterPe</strong><strong>g.</strong></li>
+</ul>
+<blockquote><strong>Hint:</strong>  These KO nodes will prevent the art from being distorted.  But the art pieces do move with the Bone Node you created.</blockquote>
+<img alt="KO 4" loading="lazy" src="images/KO_4.png"/><br/>
+<ul>
+<li>Collapse the folder structure in the Timeline.</li>
+<li>Go to the<strong> Deformer Toolbar</strong> and press <strong>Reset Current Key Frame</strong>. This removes any key frames which may have been applied to your Timeline.</li>
+</ul>
+<br/><strong>Part 3 - Add Bone Deformers to Legs:<br/><br/></strong>
+<ul>
+<li>Go to the <strong>Deformer Toolbar</strong> and press <strong>Show Selected Deformers and Hide all Others</strong>.</li>
+<li>Go to Front Leg Backdrops.</li>
+<li>Use<strong> Solo Mode</strong> on the Foot and Leg layers (this will hide all other art).</li>
+<li>Use the <strong>Bone</strong> mode deformer to add a skeleton to the Leg in <strong>Camera</strong> view.   Be sure to add the <strong>bone</strong> tool selection points to where the leg bends.  Modify the articulation point at the knee so it is touching the edges of the line art.</li>
+<li>Select the Deformer Node, hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key  and drag it above the backdrop.  Release the mouse and keyboard key.</li>
+<li>Using the hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key drag it into the waypoint between <strong>Front-Leg MasterPe</strong><strong>g </strong>and the<strong> Upper body MasterPeg.</strong></li>
+<li>Paste the <strong>KO</strong> node again (from clipboard.</li>
+<li>Reposition the new <strong>KO </strong>node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Front Leg MasterPeg</strong> and the <strong>Front Front Pe</strong><strong>g.  </strong>This will prevent the toes from being distorted.</li>
+</ul>
+<img alt="front foot ko" loading="lazy" src="images/front_foot_ko.png"/><br/>
+<ul>
+<li>Disable the Solo modes on those layers.</li>
+<li>Repeat <strong>Part 3</strong> to rig the back leg.</li>
+<li>Test out the animation of the body parts by using the <strong>Transform</strong> tool.</li>
+<li>Go to the<strong> Deformer Toolbar</strong> and press <strong>Reset Current Key Frame</strong>. This removes any key frames which may have been applied to your Timeline.</li>
+</ul>
+<strong><strong><br/>Part 4 - Using the Curve Deformer:<br/><br/></strong></strong>
+<ul>
+<li>In the <strong>Tool Property</strong> select the <strong>Curve Mode</strong>.</li>
+<li>Go to the <strong>Deformer Toolbar</strong> and press <strong>Show Selected Deformers and Hide all Others</strong>.</li>
+<li>Go to the Tail <strong>Backdrop</strong> in<strong> Node</strong> view and select the Tail Drawing layer node.</li>
+<li>Now go to the <strong>Timeline</strong> View, press <strong>o</strong> on the keyboard and it will highlight the Tail Drawing layer. </li>
+<li>Apply the <strong>Curve</strong> deformer points by clicking first where you want the rotation point to begin.  Click a point and drag the cursor approximately a third of the way.  Continue to add the last point at the end of the tail by clicking and dragging. </li>
+<li></li>
+</ul>
+<img alt="curve" loading="lazy" src="images/curve.png"/><br/><img alt="curve manipulated" loading="lazy" src="images/curve_manipulated.png"/><br/>
+<ul>
+<li>Test out the animation of the tail by using the <strong>Transform</strong> tool.</li>
+<li>Go to the<strong> Deformer Toolbar</strong> and press <strong>Reset Current Key Frame</strong>. This removes any key frames which may have been applied to your Timeline.</li>
+</ul>
+<blockquote><strong>Hint:</strong>  When designing art to be manipulated by the Curve deformer, you should always design the art straight, not curves.  The Curve deformer will make the magic happen.</blockquote>
+<br/><br/><strong>Part 5 - Add Envelope Deformers to Arms:<br/><br/></strong>
+<ul>
+<li>Go to the <strong>Deformer Toolbar</strong> and press <strong>Show Selected Deformers and Hide all Others</strong>.</li>
+<li>Go to Front Arm Backdrops.</li>
+<li>Use<strong> Solo Mode</strong> on the arm and hands layers (this will hide all other art).</li>
+<li>Use the <strong>Envelope</strong> mode deformer to add a skeleton to the Leg in <strong>Camera</strong> view.   Apply the Envelope deformer points by clicking first where you want the rotation point to begin.  Click a point at the elbow and drag the Envelope points approximately a third of the way.  Continue to add the last point at the wrist by clicking and dragging.</li>
+</ul>
+<img alt="envelop" loading="lazy" src="images/envelop.png"/><br/>
+<ul>
+<li>Select the Deformer Node, hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key  and drag it above the Front Arm backdrop.  Release the mouse and keyboard key.</li>
+<li>Using the hold the <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key drag it into the waypoint between <strong> Front-Arm MasterPe</strong><strong>g </strong>and the<strong> Upper Body MasterPeg.</strong></li>
+<li>Paste the <strong>KO</strong> node again (from clipboard).</li>
+<li>Reposition the new <strong>KO </strong>node.  Hold <strong>Option</strong> (macOS) key or <strong>Alt</strong> (windows) and drag to the waypoint between the <strong>Front Arm MasterPeg</strong> and the <strong>Front Hand Pe</strong><strong>g.  </strong>This will prevent the hand from being distorted.</li>
+</ul>
+<img alt="KO hand" loading="lazy" src="images/KO_hand.png"/><br/>
+<ul>
+<li>Repeat <strong>this process</strong> to rig the back arm, but use the <strong>Curve</strong> deformer..</li>
+<li>Test out the animation of the body parts by using the <strong>Transform</strong> tool.</li>
+<li>Go to the<strong> Deformer Toolbar</strong> and press <strong>Reset Current Key Frame</strong>. This removes any key frames which may have been applied to your Timeline.</li>
+<li>Time to reposition the back Hand using nudging.  This will move it in front of the guitar.</li>
+<li>Disable <strong>Solo</strong> modes</li>
+<li>Disable <strong>Animate mode.</strong></li>
+<li>Select <strong>Transform</strong> tool.</li>
+<li>Go to <strong>Camera</strong> View.</li>
+<li>Click the back hand art in the <strong>Camera</strong> view.</li>
+<li>Hold <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key press the down arrow once, which will shift the art in Z space.</li>
+</ul>
+<img alt="nudge in z" loading="lazy" src="images/nudge_in_z.png"/><br/>
+<ul>
+<li>Click the back hand art in the <strong>Camera</strong> view.</li>
+<li>Hold <strong>Option</strong> (macOS) or <strong>Alt</strong> (windows) key press the down arrow once, which will shift the art in Z space.</li>
+<li>Test out the animation of the tail by using the <strong>Transform</strong> tool.</li>
+<li>Go to the<strong> Deformer Toolbar</strong> and press <strong>Reset Current Key Frame</strong>. This removes any key frames which may have been applied to your Timeline.</li>
+<li>Save your project as first as <strong>YourName_Deformers.</strong></li>
+</ul>
+<h2><strong></strong>Complete the Deformers Quiz before moving to the next lesson.</h2>
+<table></table> </article><aside class="source-card resource-panel"><span class="section-kicker">Lesson Files</span><h3>Resources</h3><div class="resource-links"><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Harmony_Lesson_Handouts/Lesson_19_Using_Deformers.zip" rel="noopener" target="_blank">Lesson Support FIles ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/deformation/about-deformation.html" rel="noopener" target="_blank">Harmony's About Deformations ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/reference/toolbar/top/deformation-toolbar.html" rel="noopener" target="_blank">Harmony's Deformer Toolbar ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/deformation/create-basic-deformation.html" rel="noopener" target="_blank">Harmony's Creating Deformations ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/cut-out-animation/about-inverse-kinematic.html" rel="noopener" target="_blank">Harmony's About Inverse Kinematics ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/deformation/about-point-kinematic-output.html" rel="noopener" target="_blank">Harmony's About Kinematics Outputs ↗</a></div><p style="margin-top:18px"><a class="button primary" href="#activities">Go to activities</a></p></aside></div></div></section>
+<section class="activities-section" id="activities"><div class="container"><div class="section-heading"><span class="section-kicker">Interactive Work</span><h2>Lesson activities</h2><p>Activities from the saved courseware have been adapted so they work on this self-hosted site without the original LMS.</p></div><article class="activity-card presentation-card">
+<span class="activity-type">Interactive review</span>
+<h3>Deformer Review &amp; Quiz</h3>
+<div class="presentation-shell" data-presentation="">
+<div class="presentation-stage"><section class="presentation-slide active" data-slide="1"><div class="presentation-slide-number">Slide 1 of 20</div><img alt="" class="presentation-image" src="images/file-61041d0e97cf3.png"/><div class="presentation-text"><p><span style="font-size:4.5em;"><span style="color:#ffffff;"><strong>QUIZ</strong></span></span></p>
+</div></section><section class="presentation-slide" data-slide="2"><div class="presentation-slide-number">Slide 2 of 20</div><img alt="" class="presentation-image" src="images/file-61034ff378c59.png"/></section><section class="presentation-slide" data-slide="3"><div class="presentation-slide-number">Slide 3 of 20</div><div class="presentation-text"><p><span style="font-size:1.25em;"><strong>Deformations:  </strong></span></p>
+<p>Deformers let you animate bitmap or vector-based graphics, including gradients and textures. Deformations act as a skeleton with limbs and articulations you can bend, reshape, and curve. You can deform a character made out of one, or many, drawing or image layers and make it move as if it were a cut-out puppet. This also allows you to take an area in a single bitmap image and create animation by distortion.  A deformation skeleton is composed of deformation nodes, which are the various pieces (here represented as layers or nodes) required to articulate or deform your drawings, such as a series of bones, curves or game bones. </p>
+<p><span style="font-size:1.125em;"><strong>Types of Deformers:</strong></span></p>
+<p>The 4 types of deformers are: Bone, Game Bone, Curve and Envelope. Each type has its own advantages and limitations and need to be rigged and handled in different ways.</p>
+</div></section><section class="presentation-slide" data-slide="4"><div class="presentation-slide-number">Slide 4 of 20</div><img alt="" class="presentation-image" src="images/file-6103520183827.png"/><div class="presentation-text"><p><strong>The Bone Deformer:</strong></p>
+<p>The Bone deformation allows you to create a bone-like structure in which each part is solid, but with articulations that are flexible. This is mostly useful for animating a character's limbs, such as the arms or legs, or other parts that can be articulated such as torsos or fingers.  For example, a Bone deformation can be used to articulate an arm that is made of a single drawing, so that the upper arm and forearm can be moved independently, without having to draw the upper arm and the forearm on different layers. Harmony will deform the drawing to make it look articulated. The different parts of a Bone deformation can be rotated around their joint, extended and shortened, giving you the same capabilities as animating articulations on different layers, without having to worry about parts detaching, pivot points, or clipping outlines.</p>
+</div></section><section class="presentation-slide" data-slide="5"><div class="presentation-slide-number">Slide 5 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="6"><div class="presentation-slide-number">Slide 6 of 20</div><div class="presentation-text"><p><strong>The Game Bone Deformer:</strong></p>
+<p>The Game Bone deformation is very similar to the Bone deformation. It allows you to create a bone-like structure in which each part is solid, but with articulations that are flexible. This is mostly useful for animating a character's limbs, such as the arms or legs, or other parts that can be articulated such as torsos or fingers. The different parts of a Game Bone deformation can be rotated around their joint, extended and shortened, giving you the same capabilities as animating articulations on different layers, without having to worry about parts detaching, pivot points, or clipping outlines.</p>
+</div><div class="presentation-text"><p>The Game Bone deformation is different from the Bone deformation in which it is optimized for game engines such as Unity. Hence, it is usually only used for game development and not in animated productions. The differences between the Bone and Game Bone deformations are that Game Bone deformations do not have Bias and Region of Influence properties. The articulation folds also look slightly more rounded.</p>
+</div></section><section class="presentation-slide" data-slide="7"><div class="presentation-slide-number">Slide 7 of 20</div><div class="presentation-text"><p><strong>Curve Deformers:</strong> </p>
+<p>The Curve deformation allows you to deform parts of a character using a Bezier curve. It is different from the Bone deformation in that the lines connecting the points are curvilinear. Hence, Curve deformations are typically used to deform parts of a character that are flexible, such as hair, mouths, eyebrows, or torsos. They can also be useful to animate limbs in a rubber hose style, where arms and legs are animated like extensible, flexible tubes rather than articulated bone structures.  By manipulating the curve's points and their Bezier handles, you can change the curve's direction, shape and length. A drawing rigged with a curve deformation does not merely bend, it will deform along its entire length to match the curve deformation's shape.</p>
+</div></section><section class="presentation-slide" data-slide="8"><div class="presentation-slide-number">Slide 8 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="9"><div class="presentation-slide-number">Slide 9 of 20</div><div class="presentation-text"><p><strong>Envelope Deformer:</strong>  </p>
+<p>The Envelope deformation allows you to create an envelope around a drawing, then deform the entire drawing by manipulating the envelope's points and curves. They can be used to deform parts of a character with a fluid shape, such as hair, cloaks, shoulders, chins and so on. Envelope deformations can also be used to deform rigid parts of a character's build so as to make them look like they are seen from different angles. This is commonly done to make character rigs rotate without swapping drawings, and using this technique makes it possible to animate a character rig going from one angle to another without having to swap drawings or character models.</p>
+</div></section><section class="presentation-slide" data-slide="10"><div class="presentation-slide-number">Slide 10 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="11"><div class="presentation-slide-number">Slide 11 of 20</div><div class="tf-question" data-answer="false">
+<p><strong>True or False:</strong> The Envelope deformation tool allows you to create a bone-like structure in which each part is solid, but with articulations that are flexible. This is mostly useful for animating a character's limbs, such as the arms or legs, or other parts that can be articulated such as torsos or fingers.</p>
+<div class="tf-options"><button data-value="true" type="button">True</button><button data-value="false" type="button">False</button></div>
+<p aria-live="polite" class="tf-feedback"></p>
+</div></section><section class="presentation-slide" data-slide="12"><div class="presentation-slide-number">Slide 12 of 20</div><div class="tf-question" data-answer="true">
+<p><strong>True or False:</strong> Envelope deformations can also be used to deform rigid parts of a character's build so as to make them look like they are seen from different angles.</p>
+<div class="tf-options"><button data-value="true" type="button">True</button><button data-value="false" type="button">False</button></div>
+<p aria-live="polite" class="tf-feedback"></p>
+</div></section><section class="presentation-slide" data-slide="13"><div class="presentation-slide-number">Slide 13 of 20</div><div class="tf-question" data-answer="true">
+<p><strong>True or False:</strong> By manipulating the curve's points and their Bezier handles, you can change the curve's direction, shape and length.</p>
+<div class="tf-options"><button data-value="true" type="button">True</button><button data-value="false" type="button">False</button></div>
+<p aria-live="polite" class="tf-feedback"></p>
+</div></section><section class="presentation-slide" data-slide="14"><div class="presentation-slide-number">Slide 14 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="15"><div class="presentation-slide-number">Slide 15 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="16"><div class="presentation-slide-number">Slide 16 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="17"><div class="presentation-slide-number">Slide 17 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="18"><div class="presentation-slide-number">Slide 18 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="19"><div class="presentation-slide-number">Slide 19 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section><section class="presentation-slide" data-slide="20"><div class="presentation-slide-number">Slide 20 of 20</div><p class="presentation-media-note">This slide contained an embedded demonstration video in the original interactive. That video file was not included in the saved ZIP.</p></section></div>
+<div class="presentation-controls"><button data-prev="" type="button">← Previous</button><span data-count="">1 / 20</span><button data-next="" type="button">Next →</button></div>
+</div>
+</article></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><p>ASH Animation · Introduction to Animation</p><a href="../../index.html#lessons">Course lessons ↑</a></div></footer>
+<script src="../../assets/js/navigation.js"></script></body></html>

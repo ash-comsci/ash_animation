@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="ASH Animation Lesson 18: Adding Master Pegs" name="description"/><title>18 - Adding Master Pegs | ASH Animation</title><link href="../../assets/css/site.css" rel="stylesheet"/></head>
+<body data-lesson="18" data-root="../../">
+<header class="course-shell-header"><div class="container course-shell-inner">
+<a class="course-brand" href="../../index.html"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><span><strong>ASH Animation</strong><small>Introduction to Animation</small></span></a>
+<nav class="course-shell-nav"><a href="../../index.html">Course Home</a><a class="hide-tablet" href="../../index.html#lessons">All Lessons</a><div class="lesson-jump"><button type="button">Jump to Lesson ▾</button><div class="lesson-jump-menu"></div></div></nav>
+</div></header>
+<div class="course-progress-nav"><div class="container course-progress-inner"><a class="prev" href="../../lessons/17-cut-out-character-rigging/index.html">← Setting up a Cut Out Character for Rigging</a><div class="lesson-position">Lesson 18 of 25<strong>Adding Master Pegs</strong></div><a class="next" href="../../lessons/19-adding-deformers/index.html">Adding Deformers →</a></div></div>
+<main>
+<section class="lesson-shell-hero"><div class="container"><span class="lesson-count">Lesson 18 · Rigging</span><h1>Adding Master Pegs</h1><p>Work through the lesson notes, demonstrations, tasks and activities below. Use the navigation above to move through the course.</p></div></section>
+<section class="lesson-content-section"><div class="container"><div class="source-video"><video controls="" playsinline="" preload="none"><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/HarmonyTrainingVideos/12_Rigging_Cnote_pt2.mp4#t=0.001"/></video><p>Main lesson video</p></div><div class="source-layout"><article class="source-card source-article">
+<h2>About this Lesson:</h2>
+In the last lesson you prepared a cut out character using composites and pegs.  In this lesson you will learn how to parent and create master pegs in Harmony to prepare your character to be animated.<br/><br/>
+<p><strong>Lesson Duration:</strong>  8 hours</p>
+<br/>
+<h3><strong>Harmony Topics:</strong></h3>
+<br/>
+<ul>
+<li><strong>Hierarchy:</strong>  If there is a layer hierarchy in the puppet you built, use the keyboard shortcuts to travel up and down the parent-child chain. You can navigate between the children of the same parent. You can also easily center on your selection in the Timeline or Node view.</li>
+<li><strong>Parent and Children:</strong>  When animating, large movements that are made at the root (parent) of a chain cause secondary movements throughout the rest (children) of the chain. For example, when you rotate the arm of a character from the shoulder, the forearm and hand will follow. However, in order to make the movement appear natural and graceful, the forearm and hand should not move at the same speed or angle. As a result, animators often need to move up and down a chain, intermittently selecting parent and children, in order to make both large and fine movements.</li>
+<li><strong>Master Peg: </strong>Your character rig should always have a master peg which connects to all of its parts. The master peg allows you to manipulate the entire rig from a single layer, without having to manipulate each individual part. This is useful for positioning and scaling your character relative to the scene, as well as to animate your character's trajectory when it has to move between areas of the scene.</li>
+</ul>
+<br/>
+<h3>Task:<br/><br/></h3>
+<ul>
+<li>
+<p>Download the support files from the Lesson Files.  </p>
+</li>
+<li>
+<p>Watch, complete and take notes on the <strong>Rigging A Character</strong> video tutorial and the topics presented in this lesson.  Taking notes in your sketchbook/notebook on how to use Harmony and any animation terminology will help you prepare for your certification exam at the end of this course.</p>
+</li>
+</ul>
+<blockquote><strong>Please Note:</strong>  The cut out pieces of CNote are setup to be transparent to help you learn how to set up the rigged character.</blockquote>
+<p><strong>Part 1 - Adding Master Pegs and Backdrops in Node View: </strong><br/><br/></p>
+<ul>
+<li>
+<p>Launch Toon Boom Harmony.   </p>
+</li>
+<li>In the Welcome Window, open <strong>12_rigging_cnote</strong> </li>
+<li>Be sure to save your Harmony file as:  <strong>YourName_Rigging</strong> in your Documents folder.</li>
+<li>Take some time to investigate the construction of the Timeline layers and the Node View.   You may. also want to review your notes from the previous lesson.</li>
+</ul>
+<blockquote><strong>Hint:</strong>  <strong>Space bar</strong> is freehand,<strong> 1</strong> is Zoom out and<strong> 2</strong> is Zoom in.  These shortcuts will help you navigate the <strong>Node</strong> view.</blockquote>
+<br/><br/><strong>Head Master Peg:</strong><br/>
+<ul>
+<li>Go to <strong>Node</strong> View.  Select, copy and paste the<strong> C_Head peg</strong> (as we want to copy the pivot point of the Head peg).  Rename<strong> C_Head-MasterPeg</strong></li>
+<li>Reposition the <strong>C_Head-MasterPeg</strong> higher in the node view.</li>
+<li>Connect waypoints from the new <strong>C_Head-MasterPeg</strong> to the <strong>Head Peg,</strong> the <strong>Mouth Peg, </strong>the<strong> eyes peg </strong>and<strong> eyeballs peg. </strong> The<strong> <strong>C_Head-MasterPeg</strong> </strong>will control all the head art.</li>
+<li>Drag the cursor over the entire Head section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+</ul>
+<img alt="head master peg" loading="lazy" src="images/head_master_peg.png"><br/>
+<ul>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Head and reassign the colour to match the Timeline colour (orange).</li>
+<li>Reposition Back drop to a new location.</li>
+</ul>
+<br/><img alt="Backdrop" loading="lazy" src="images/Backdrop.png"/><br/><br/><strong>Front Leg Master Peg:</strong><br/>
+<ul>
+<li>Select, copy and paste the<strong> C_front_leg peg.</strong></li>
+<li>Rename<strong> C_Front_leg-MasterPeg</strong></li>
+<li>Reposition the <strong>C_Front_leg-MasterPeg</strong> in the node view (so it is easier to work with them).</li>
+<li>Connect waypoints from the new <strong>C_Front_leg-MasterPeg</strong> to the <strong>Front Leg Peg,</strong> and the <strong>Front Foot Peg</strong><strong>. </strong> The <strong>C_Front_leg-MasterPeg</strong><strong> </strong>will  control all the front leg art.</li>
+<li>Drag the cursor over the entire Front Leg section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Front Leg and reassign the colour to match the Timeline colour (green).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong><strong><strong>Front Arm Master Peg:</strong><br/></strong> </strong>
+<ul>
+<li>Select, copy and paste the<strong> C_front_arm peg.</strong></li>
+<li>Rename<strong> C_Front_arm-MasterPeg</strong></li>
+<li>Reposition the <strong>C_Front_arm-MasterPeg</strong> in the node view.</li>
+<li>Connect waypoints from the new <strong>C_Front_arm-MasterPeg</strong> to the <strong>Front</strong> <strong>Arm Peg,</strong> and the <strong>Front </strong><strong>Hand Peg</strong><strong>. </strong> The <strong>C<strong>C_Front_arm-MasterPeg</strong></strong><strong> </strong>will  control all the front arm art.</li>
+<li>Drag the cursor over the entire Front Arm section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Front Arm and reassign the colour to match the Timeline colour (blue).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong>Back Leg Master Peg:</strong><br/>
+<ul>
+<li>Select, copy and paste the<strong> <strong>C_Back_leg-Peg.</strong></strong></li>
+<li>Rename<strong> C<strong>C_Back_leg-MasterPeg</strong></strong></li>
+<li>Reposition the <strong>C_Back_leg-MasterPeg</strong> in the node view.</li>
+<li>Connect waypoints from the new <strong>C_Back_leg-MasterPeg</strong> to the <strong>Back Leg Peg,</strong> and the <strong>Back </strong><strong>Foot Peg</strong><strong>. </strong> The <strong>C_Back_leg-MasterPeg</strong><strong> </strong>will  control all the back leg art.</li>
+<li>Drag the cursor over the entire Back Leg section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Back Leg and reassign the colour to match the Timeline colour (green).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong><strong><strong>Back Arm Master Peg:</strong><br/></strong> </strong>
+<ul>
+<li>Select, copy and paste the<strong> C_back_arm peg</strong></li>
+<li>Rename<strong> C_Back_arm-MasterPeg</strong></li>
+<li>Reposition the <strong> C_Back_arm-MasterPe</strong><strong>g</strong> in the node view.</li>
+<li>Connect waypoints from the new <strong> C_Back_arm-MasterPeg</strong> to the <strong>Back</strong> <strong>Arm Peg,</strong> and the <strong>Back </strong><strong>Hand Peg</strong><strong>. </strong> The <strong> C_Back_arm-MasterPeg</strong><strong> </strong>will control all the back arm art.</li>
+<li>Drag the cursor over the entire Back Arm  section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Back Arm and reassign the colour to match the Timeline colour (blue).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong></strong><strong><strong><strong>Body Master Peg:</strong><br/></strong> </strong>
+<ul>
+<li>Select, copy and paste the<strong> C_body_arm peg</strong>.</li>
+<li>Rename<strong> C_<strong>body</strong>-MasterPeg</strong></li>
+<li>Reposition the <strong> C_<strong>body</strong>-MasterPe</strong><strong>g</strong> in the node view.</li>
+<li>Connect waypoints from the new <strong> C_<strong>body</strong>-MasterPeg</strong> to the <strong>Tail Peg,</strong> and the <strong>Body Peg</strong><strong>. </strong> The <strong> C_<strong>body</strong>-MasterPeg</strong><strong> </strong>will control all the body art.</li>
+<li>Drag the cursor over the entire Body section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop CNote Body and reassign the colour to match the Timeline colour (red).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong></strong><strong><strong><strong>Guitar Master Peg:</strong><br/></strong> </strong>
+<ul>
+<li>Select, copy and paste the<strong> Guitar peg</strong>.</li>
+<li> Rename<strong> Guitar-MasterPeg</strong></li>
+<li>Reposition the <strong>Guitar-MasterPeg</strong> in the node view.</li>
+<li>Connect waypoints from the new<strong>Guitar-MasterP</strong><strong>eg</strong> to the <strong>Guitar Peg.</strong></li>
+<li>Drag the cursor over the entire Guitar section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Backdrop Guitar and reassign the colour to match the Timeline colour (grey).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<strong></strong><strong><strong><strong>Cajon Master Peg:</strong><br/></strong> </strong>
+<ul>
+<li>Create a peg for the<strong> Cajon</strong>.  Rename<strong> Guitar-MasterPeg</strong></li>
+<li>Drag the cursor over the entire Guitar section in the Node View. In the Menu drop down, go to <strong>Insert/Backdrop</strong>.</li>
+<li>Right click the yellow square on top left of the backdrop to rename the Cajon  and reassign the colour to match the Timeline colour (brown).</li>
+<li>Reposition Back Drop to a new location.</li>
+</ul>
+<img alt="all backdrops" loading="lazy" src="images/all_backdrops.png"/><br/><br/>
+<ul>
+<li>Select the backdrops and organize them so all the corresponding backdrop colours are in proximity.  See the order in the screenshot below:</li>
+</ul>
+<img alt="back prox" loading="lazy" src="images/back_prox.png"/><br/>
+<ul>
+<li></li>
+</ul>
+<strong>Part 2 - Creating Master Pegs to control the other Master Pegs:</strong><br/><br/><strong>Upper Body Master Peg:</strong><br/><br/>
+<ul>
+<li>Select, copy and paste the<strong> </strong><strong>C_<strong>body</strong>-MasterPeg</strong>.  Rename it<strong> Upper Body MasterPeg.</strong></li>
+<li>Reposition the <strong>Upper Body MasterPe</strong><strong>g</strong> in the node view.</li>
+<li>Connect <strong>waypoints</strong> from the new <strong>Upper Body MasterPe</strong><strong>g</strong> to the <strong>C_<strong>body</strong>-MasterPeg, the <strong>C_Back_arm-MasterPeg, <strong>C_Head-MasterPeg, the <strong>C_Front_arm-MasterPeg</strong></strong> </strong> </strong>, and the<strong><strong><strong><strong> <strong>Guitar-MasterPeg.</strong></strong> </strong> </strong> </strong></li>
+</ul>
+<strong>Lower Body Master Peg:</strong><br/><br/>
+<ul>
+<li>Paste the<strong> </strong><strong>C_<strong>body</strong>-MasterPeg</strong>.  Rename it<strong> Lower Body MasterPeg.</strong></li>
+<li>Reposition the <strong>Lower</strong><strong> Body MasterPe</strong><strong>g</strong> in the node view.</li>
+<li>Connect waypoints from the new <strong>Lower</strong><strong> Body MasterPe</strong><strong>g</strong> to the <strong>C_<strong>body</strong>-MasterPeg, the <strong>C_Back_leg-MasterPeg, <strong> the <strong>C_Front_leg -MasterPeg</strong></strong> </strong> </strong>, and the<strong><strong><strong><strong> tail peg<strong>. </strong></strong> </strong> </strong> </strong> To do this<strong><strong><strong><strong><strong>, </strong></strong> </strong> </strong> </strong>disconnect the Tail Peg from Upper Body.  Connect the <strong>waypoint</strong> from <strong>Lower Body MasterPeg </strong>to the tail<strong> peg.</strong></li>
+</ul>
+<strong>Full Body Master Peg:</strong><br/><br/>
+<ul>
+<li>Paste the<strong> </strong><strong>C_<strong>body</strong>-MasterPeg</strong>.  Rename it <strong>CNote-MasterPeg.</strong></li>
+<li>Reposition the <strong>Lower</strong><strong> Body MasterPe</strong><strong>g</strong> in the node view.</li>
+</ul>
+<img alt="full node of master" loading="lazy" src="images/full_node_of_master.png"/><br/>
+<ul>
+<li>Connect <strong>waypoints</strong> from the new <strong>CNote-MasterPeg</strong> to the <strong>Lower</strong><strong> Body MasterPe</strong><strong>g</strong><strong> </strong>and the<strong> <strong>Upper</strong><strong> Body MasterPe</strong><strong>g</strong></strong></li>
+</ul>
+<video autoplay="autoplay" controls="" loop="loop" playsinline="" preload="none" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rigging/full_master.mp4" type="video/mp4"></video>
+<br/><br/><br/><strong>Part 3 - Presenting your work:</strong><br/><br/>
+<ul>
+<li>Take a screenshot of your Node View demonstrating:
+<ul>
+<li>Node View:
+<ul>
+<li>Main Composite</li>
+<li>Head Composite</li>
+<li>Front Arm Composite</li>
+<li>Back Arm Composite</li>
+<li>Front Leg Composite</li>
+<li>Back Leg Composite</li>
+<li>Guitar Composite</li>
+<li>Body Composite</li>
+<li>Prop art layers</li>
+</ul>
+</li>
+<li>Camera View with the Pivot Point set to the Body Composite</li>
+<li>Timeline with layers correctly labelled in Red, Orange, Blue, Gray and Green.</li>
+</ul>
+</li>
+<li>Submit <strong>Rigging Layout</strong> screenshot<strong> </strong>below.</li>
+</ul> </article><aside class="source-card resource-panel"><span class="section-kicker">Lesson Files</span><h3>Resources</h3><div class="resource-links"><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Harmony_Lesson_Handouts/Lesson_18_Rigging_a_Character_pt2.zip" rel="noopener" target="_blank">Support Files ↗</a><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rubrics/Harmony_Rubrics_FINAL/Lesson_18_Rubric.pdf" rel="noopener" target="_blank">Assessment Rubric ↗</a></div><p style="margin-top:18px"><a class="button primary" href="#activities">Go to activities</a></p></aside></div></div></section>
+<section class="activities-section" id="activities"><div class="container"><div class="section-heading"><span class="section-kicker">Interactive Work</span><h2>Lesson activities</h2><p>Activities from the saved courseware have been adapted so they work on this self-hosted site without the original LMS.</p></div><article class="activity-card completion-activity">
+<span class="activity-type">Completion check</span>
+<h3>Did you submit your screenshot to your teacher via your school's submission method? (Email, Portal, Server Folder, Dropbox...)</h3>
+<p>Select True once you have submitted your work.</p>
+<div class="completion-control"><input data-complete="activity-1" id="complete-1" type="checkbox"/><label for="complete-1">I have completed/submitted this work.</label></div>
+</article></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><p>ASH Animation · Introduction to Animation</p><a href="../../index.html#lessons">Course lessons ↑</a></div></footer>
+<script src="../../assets/js/navigation.js"></script></body></html>

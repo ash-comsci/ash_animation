@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="ASH Animation Lesson 17: Setting up a Cut Out Character for Rigging" name="description"/><title>17 - Setting up a Cut Out Character for Rigging | ASH Animation</title><link href="../../assets/css/site.css" rel="stylesheet"/></head>
+<body data-lesson="17" data-root="../../">
+<header class="course-shell-header"><div class="container course-shell-inner">
+<a class="course-brand" href="../../index.html"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><span><strong>ASH Animation</strong><small>Introduction to Animation</small></span></a>
+<nav class="course-shell-nav"><a href="../../index.html">Course Home</a><a class="hide-tablet" href="../../index.html#lessons">All Lessons</a><div class="lesson-jump"><button type="button">Jump to Lesson ▾</button><div class="lesson-jump-menu"></div></div></nav>
+</div></header>
+<div class="course-progress-nav"><div class="container course-progress-inner"><a class="prev" href="../../lessons/16-camera-multiplanes/index.html">← Camera &amp; Creating Multiplanes</a><div class="lesson-position">Lesson 17 of 25<strong>Setting up a Cut Out Character for Rigging</strong></div><a class="next" href="../../lessons/18-adding-master-pegs/index.html">Adding Master Pegs →</a></div></div>
+<main>
+<section class="lesson-shell-hero"><div class="container"><span class="lesson-count">Lesson 17 · Rigging</span><h1>Setting up a Cut Out Character for Rigging</h1><p>Work through the lesson notes, demonstrations, tasks and activities below. Use the navigation above to move through the course.</p></div></section>
+<section class="lesson-content-section"><div class="container"><div class="source-video"><video controls="" playsinline="" preload="none"><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/HarmonyTrainingVideos/12_Rigging_Cnote_pt1.mp4#t=0.001"/></video><p>Main lesson video</p></div><div class="source-layout"><article class="source-card source-article">
+<h2>About this Lesson:</h2>
+Earlier in this course you learned how to rig eyes and applied lip-sync to the character CNote.  In this lesson you will learn how to set the CNote character for rigging.<br/><br/>Harmony is a great tool for building characters. You can use different techniques and features to break down your puppets. This chapter will guide you through all the steps to create a complete simple rig. Harmony allows you to create very advanced puppets using deformations, hierarchies and z ordering. As you practice and get familiar with those concepts, you will be able to develop more.<br/>
+<p><strong>Lesson Duration:</strong>  4 hours</p>
+<br/>
+<h3><strong>Harmony Topics:</strong></h3>
+<ul>
+<li><strong>Cut-Out</strong>: Harmony provides some great tools for rigging and animating cut-out character models. You can make simple rigs or give your characters flexible capabilities using peg hierarchies, groups, composites, cutters, and deformers, among other things. You can create basic animations with the Transform tool, or more advanced animation with Inverse Kinematics as well as Bone and Curve Deformers. Harmony also supports advanced onion skin and image swapping features to help you animate efficiently and quickly.</li>
+</ul>
+<img alt="an 005 updownhierarchy 002" loading="lazy" src="images/an_005_updownhierarchy_002.png"><br/>
+<ul>
+<li><strong>Pivots:</strong>  Even with a complex hierarchy, a rig is useless without positioning the proper pivot points. This will allow the puppet's pieces to rotate correctly. The arm needs to rotate from the shoulder and stay attached to the torso, so its pivot point needs to be positioned accordingly. A good way to achieve this is to position the pivot point exactly in the center of the articulation.  The initial position of the pivot point is always at the center of the scene. Sometimes there will not be an obvious place of rotation to place the pivot point, but it's a good idea to reposition the pivot to the best transformation point. For instance, the master peg, which generally controls the entire rig, is often best positioned between the character's feet.</li>
+<li><strong>About Peg Hierarchy Rigs:</strong> Peg layer are useful when you are doing more advanced puppet rigging. Peg layers are trajectory layers that do not contain drawings. They are motion paths that you can use to control your entire puppet or advanced hierarchies.<br/>Parenting a drawing layer to a peg layer allows you to divide your motions on two separate levels. You can scale a body part up the chain of pegs directly on the drawing layer. This way, you do not affect any child layers that could be attached to that part.  Then, you can perform your translation and rotation on the peg layer so all the parts attached to that peg layer follow the same trajectory.</li>
+</ul>
+<img alt="HAR11 Rigging With Pegs" loading="lazy" src="images/HAR11_Rigging_With_Pegs.png"/><br/>
+<h3>Task:<br/><br/></h3>
+<ul>
+<li>
+<p>Download the support files from the Lesson Files.  </p>
+</li>
+<li>Review the Assessment Rubric found in the Lesson Files.</li>
+<li>
+<p>Watch, complete and take notes on the <strong>Rigging A Character</strong> video tutorial and the topics presented in this lesson.  Taking notes in your sketchbook/notebook on how to use Harmony and any animation terminology will help you prepare for your certification exam at the end of this course.</p>
+</li>
+</ul>
+<blockquote><strong>Please Note:</strong>  The cut out pieces of CNote are set up to be transparent to help you learn how to set up the rigged character.</blockquote>
+<p><strong>Part 1 - The Character construction in the Timeline: </strong><br/><br/></p>
+<ul>
+<li>
+<p>Launch Toon Boom Harmony.   </p>
+</li>
+<li>In the Welcome Window, open the file named:  <strong>12_rigging_cnote.</strong></li>
+<li>Be sure to save your Harmony file as:  <strong>YourName_Rigging</strong> in your Documents folder.</li>
+<li>Take some time to investigate the construction of the Timeline layers.  Your Timeline should look like this:</li>
+</ul>
+<img alt="timeline rig" loading="lazy" src="images/timeline_rig.png"/><br/>
+<ul>
+<li>Use<strong> Solo</strong> mode to preview the art layers in the <strong>Camera</strong> view.</li>
+<li>Toggle through the mouth shapes, completed in a previous lesson.</li>
+<li>Toggle through the eyes, completed in a previous lesson.</li>
+<li>Check out the new art layers.</li>
+</ul>
+<blockquote><strong>Hint:</strong> shortcut <strong>K</strong> allows you to see enable and disable the visibility of invisible strokes</blockquote>
+<br/>
+<ul>
+<li>Take some time to look at how each cut out art has been created and set up. Some art layers have numerous drawing substitutions created.  Some art will be missing line art, as that part of the art will be hidden when the character is fully composed.</li>
+</ul>
+<video controls="" playsinline="" preload="none" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rigging/demo_invisble_stroke.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>Also note that the eyes, eyeballs layers have been labelled orange on the timeline.  This way you can visually mark your work.</li>
+</ul>
+<img alt="colour labels" loading="lazy" src="images/colour_labels.png"/><br/>
+<ul>
+<li>Select all the <strong>C_mouths</strong> layer and <strong>C_head</strong> layer and also assign an orange label, similar to the eyes layer and eyeballs layer.  
+<ul>
+<li>You can select numerous layers by selecting one layer, holding shift on the keyboard, and then clicking on the other layers.</li>
+</ul>
+</li>
+<li>Select all the associated body parts that make up the legs and assign a green label by selecting the square to the left of the layer name. </li>
+<li>Select all the associated body parts that make up the arms and assign a blue label by selecting the square to the left of the layer name.</li>
+<li>Select all the associated parts (including the tail) that make up the body and assign a red label by selecting the square to the left of the layer name.</li>
+<li>Leave the guitar labelled grey.</li>
+</ul>
+<img alt="layers coloured" loading="lazy" src="images/layers_coloured.png"/><br/><strong>Part 2 - Node View:</strong><br/><br/>
+<ul>
+<li>Switching to <strong>Node</strong> view after you design a character in <strong>Timeline</strong> mode can get a little messy.  </li>
+<li>Let's clean up your <strong>Node</strong> view.</li>
+<li>In the <strong>Node</strong> view, zoom out using the 1 key until you see all of the <strong>Nodes</strong>.</li>
+<li>Drag your cursor over all the <strong>Nodes</strong></li>
+<li>Along the top menu in the <strong>Node</strong> view, select <strong>Order Node View Down</strong>.</li>
+</ul>
+<img alt="node view order" loading="lazy" src="images/node_view_order.png"/><br/>
+<ul>
+<li>Leave the parameters at the default, click OK.</li>
+<li>Now your <strong>Node</strong> view will be cleaned up, in a tree like shape.</li>
+</ul>
+<blockquote><strong>Hint:</strong>  <strong>Space bar</strong> is freehand,<strong> 1</strong> is Zoom out and<strong> 2</strong> is Zoom in.  These shortcuts will help you navigate the <strong>Node</strong> view.</blockquote>
+<br/><strong>Creating a new Composite Node:</strong><br/>
+<ul>
+<li>Note there is only one main <b>Composite</b> for the character.</li>
+<li>Select, copy and paste the existing <strong>Composite</strong> node.</li>
+<li>Double click the new composite and rename it to <strong>Head_composite.</strong>  Set the mode to <strong>passthrough</strong> (similar to the Dynamic Eyes lesson).</li>
+<li>Reposition the new <strong>Head_composite</strong> where the head art nodes are.  Hold option (macOS) or Alt (windows) and drag it between the <strong>eyes_composite</strong> and the main composite.</li>
+</ul>
+<img alt="head comp" loading="lazy" src="images/head_comp.png"/><br/>
+<ul>
+<li>Now drag the <strong>waypoints</strong> from the Mouths layer node and the Head layer node to the <strong>Head_Composite</strong>.</li>
+</ul>
+<img alt="full head comp" loading="lazy" src="images/full_head_comp.png"/><br/><br/>
+<ul>
+<li>Select everything connected to the <strong>Head_composite</strong> and reposition to the far left.</li>
+<li>Make sure the <strong>Write</strong> and <strong>Display</strong> nodes are close to the main composite.</li>
+</ul>
+<strong>Creating a new Front Arm Node C<strong>omposite</strong>:</strong><br/>
+<ul>
+<li>Select the <strong>Head_composite,</strong> copy and paste it in the node view.</li>
+<li>Double click the new composite and rename it to <strong>Front_arm_composite</strong>.  Set the mode to <strong>passthrough</strong>.</li>
+<li>Reposition the new <strong>Front_arm_composite</strong> where the front arm layer node is. Hold option (macOS) or Alt (windows) and drag it between the <strong>Front_arm_composite</strong> and the main composite.</li>
+<li>Now drag the <strong>waypoint</strong> from the front hand layer node to the <strong>Front_arm_composite</strong>.</li>
+<li>Reposition in a new location in the Node view.</li>
+</ul>
+<strong>Creating a new Front Leg Node C<strong>omposite</strong>:</strong><br/>
+<ul>
+<li>Paste the composite node again (as it is still saved in our Harmony clipboard).   </li>
+<li>Double click the new composite and rename it to <strong>Front_leg_composite</strong>.  Set the mode to <strong>passthrough</strong>.</li>
+<li>Reposition the new <strong>Front_leg_composite</strong> where the front leg layer node is. Hold option (macOS) or Alt (windows) and drag it between the <strong>Front_leg_composite</strong> and the main composite.</li>
+<li>Now drag the <strong>waypoints</strong> from the leg layer node and the front foot layer node to the <strong>Front_leg_composite</strong>.</li>
+<li>Reposition in a new location in the Node view.</li>
+<li></li>
+</ul>
+<strong>Creating a rest of the Composites:</strong><br/>
+<ul>
+<li>Repeat these above steps to create composites for all of the body parts., including:
+<ul>
+<li>Body Composite. (include the Tail layer)</li>
+<li>Guitar Composite</li>
+<li>Back Leg Composite</li>
+<li>Back Arm Composite</li>
+</ul>
+</li>
+<li>Your Node view should look like this:</li>
+</ul>
+<img alt="full nodes" loading="lazy" src="images/full_nodes.png"/><br/>
+<ul>
+<li>Organize the layout of the Node view.</li>
+</ul>
+<strong>Part 2 - Adding Pegs</strong><br/><br/>
+<ul>
+<li>In each composite, select the art layer nodes and press <strong>CMD+S<strong>hift+</strong>P</strong> (macOS) or <strong>Ctrl+Shift+P</strong> (windows) to add a peg to each node.</li>
+<li>Using the <strong>Translate</strong> tool reposition the pivots points for the pegs in the Camera view.  Watch the video for pivot point positioning.</li>
+</ul>
+<blockquote><strong>Hint</strong> - Using Solo mode will assist in viewing the back art.</blockquote>
+<ul>
+<li>Most pivot points should be positioned as follows:
+<ul>
+<li>Arms - Shoulders</li>
+<li>Hands - Wrists</li>
+<li>Legs - thigh</li>
+<li>Foot - ankle</li>
+<li>Guitar - the main strumming area</li>
+<li>Body - base of the character's bottom</li>
+<li>Tail - connected to bottom</li>
+<li>Mouth - which should be positioned to the side of the mouth.</li>
+<li>No pegs for the non-character art.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="mouth position" loading="lazy" src="images/mouth_position.png"/><strong></strong></p>
+<p> </p>
+<p><strong>Part 3 - Presenting your work:</strong><br/><br/></p>
+<ul>
+<li>Take a screenshot of your Node View demonstrating:
+<ul>
+<li>Node View:
+<ul>
+<li>Main Composite</li>
+<li>Head Composite</li>
+<li>Front Arm Composite</li>
+<li>Back Arm Composite</li>
+<li>Front Leg Composite</li>
+<li>Back Leg Composite</li>
+<li>Guitar Composite</li>
+<li>Body Composite</li>
+<li>Prop art layers</li>
+</ul>
+</li>
+<li>Camera View with the Pivot Point set to the Body Composite</li>
+<li>Timeline with layers correctly labelled in Red, Orange, Blue, Gray and Green.</li>
+</ul>
+</li>
+<li>Submit <strong>Rigging Layout</strong> screenshot<strong> </strong>below.</li>
+</ul> </article><aside class="source-card resource-panel"><span class="section-kicker">Lesson Files</span><h3>Resources</h3><div class="resource-links"><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Harmony_Lesson_Handouts/Lesson_17_Rigging_a_Character_pt1.zip" rel="noopener" target="_blank">Rigging Support Files ↗</a><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rubrics/Harmony_Rubrics_FINAL/Lesson_17_Rubric.pdf" rel="noopener" target="_blank">Assessment Rubric ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/rigging/about-rig-type.html" rel="noopener" target="_blank">Harmony's Rig Types ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/rigging/create-hierarchy.html" rel="noopener" target="_blank">Harmony's Creating Hierarchies ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/rigging/add-master-peg.html" rel="noopener" target="_blank">Harmony's Adding a Master Peg ↗</a></div><p style="margin-top:18px"><a class="button primary" href="#activities">Go to activities</a></p></aside></div></div></section>
+<section class="activities-section" id="activities"><div class="container"><div class="section-heading"><span class="section-kicker">Interactive Work</span><h2>Lesson activities</h2><p>Activities from the saved courseware have been adapted so they work on this self-hosted site without the original LMS.</p></div><article class="activity-card completion-activity">
+<span class="activity-type">Completion check</span>
+<h3>Did you submit your Animated Rig Character to your teacher via your school's submission method? (Email, Portal, Server Folder, Dropbox...)</h3>
+<p>Select True once you have submitted your work.</p>
+<div class="completion-control"><input data-complete="activity-1" id="complete-1" type="checkbox"/><label for="complete-1">I have completed/submitted this work.</label></div>
+</article></div></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><img alt="ASH Animation" src="../../assets/images/ash-animation-logo.png"/><p>ASH Animation · Introduction to Animation</p><a href="../../index.html#lessons">Course lessons ↑</a></div></footer>
+<script src="../../assets/js/navigation.js"></script></body></html>
