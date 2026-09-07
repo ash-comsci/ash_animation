@@ -1,0 +1,155 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>13 - Rigging Dynamic Eyes | ASH Animation</title><link rel="stylesheet" href="../../assets/css/site.css"></head><body data-root="../../" data-lesson="13"><header class="course-shell-header"><div class="container course-shell-inner">
+<a class="course-brand" href="../../index.html"><img src="../../assets/images/ash-animation-logo.png" alt="ASH Animation"><span><strong>ASH Animation</strong><small>Introduction to Animation</small></span></a>
+<nav class="course-shell-nav"><a href="../../index.html">Course Home</a><a class="hide-tablet" href="../../index.html#lessons">All Lessons</a><div class="lesson-jump"><button type="button">Jump to Lesson ▾</button><div class="lesson-jump-menu"></div></div></nav>
+</div></header><div class="course-progress-nav"><div class="container course-progress-inner"><a class="prev " href="../../lessons/12-nodes/index.html">← Nodes, Nodes and more Nodes</a><div class="lesson-position">Lesson 13 of 25<strong>Rigging Dynamic Eyes</strong></div><a class="next" href="../../lessons/14-lip-sync/index.html">Lip-Sync →</a></div></div><main><section class="lesson-shell-hero"><div class="container"><span class="lesson-count">Lesson 13 · Rigging</span><h1>Rigging Dynamic Eyes</h1><p>Work through the lesson notes, demonstrations, tasks and activities below. Use the navigation above to move through the course.</p></div></section><section class="lesson-content-section"><div class="container"><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/HarmonyTrainingVideos/08_dynamic_eyes.mp4#t=0.001"></video><p>Main lesson video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/eye_subs.mp4"></video><p>Lesson demonstration video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/Waypoints.mp4"></video><p>Lesson demonstration video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://toonboomanimation.tovuti.io/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/colour_art_nosound.mp4"></video><p>Lesson demonstration video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/clip_path.mp4"></video><p>Lesson demonstration video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/Line_art_node.mp4"></video><p>Lesson demonstration video</p></div><div class="source-layout"><article class="source-card source-article">
+<h2>About this Lesson:</h2>
+<p>In this lesson you will learn what a Peg is and how it is used to animate art. For this lesson, you will learn how to create a dynamic set of eyes using Node view and rigging. You learn how to use layers, art layers and masks to separate the white of the eyes from the pupils.  You will also be using Drawing Substitutions again.    <br/><br/><strong>Lesson Duration:</strong> 5 hours<br/><br/></p>
+<h3><strong>Topics:</strong></h3>
+<ul>
+<li><strong>Rigging:  </strong>In Harmony, a character rig is basically a template based on your character's model, but in which all movable parts are broken down into different layers, and arranged in a hierarchy that facilitates digital animation, also known as cut-out animation.  </li>
+</ul>
+<h3><strong>Harmony Topics:</strong></h3>
+<ul>
+<ul>
+<li>
+<p><strong>Node View/Backdrop:</strong>  Backdrops are a way to work with complex node systems that let you associate a selected set of nodes by colour. You can add as many backdrops to your node structure as needed. The idea is to visually organize the structure so you can quickly identify the particular set of nodes.<br/>You can customize the backdrops with different colours. For example, the upper part of a character's body could be in different shades of red, while the lower body is in shades of green. When you create a backdrop to the Node view, the default colour is red.</p>
+</li>
+<li>
+<p><strong>Drawing View:  </strong>In <span>Harmony</span>, you can draw in both the <span>Drawing</span> or Camera <span>view</span>s. Although the two <span>view</span>s are similar, there are some differences when it comes to <span>drawing</span>. Only the selected <span>drawing</span> is displayed by default in the <span>Drawing</span> <span>view</span>. You can use features, such as the light table to display the current <span>drawing</span> of all the enabled layers of your scene in washed-out colours, or the Onion Skin to display the previous and next <span>drawing</span>s of the currently selected <span>drawing</span> layer.</p>
+</li>
+<li>
+<p><strong>Mattes:  </strong><span data-mce-bogus="1">Y</span>ou can connect a <span>matte</span> <span>drawing</span> to the left edge of an Element <span>node</span>. When an Element <span>node</span> is connected to a <span>matte</span> <span>drawing</span>, only the parts of the <span>drawing</span>s that intersect with the opaque areas of the <span>matte</span> <span>drawing</span> will be rendered. This allows you to accomplish the same effect as connecting the Element <span>node</span> to a cutter <span>node</span>, without using an extra <span>node</span>. </p>
+<p data-mc-conditions="Default.HAR_Premium_Only"><img alt="" src="images/element-node-with-matte-node-view.png"/><span>  </span></p>
+</li>
+<li><strong>Node Library:</strong> To add effects or other types of nodes to the Node view, you must first find them in the Node Library view.</li>
+</ul>
+</ul>
+<p><img src="images/HAR12_node_library.png"/></p>
+<ul>
+<ul>
+<li><strong>Colour Art Node:  </strong>The Colour-Art effect lets you isolate the colour art in a layer. Placing a Colour Art node after a drawing node in the Node view only displays the Colour Art output. You can connect the Colour-Art node after nodes of any type. Any bitmap information will pass through the node and be processed.</li>
+<li><strong>Line Art Node:</strong>  The Line Art effect lets you read only the Line Art in an element. Place a Line Art node after a drawing node in the Node view to display only the node's Line Art output. The Line Art node can be connected after nodes of any type. Any bitmap information will pass through and be processed.</li>
+<li><strong>Node/Composite:</strong>  The Composite node allows you to use several images and output a single image. You can compare that to doing pre-compositions in editing software. You can connect several drawing, image generators and effect nodes in your Composite node and one bitmap (or vector in some cases) comes out of it.<br/> </li>
+</ul>
+</ul>
+<img alt="anp aboutnetwork" src="images/anp_aboutnetwork.png"/><strong></strong>
+<ul>
+<li><strong>Node/Write:</strong>  When you render a scene in Harmony, what is actually rendered is what is connected to your scene's Write node.  Rendering a scene's Write nodes is the main way to export a scene into image and movie files for post production.</li>
+<li><strong>Node Display:  </strong>The Display node is an important node; it is used by the export and views to display your scene, primarily the Camera and Timeline views. By default, a scene's node system always has a Display node which can be used to show your entire scene, a single node or a group of nodes through a Composite or Group node. You might use it to see one single character as you animate it, debug your node system as you create complex effects or export your complete scene or a portion of it.</li>
+<li><strong>Node/Waypoints:</strong>  Waypoints are a way to organize the connection cables in the</li>
+</ul>
+<p><strong>Shortcuts introduced in this Lesson:</strong><br/><br/></p>
+<ul>
+<li>
+<p><strong><img alt="Screen Shot 2021 07 19 at 2.37.43 PM" src="images/Screen_Shot_2021-07-19_at_2.37.43_PM.png"/> <img alt="shift" src="images/shift.png"/> <img alt="Screen Shot 2021 07 26 at 10.28.30 PM" src="images/Screen_Shot_2021-07-26_at_10.28.30_PM.png"/> <strong>CMD+Shift+P (macOS) </strong></strong>or <strong><strong><img alt="Screen Shot 2021 07 19 at 12.10.52 PM" src="images/Screen_Shot_2021-07-19_at_12.10.52_PM.png"/> <strong><img alt="Screen Shot 2021 07 26 at 10.28.30 PM" src="images/Screen_Shot_2021-07-26_at_10.28.30_PM.png"/></strong> CTRL+Shift+P</strong> = </strong>Add separate Pegs to numerous node layers at the same time.</p>
+</li>
+</ul>
+<br/>
+<h3>Task:<br/><br/></h3>
+<ul>
+<li>
+<p>Download the support files (Dynamic Eyes) from the Lesson Files.  </p>
+</li>
+<li>
+<p>Watch and take notes on the <strong>Creating Dynamic Eyes</strong> video (above) and the topics presented in this lesson.  </p>
+</li>
+<li>
+<p>Create your own animated version of CNote moving his eyes in Harmony by following the steps presented in the video. Be sure to<strong> save </strong>and<strong> export</strong> your Harmony file as:  <strong>YourName_Dynamic_Eyes </strong>in your<strong> Documents folder.</strong>  Be sure to continue to take notes in your sketchbook/notebook on how to use Harmony and any animation terminology as it will help you prepare for your certification exam at the end of this course.</p>
+</li>
+</ul>
+<strong>Part 1 - Setting up CNote in Node View:</strong> <br/><br/>
+<ul>
+<li>Unzip the support files into your Documents folder on your computer.</li>
+<li>Launch Toon Boom Harmony, and open<strong> 08_eye_rig.xstage</strong></li>
+<li>Play, complete and take notes on the <strong>Creating Dynamic Eyes</strong> video tutorial. </li>
+<li>Investigate the layout of the layers on the Timeline, you should have a face layer and an eyes layer.</li>
+<li>Open the<strong> Node View</strong>.  Investigate the construction in your Node View, you should have a face layer node and an eyes layer node which are connected to the composite..</li>
+<li>Arrange your Views so you are comfortable working with <strong>Node</strong> <strong>View</strong>, <strong>Timeline</strong> and<strong> Camera</strong> <strong>View</strong>. </li>
+<li>Please note that there are three Drawing Substitutions on the eyes layer:  open eyes (with pupils), half closed eyes and closed eyes.</li>
+</ul>
+<video autoplay="autoplay" controls="controls" loop="loop" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/eye_subs.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>You wil<span>l now separate the <span color="#ffffff"><span>eyes </span></span>from the frame one (drawing substitution 1) in the eyes layer. Add a New Drawing layer and name it 'eyeballs.'  Select the <span color="#ffffff"><span>eyes</span></span> art on frame 1 of the ey</span>e layer.  Cut the eyes art and paste the eyes art in your new pupils layer.</li>
+<li>Go to frame 60 and<strong> Extend Exposure </strong>of the eye layer. </li>
+<li>As a quick lesson about <strong>Waypoint</strong> connectors in <strong>Node View</strong>, disconnect the <strong>Waypoint</strong> from the eyeballs layer and the composite.  Notice that the layer disappears from the <strong>Timeline</strong> view.  Reconnect the <strong>Waypoint</strong> connector to the <strong>Composite Node.</strong></li>
+</ul>
+<video autoplay="autoplay" controls="controls" loop="loop" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/Waypoints.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>Create a separate <strong>Composite Node</strong> for just the eyeballs.  Copy the existing <strong>Composite Node </strong>in the<strong> Node View</strong> and Paste it in the Node View.  Select the<strong> yellow square</strong> on the left of the <strong>Composite Node</strong> to open the<strong> Layer Properties</strong>. Rename the new <strong>Composite Node</strong> to Eye_Composite.  Change the <strong>Mode</strong> <strong>by Default</strong> to <strong>Pass Through</strong>, this tells Harmony that it is a secondary Composite.</li>
+<li>Connect a waypoint from the eyeballs layer node to the Eyes_Composite Node.</li>
+<li>Connect a waypoint from the eye layer node to the Eyes_Composite Node.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 10.10.02 AM" src="images/Screen_Shot_2021-07-27_at_10.10.02_AM.png"/><br/>
+<ul>
+<li>You may need to clean up the layout of your Nodes to make it easier to work with.</li>
+<li>Select both the eyes and eyeballs layer nodes, press <strong>CMD+Shift+P (macOS)</strong> or<strong> CTRL+Shift+P</strong> to add <strong>Pegs</strong> to each of the eyes and eyeballs using.  Please note that using just CMD+P or CTRL+P would add just one peg connected to both layer nodes.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 10.13.52 AM" src="images/Screen_Shot_2021-07-27_at_10.13.52_AM.png"/><br/>
+<ul>
+<li>Select the Peg Node connected to the <strong>Eyeballs Layer Node.</strong>  Using the Translate tool position the pivot to the middle point (X and Y axi<em>s) </em>of the eyeball art. It is best to move the pivot, not the arrows.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 10.17.46 AM" src="images/Screen_Shot_2021-07-27_at_10.17.46_AM.png"/><br/>
+<ul>
+<li> Select the Peg Node connected to the <strong>Eyes Layer Node</strong>.  Using the Translate tool position the pivot to the between the two eyes, but this time at the base of the eyes, near the top of the nose.  </li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 10.59.37 AM" src="images/Screen_Shot_2021-07-27_at_10.59.37_AM.png"/><br/>
+<ul>
+<li>Go to the eyes layer, select the Paint tool.</li>
+<li>You will be using the Art layers to design CNotes' eyes.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 1.59.48 PM" src="images/Screen_Shot_2021-07-27_at_1.59.48_PM.png"/>
+<ul>
+<li>On frame 1 and fill the white part of the eyes with the<strong> Paint</strong> tool on the <strong>Line Art layer</strong>.</li>
+<li>Using the <strong>Select</strong> tool, select the white of the eyes and cut.</li>
+<li>Go to the <strong>Colour art Layer</strong> and paste.  </li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 2.02.28 PM" src="images/Screen_Shot_2021-07-27_at_2.02.28_PM.png"/><br/>
+<ul>
+<li>On frame 2 and fill the white part of the half-closed eyes with the<strong> Paint</strong> tool on the <strong>Line Art layer</strong>.</li>
+<li>Using the <strong>Select</strong> tool, select the white of the eyes and edit/cut.</li>
+<li>Go to the <strong>Colour art Layer</strong> and paste.  </li>
+<li>Repeat for frame 2.</li>
+<li>Switch from <strong>Camera</strong> View to <strong>Drawing</strong> View to view what art is on the<strong> Line Art</strong> and what art is on the <strong>Colour Art</strong>.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 2.08.28 PM" src="images/Screen_Shot_2021-07-27_at_2.08.28_PM.png"/><img alt="Screen Shot 2021 07 27 at 2.08.39 PM" src="images/Screen_Shot_2021-07-27_at_2.08.39_PM.png"/><br/>
+<ul>
+<li>Switch back to<strong> Camera View</strong>.</li>
+<li>Go to the<strong> Node Library</strong> and search for the<strong> Colour Art Node.</strong></li>
+<li>Drag and drop the <strong>Colour Art</strong><strong> Node (Isolate Category)</strong> into the <strong>Node</strong> View.</li>
+<li>Hold the<strong> Option</strong> key and drag the Colour Art node in between the eyes layer node and the eyes Composite. It should snap into the <strong>Waypoint</strong>. This will hide the Line Art on this Layer Node. Remember that <em>Colour</em> is spelt with a <em>"u."</em></li>
+</ul>
+<video autoplay="autoplay" controls="controls" loop="loop" src="https://toonboomanimation.tovuti.io/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/colour_art_nosound.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>Select the eyes layer and select the <strong>Transform</strong> tool.</li>
+<li>Position the eyes to the right side of the eyeballs, slightly overlapping the eyeballs.</li>
+<li>Drag a new Waypoint from the <strong>Colour Art</strong><strong> Node</strong> into the<strong> Matte</strong> port of the eyeballs layer node.</li>
+</ul>
+<video autoplay="autoplay" controls="controls" loop="loop" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/clip_path.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>The eyes will be contained inside the white area of the eyeballs.</li>
+<li>Go to <strong>Node Library</strong> and find the <strong>Line Art</strong> node.</li>
+<li>Drag the <strong>Line Art Node</strong> into the Node View.  Connect a <strong>Waypoint</strong> from the eyes Layer Node to the<strong> Line Art</strong> node.</li>
+</ul>
+<video autoplay="autoplay" controls="controls" loop="loop" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Dynamic_Eyes/Line_art_node.mp4" type="video/mp4"></video>
+<br/>
+<ul>
+<li>Position the Line Art node between the Colour Art node and eyeballs layer node.  Attach a waypoint from the Line Art node to the eyeballs Composite node. Notice the overlap.  To fix this so that the Line Art waypoint is on the far left of the Eyeball composite node.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 2.37.13 PM" src="images/Screen_Shot_2021-07-27_at_2.37.13_PM.png"/><br/>Part 2- Animating the eyeballs:<br/>
+<ul>
+<li>Select and organize your nodes so all but the face node is off to the left side of the Node View.  </li>
+<li>Click the menu option near the House icon, select Insert/Backdrop.  This will organize your Node view.  You can move the backdrop around with all the nodes embedded inside it.</li>
+</ul>
+<img alt="Screen Shot 2021 07 27 at 2.43.46 PM" src="images/Screen_Shot_2021-07-27_at_2.43.46_PM.png"/><br/>
+<ul>
+<li>Go to the Timeline.</li>
+<li>Add Keyframes on the eyeball layer to move CNotes' eyes.</li>
+<li>Change the drawing substitution at least 3 times on the eyeball layer (not shown in video).</li>
+<li>Add a <strong>Colour Card</strong>.</li>
+<li>You will need to export your animation as a movie file as <strong>CNote_Dynamic_Eyes</strong><strong>.</strong></li>
+<li>Submit <strong>CNote_Dynamic_Eyes</strong><strong>.</strong></li>
+</ul> </article><aside class="source-card resource-panel"><span class="section-kicker">Lesson Files</span><h3>Resources</h3><div class="resource-links"><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Harmony_Lesson_Handouts/Lesson_13_Eye_Rig.zip" target="_blank" rel="noopener">Support Work Files ↗</a><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rubrics/Harmony_Rubrics_FINAL/Lesson_13_Rubric.pdf" target="_blank" rel="noopener">Assessment Rubric ↗</a><a href="https://docs.toonboom.com/help/harmony-22/premium/nodes/connect-node.html" target="_blank" rel="noopener">Harmony&#x27;s Connecting Nodes ↗</a></div><p style="margin-top:18px"><a class="button primary" href="#activities">Go to activities</a></p></aside></div></div></section><section class="activities-section" id="activities"><div class="container"><div class="section-heading"><span class="section-kicker">Interactive Work</span><h2>Lesson activities</h2><p>These activities were recovered from the saved lesson package and adapted for the self-hosted course.</p></div><article class="activity-card"><h3>Did you submit your Dynamic Eyes  to your teacher via your school&#x27;s submission method? (Email, Portal, Server Folder, Dropbox...) Select True once you have submitted your work.</h3><p>Select True once you have submitted your work.</p><div class="completion-control"><input id="complete-1" type="checkbox" data-complete="activity-1"><label for="complete-1">Mark this activity complete after you have finished/submitted the work.</label></div></article></div></section></main><footer class="site-footer"><div class="container footer-inner"><img src="../../assets/images/ash-animation-logo.png" alt="ASH Animation"><p>ASH Animation · Introduction to Animation</p><a href="../../index.html#lessons">Course lessons ↑</a></div></footer><script src="../../assets/js/navigation.js"></script></body></html>
