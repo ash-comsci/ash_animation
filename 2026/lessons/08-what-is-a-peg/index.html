@@ -1,0 +1,136 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>08 - What is a Peg | ASH Animation</title><link rel="stylesheet" href="../../assets/css/site.css"></head><body data-root="../../" data-lesson="8"><header class="course-shell-header"><div class="container course-shell-inner">
+<a class="course-brand" href="../../index.html"><img src="../../assets/images/ash-animation-logo.png" alt="ASH Animation"><span><strong>ASH Animation</strong><small>Introduction to Animation</small></span></a>
+<nav class="course-shell-nav"><a href="../../index.html">Course Home</a><a class="hide-tablet" href="../../index.html#lessons">All Lessons</a><div class="lesson-jump"><button type="button">Jump to Lesson ▾</button><div class="lesson-jump-menu"></div></div></nav>
+</div></header><div class="course-progress-nav"><div class="container course-progress-inner"><a class="prev " href="../../lessons/07-paint-tools-palettes/index.html">← Paint Tools &amp; Palettes</a><div class="lesson-position">Lesson 8 of 25<strong>What is a Peg</strong></div><a class="next" href="../../lessons/09-drawing-substitutions/index.html">Drawing Substitutions →</a></div></div><main><section class="lesson-shell-hero"><div class="container"><span class="lesson-count">Lesson 08 · Rigging</span><h1>What is a Peg</h1><p>Work through the lesson notes, demonstrations, tasks and activities below. Use the navigation above to move through the course.</p></div></section><section class="lesson-content-section"><div class="container"><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/HarmonyTrainingVideos/07_whats_a_peg.mp4#t=0.001"></video><p>Main lesson video</p></div><div class="source-video"><video controls preload="none" playsinline><source src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Screen_Recording_2021-07-26_at_9.15.06_PM.mp4"></video><p>Lesson demonstration video</p></div><div class="source-layout"><article class="source-card source-article">
+<h2>About this Lesson:</h2>
+<p>In this lesson you will learn what a Peg is and how it is used to animate art. For this lesson, you will animate the character CNote completing a simple walk cycle.  <br/><br/><strong>Lesson Duration:</strong>  3 hours<br/><br/></p>
+<strong><br/></strong><br/><strong>Harmony Topics:</strong>
+<ul>
+<li>
+<p><strong>Peg: </strong> A layer/node used to animate movement in Harmony. It has no drawings, but can be attached to drawings, objects and cameras.</p>
+</li>
+<li>
+<p><strong>Transform Tool: </strong> Using the Transform tool, you can easily reposition, scale, rotate and even skew layers directly in the Camera view. When positioning a drawing layer using the Transform tool, always make sure the Peg Selection Mode is deselected in the Tool Properties view. Otherwise, it will limit the selection to pegs in the Camera view.</p>
+</li>
+<li><strong>Element Node:</strong> The Element node is at the very core of a scene's structure. An element is a directory in which drawings are stored, which is associated with an Xsheet column indicating when and for how long each drawing is exposed, and which is in turn linked to a layer which indicates the position of the drawings in the scene. The Element node allows you to connect the element to effects, pegs and composites, determining how its drawings are processed and rendered.</li>
+</ul>
+<ul>
+<li>
+<p><strong>Node View:</strong> In the Node view, you can connect effects and compositing nodes to form a network, also known as a node system. This view is very useful for rigging puppets, creating advanced effects and having a clear view of complex scenes. The organization and order of the nodes determines the flow of data during the compositing process and how your animation elements will be composited.</p>
+</li>
+</ul>
+<img alt="HAR12 node view" src="images/HAR12_node_view.png"/><br/>
+<ul>
+<li>
+<p><strong>Pivot point:</strong>  Transformations made on a drawing layer, such as rotation, scale, skew and flip, are made relative to the position of the drawing's pivot point. For example, rotating a layer will make it rotate around its pivot point and scaling the layer will make it scale as if its centre was actually its pivot point.</p>
+</li>
+<li>
+<p><strong>Advance Animation Toolbar/Translate Tool:  </strong>You can use the Translate tool to pan your elements on the X, Y and Z axes and adjust the position of the pivot on a peg layer.</p>
+</li>
+</ul>
+<p><strong>Shortcuts introduced in this Lesson:</strong><br/><br/></p>
+<ul>
+<li>
+<p><strong><img alt="Screen Shot 2021 07 19 at 2.37.43 PM" src="images/Screen_Shot_2021-07-19_at_2.37.43_PM.png"/> <img alt="Screen Shot 2021 07 26 at 10.28.30 PM" src="images/Screen_Shot_2021-07-26_at_10.28.30_PM.png"/> CMD+P (macOS) or <strong><img alt="ctrl" src="images/ctrl.png"/> <strong><img alt="Screen Shot 2021 07 26 at 10.28.30 PM" src="images/Screen_Shot_2021-07-26_at_10.28.30_PM.png"/> </strong></strong>CTRL+P (windows).</strong> = Add Peg</p>
+</li>
+<li><strong><img alt="Screen Shot 2021 07 26 at 10.29.10 PM" src="images/Screen_Shot_2021-07-26_at_10.29.10_PM.png"/> F6</strong> = Add Keyframe</li>
+<li><strong><strong><img alt="Screen Shot 2021 07 19 at 2.37.43 PM" src="images/Screen_Shot_2021-07-19_at_2.37.43_PM.png"/> </strong><img alt="Screen Shot 2021 07 26 at 10.28.42 PM" src="images/Screen_Shot_2021-07-26_at_10.28.42_PM.png"/> CMD+K (macOS) or <img alt="ctrl" src="images/ctrl.png"/> <strong><img alt="Screen Shot 2021 07 26 at 10.28.42 PM" src="images/Screen_Shot_2021-07-26_at_10.28.42_PM.png"/> </strong>CTRL+K (windows) </strong>= Set Motion tween</li>
+<li><strong><strong><img alt="Screen Shot 2021 07 19 at 2.37.43 PM" src="images/Screen_Shot_2021-07-19_at_2.37.43_PM.png"/> <img alt="Screen Shot 2021 07 26 at 10.28.59 PM" src="images/Screen_Shot_2021-07-26_at_10.28.59_PM.png"/> </strong>CMD+B or <strong><img alt="ctrl" src="images/ctrl.png"/> <strong><img alt="Screen Shot 2021 07 26 at 10.28.59 PM" src="images/Screen_Shot_2021-07-26_at_10.28.59_PM.png"/></strong><strong></strong> </strong>CTRL+B</strong> = Paste Special</li>
+</ul>
+<br/>
+<h3>Task:<br/><br/></h3>
+<ul>
+<li>
+<p>Download the support files (Using Pegs) from the Lesson Files.  </p>
+</li>
+<li>Download and review the assessment rubric found in the Lesson Files. </li>
+<li>
+<p>Watch and take notes on the information presented in the <strong>What's a Peg</strong> video (above) and the topics presented in this lesson.  </p>
+</li>
+<li>
+<p>Create your own animated version of CNote walking in Harmony by following the steps presented in the video. Be sure to<strong> save </strong>and<strong> export</strong> your Harmony file as: <strong>YourName_CNote_Walk </strong>in your<strong> Documents folder.</strong> Be sure to continue to take notes in your sketchbook/notebook on how to use Harmony and any animation terminology as it will help you prepare for your certification exam at the end of this course.</p>
+</li>
+</ul>
+<strong>Part 1 - Setting up CNote in Node View:</strong> <br/><br/>
+<ul>
+<li>Unzip the Lesson File into your Documents folder on your computer.</li>
+<li>Launch Toon Boom Harmony, and open <strong>Using_Pegs.xstage</strong></li>
+<li>Play, complete and take notes on the <strong>What's a Peg</strong> video tutorial. </li>
+<li>Open the<strong> Node View</strong>, next to the <strong>Colour View</strong>.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 4.50.58 PM" src="images/Screen_Shot_2021-07-26_at_4.50.58_PM.png"/><br/>
+<blockquote><strong>Hint</strong>:  You can open <strong>Node</strong> view by selecting the <strong>+</strong> icon in any View area.</blockquote>
+<ul>
+<li>Note that you find the Layer CNote_front in both the <strong>Node View</strong> and in the <strong>Timeline</strong>. Rename the CNote_F in the <strong>Timeline</strong>, notice it changes the name in the <strong>Node Layer</strong> as well.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.03.24 PM" src="images/Screen_Shot_2021-07-26_at_5.03.24_PM.png"/><br/>
+<ul>
+<li>Make sure Animation Mode is enabled and select the <strong>Transform Tool</strong> in the Toolbar. CNote will turn purple in colour. This means you are currently working directly on the drawing layer.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.16.49 PM" src="images/Screen_Shot_2021-07-26_at_5.16.49_PM.png"/><br/>
+<ul>
+<li>Select the CNote_F Node layer and press<strong> CMD+P</strong> (macOS) or <strong>CTRL+P</strong> (windows) on your keyboard (you can also add a <strong>Peg</strong> in the Timeline by selecting your layer and clicking <strong>Add Peg</strong>) to add a <strong>Peg</strong>.</li>
+<li>When you select the new <strong>Peg Node</strong> in the <strong>Node</strong> view, CNote will turn yellow with a yellow bounding box. This means you are working on the <strong>Peg</strong>.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.15.43 PM" src="images/Screen_Shot_2021-07-26_at_5.15.43_PM.png"/><br/><br/>
+<ul>
+<li> Go to the <strong>Advanced Animation Toolbar</strong> and select the <strong>Translate tool</strong>. You will see an axis marker pointing up (green) and to the side (red). Reposition CNote's Pivot point (blue rotation point) to his belly button.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.22.06 PM" src="images/Screen_Shot_2021-07-26_at_5.22.06_PM.png"/><br/><img alt="Screen Shot 2021 07 26 at 5.25.23 PM" src="images/Screen_Shot_2021-07-26_at_5.25.23_PM.png"/><br/><br/><strong>Part 2 - Creating a Legless (Hidden legs) Walk Cycle:</strong><br/>
+<ul>
+<li>For this part of the task, you will be making Cnote walk closer to the Camera.</li>
+<li>Note the hierarchy created in the <strong>Timeline</strong> for CNote and the <strong>Peg</strong>. The Peg has the CNote art layer collapsed under it, thus the <strong>Peg</strong> is controlling the artwork.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.29.31 PM" src="images/Screen_Shot_2021-07-26_at_5.29.31_PM.png"/><br/>
+<ul>
+<li>In your <strong>Timeline</strong> View, collapse the <strong>Peg</strong> layer to hide the CNote_F layer.  </li>
+<li>Add a Keyframe, by selecting the <strong>+KF</strong> on the Timeline, on Frame 1 of the Peg layer (Red Square will appear).</li>
+<li>Add a Keyframe by pressing <strong>F6</strong> on Frame 15 of the Peg layer (another Red Square will appear).</li>
+</ul>
+<div><img alt="Screen Shot 2021 07 26 at 5.33.01 PM" src="images/Screen_Shot_2021-07-26_at_5.33.01_PM.png"/></div>
+<br/>
+<ul>
+<li>Select frame 9 and click once on CNote to select the character and activate the Camera View.</li>
+<li>Hold Shift on your keyboard and click the arrow up key once on your keyboard. This will move CNote up approximately 10 pixels.  </li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.36.46 PM" src="images/Screen_Shot_2021-07-26_at_5.36.46_PM.png"/><br/>
+<ul>
+<li>Note that a Keyframe has been added to frame 9.</li>
+<li>Go to Frame 1, select the Keyframe. Hold Shift and select the Keyframe on frame 15.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 5.39.27 PM" src="images/Screen_Shot_2021-07-26_at_5.39.27_PM.png"/><br/>
+<ul>
+<li>Press CMD+K (macOS) or CTRL+K (windows) to set Motion tween.</li>
+<li>This will create an automated tween to create all the in-between frames between your Keyframes.</li>
+<li>Press play and watch your animated CNote. CNote should move up and down.</li>
+<li>Select frames 1-15 again. Copy those frames, select frame 16 and press CMD+B or CTRL+B to Paste Special.</li>
+<li>In the <strong>Paste Special</strong> pop up window change Cycles Normal from 5 to 3.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 8.30.53 PM" src="images/Screen_Shot_2021-07-26_at_8.30.53_PM.png"/><br/>
+<ul>
+<li>CNotes' walk cycle should now repeat three times. </li>
+</ul>
+<strong>Part 3 - Animating CNote moving forward:</strong><br/><br/>
+<ul>
+<li>Reposition the <strong>Playhead</strong> to frame 1.</li>
+<li>Go back to the <strong>Peg</strong> in <strong>Node View</strong> and create a new <strong>Peg</strong>. Rename the new <strong>Peg</strong> 'CNote_FWD'.
+<ul>
+<li>Make sure the new <span data-mce-bogus="true"><strong>Peg</strong><span data-mce-bogus="true"> is attached to your first one.</span></span></li>
+</ul>
+</li>
+<li>The bounding box will change to red, but CNote should still be yellow.</li>
+</ul>
+<img alt="Screen Shot 2021 07 26 at 9.10.37 PM" src="images/Screen_Shot_2021-07-26_at_9.10.37_PM.png"/><br/>
+<ul>
+<li>Reposition the pivot point of the new Peg to the same belly button area.</li>
+<li>In your <strong>Timeline</strong>, select frame 1 of the 'CNote_FWD' layer.</li>
+<li>Add a Keyframe on frame 1.</li>
+<li>Select the <strong>Transform</strong> tool. Now go to frame 60 and hold <strong>Shift</strong> (this will maintain the height to width ratio) and increase his height, but move him down a bit.</li>
+<li>Select all your frames on that new layer and press CMD+K (macOS) or CTRL+K (windows) to create the tween.</li>
+<li>Press <strong>Play</strong> and watch CNote walk closer to the camera.</li>
+<li>Enable the <strong>Camera Mask</strong> in the Camera View. </li>
+<li>Add a <strong>Colour Card</strong> (not in video).</li>
+<li>You will need to export your animation as a movie file as <strong>CNote_walk</strong><strong>.</strong></li>
+<li>Submit<strong> CNote_walk animation.</strong></li>
+</ul>
+<video controls="controls" src="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Screen_Recording_2021-07-26_at_9.15.06_PM.mp4" type="video/mp4"></video> </article><aside class="source-card resource-panel"><span class="section-kicker">Lesson Files</span><h3>Resources</h3><div class="resource-links"><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Harmony_Lesson_Handouts/Lesson_08_Whats_a_Peg.zip" target="_blank" rel="noopener">What is a Peg Work Files ↗</a><a href="https://courseware.toonboom.com/images/xMWFcZ5Jg6ZsHZ6mNmrmm3MTk5Nzc0MDg4NTA4Mw/Rubrics/Harmony_Rubrics_FINAL/Lesson_8_Rubric.pdf" target="_blank" rel="noopener">Assessment Rubric ↗</a></div><p style="margin-top:18px"><a class="button primary" href="#activities">Go to activities</a></p></aside></div></div></section><section class="activities-section" id="activities"><div class="container"><div class="section-heading"><span class="section-kicker">Interactive Work</span><h2>Lesson activities</h2><p>These activities were recovered from the saved lesson package and adapted for the self-hosted course.</p></div><article class="activity-card"><h3>Did you submit your Animated Walk to your teacher via your school&#x27;s submission method? (Email, Portal, Server Folder, Dropbox...) Select True once you have submitted your work.</h3><p>Select True once you have submitted your work.</p><div class="completion-control"><input id="complete-1" type="checkbox" data-complete="activity-1"><label for="complete-1">Mark this activity complete after you have finished/submitted the work.</label></div></article></div></section></main><footer class="site-footer"><div class="container footer-inner"><img src="../../assets/images/ash-animation-logo.png" alt="ASH Animation"><p>ASH Animation · Introduction to Animation</p><a href="../../index.html#lessons">Course lessons ↑</a></div></footer><script src="../../assets/js/navigation.js"></script></body></html>
